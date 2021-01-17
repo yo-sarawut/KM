@@ -1,0 +1,1403 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	21. Classes &amp; Objects :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-17T23:37:26 &#43;07">
+<meta name="description" content="">
+
+
+
+<title>21. Classes &amp; Objects :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/example.com";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/learning-python/20_classes/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://example.com'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/example.com";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://example.com/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/9_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/13_list_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/20_classes/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/22_thread/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/24_date-time/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/basic_functin/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/string_format/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://example.com">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/learning-python/">
+        Python by MascusCode
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        21. Classes &amp; Objects
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>21. Classes &amp; Objects</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#คลาสคออะไร">คลาสคืออะไร</a></li>
+    <li><a href="#การสรางคลาสและออบเจค">การสร้างคลาสและออบเจ็ค</a></li>
+    <li><a href="#constructor-และ-destructor">Constructor และ Destructor</a></li>
+    <li><a href="#static-variables-และ-static-methods">Static variables และ Static methods</a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <p>ในบทนี้ คุณได้เรียนรู้เกี่ยวกับโมดูลในภาษา Python และได้ทราบว่าการใช้งานโมดูลนั้นสามารถช่วยแบ่งโค้ดออกเป็นส่วนๆ และเรียกใช้งานได้เมื่อต้องการ เราได้พูดถึงการสร้างและการใช้งานโมดูลโดยการนำเข้าโมดูลด้วยคำสั่ง <code>import</code> และคำสั่ง from import การจัดหมวดหมู่ของโมดูลด้วย Package นี่เป็นสิ่งที่สำคัญเมื่อโปรแกรมของคุณมีขนาดใหญ่ขึ้น คุณอาจจะแบ่งมันออกเป็นส่วนๆ โดยแยกเป็นโมดูล และจัดกลุ่มของโมดูลด้วยการใช้ Package และนอกจากนี้ คุณยังสามารถสร้างไลบรารี่ของคุณ เพื่อให้นักพัฒนาคนอื่นๆ ได้ใช้งาน</p>
+<p>ก่อนที่จะเริ่มต้น มาทำความเข้าใจกับคำศัพท์ที่จำเป็นต้องทราบสำหรับการเขียนโปรแกรมเชิงวัตถุในภาษา Python</p>
+<ul>
+<li><strong>คลาส</strong> คือประเภทข้อมูลที่สร้างโดยผู้ใช้ โดยจะนำไปใช้สร้างออบเจ็ค กล่าวอีกนัยหนึ่ง คลาสคือประเภทข้อมูลของออบเจ็ค</li>
+<li><strong>ออบเจ็ค</strong> คือสิ่งที่สร้างมาจากคลาสหรือ class instances</li>
+<li><strong>แอตทริบิวต์</strong> (instance attributes) คือข้อมูลที่เป็นสมาชิกของแต่ละออบเจ็ค โดยมักจะกำหนดไว้ในเมธอด <code>__init__()</code> ของคลาส</li>
+<li><strong>เมธอด</strong> คือฟังก์ชันการทำงานที่กำหนดไว้ในคลาส</li>
+<li><strong>คลาสแอตทริบิวต์</strong> (class attributes) คือตัวแปรที่ประกาศไว้ในคลาส ซึ่งจะแชร์กับออบเจ็คทั้งหมดที่สร้างจากคลาสนั้นๆ</li>
+</ul>
+<h2 ref="คลาสคออะไร" >คลาสคืออะไร</h2><a class="anchor" id="คลาสคออะไร"></a>
+<p>คลาส คือสิ่งที่ใช้กำหนดรูปแบบของข้อมูล (Attributes) และเมธอด (Methods) การทำงานเข้าด้วยกัน การสร้างคลาส หมายถึงการสร้างประเภทของออบเจ็คขึ้นมา กล่าวอีกนัยหนึ่ง คลาสคือประเภทข้อมูลของออบเจ็คโดยคลาสนั้นสร้างขึ้นโดยผู้ใช้ (User-defined type) โดยปกติแล้ว ประเภทข้อมูลพื้นฐานในภาษา Python นั้นคือคลาส เมื่อคุณสร้างตัวแปรใดๆ ขึ้นมา ตัวแปรเหล่านั้นเป็นออบเจ็คของคลาส เพื่อทำให้คุณเข้าใจมากขึ้นมาดูตัวอย่างต่อไปนี้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.34</span>
+c <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;marcuscode.com&#39;</span>
+
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(a))
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(b))
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">type</span>(c))
+
+</code></pre></div><p>ในตัวอย่าง เราได้ประกาศตัวแปรสามตัวคือ Integer Floating และ String ตามลำดับ ดังนั้นตัวแปรเหล่านี้ถือว่าเป็นออบเจ็คของคลาส ดังผลลัพธ์ข้างล่าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+
+</code></pre></div><p>เหมือนที่คุณเห็น เราใช้ฟังก์ชัน <code>type()</code> เพื่อดูประเภทข้อมูลของออบเจ็คใดๆ หรือใช้สำหรับดูประเภทของคลาสที่มันสร้างมาจาก จากตัวอย่างนั้น เราเรียกคลาส <code>int</code> <code>float</code> และ <code>str</code> ว่า build-in type สำหรับในบทนี้ เรากำลังจะพูดเกี่ยวกับการสร้างคลาสซึ่งเป็น User-defined type นั่นเอง</p>
+<h2 ref="การสรางคลาสและออบเจค" >การสร้างคลาสและออบเจ็ค</h2><a class="anchor" id="การสรางคลาสและออบเจค"></a>
+<p>คลาส จะประกอบไปด้วยสมาชิกสองประเภท คือ แอตทริบิวต์หรือตัวแปร ที่ใช้ในการเก็บข้อมูลภายในคลาสนั้นๆ และเมธอด (methods) เป็นฟังก์ชันการทำงานหรือจัดการข้อมูลในคลาสนั้น เมธอดนั้นคล้ายกับฟังก์ชัน แต่ในบริบทของการเขียนโปรแกรมเชิงวัตถุแล้วเราจะเรียกว่าเมธอดแทน เพราะว่ามันถูกประกาศอยู่ภายในคลาส นี่เป็นรูปแบบของการสร้างคลาสในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ClassName</span>:
+    <span style="color:#6272a4"># statements</span>
+
+</code></pre></div><p>เราจะใช้คำสั่ง <code>class</code> สำหรับสร้างคลาสในภาษา Python และตามด้วยชื่อของคลาส <code>ClassName</code> ชื่อของคลาสควรจะขึ้นต้นด้วยตัวใหญ่และเป็นรูปแบบ camel case หลังจากนั้นเป็นคำสั่งในการกำหนดตัวแปรและเมธอดของคลาส ต่อไปมาดูตัวอย่างการสร้างคลาสในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Book</span>:
+
+    <span style="color:#ff79c6">def</span> __init__(self, name, price):
+        self<span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">=</span> name
+        self<span style="color:#ff79c6">.</span>price <span style="color:#ff79c6">=</span> price
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">getDetail</span>(self):
+        <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Name: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> self<span style="color:#ff79c6">.</span>name)
+        <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Price: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> USD&#39;</span> <span style="color:#ff79c6">%</span> self<span style="color:#ff79c6">.</span>price)
+
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างคลาส <code>Book</code> และภายในมีเมธอด <code>__init__()</code> ซึ่งเป็นคอนสตรัคเตอร์ (Constructor) ซึ่งจะถูกเรียกอัตโนมัติเมื่อออบเจ็คถูกสร้างสำเร็จ พารามิเตอร์แรกของเมธอดจะเป็น <code>self</code> เสมอ นี่จะใช้เป็นตัวแปรในการอ้างถึงออบเจ็คปัจจุบัน คลาสนี้จะมีสองแอตทริบิวต์คือ <code>name</code> และ <code>price</code> ใช้สำหรับเก็บชื่อและราคาของหนังสือของแต่ละออบเจ็ค หลังจากที่เราได้สร้างคลาสเสร็จแล้ว ต่อไปเราจะนำมาสร้างออบเจ็ค</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">b1 = Book(&#39;Python language&#39;, 59)
+b2 = Book(&#39;C++ language&#39;, 69)
+
+b1.getDetail()
+b2.getDetail()
+
+b1.price = 99
+
+b1.getDetail()
+
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างตัวแปรออบเจ็คจากคลาส <code>Book</code> สองตัวแปร คือ <code>b1</code> และ <code>b2</code> สำหรับพารามิเตอร์แรกในคอนสตรัคเตอร์นั้นเราได้ละเว้นไป เพราะ Python จะใส่เป็นออบเจ็คปัจจุบันให้อัตโนมัติ ดังนั้นพารามิเตอร์ที่เราจะต้องใส่คือชื่อและราคาของหนังสือ</p>
+<p>หลังจากที่ออบเจ็คถูกสร้างแล้ว ทั้ง <code>b1</code> และ <code>b2</code> จะมีแอตทริบิวต์ <code>name</code> <code>price</code> และเมธอด <code>getDetail()</code> เป็นของตัวเองที่ไม่เกี่ยวข้องกัน ในการเข้าถึงสมาชิกภายในออบเจ็คจะใช้เครื่องหมายจุด (.) ดังนั้นเมื่อเราเรียก <code>b1.getDetail()</code> จะเป็นการแสดงรายละเอียดข้อมูลในออบเจ็ค <code>b1</code> ซึ่ง <code>b2</code> ก็เช่นเดียวกัน และต่อมาเราได้เปลี่ยนค่า <code>price</code> ของออบเจ็ค <code>b1</code> ให้มีค่าเป็น <em>99</em> และแสดงรายละเอียดอีกครั้ง และนี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Name: Python language
+Price: 59 USD
+Name: C++ language
+Price: 69 USD
+Name: Python language
+Price: 99 USD
+
+</code></pre></div><p>ในตอนนี้ คุณได้เห็นแล้วว่าคลาสหนึ่งคลาสสามารถนำไปสร้างเป็นออบเจ็คกี่อันก็ได้ ซึ่งนี่เองถือว่าเป็นแนวคิดที่สำคัญของการเขียนโปรแกรมเชิงวัตุในการนำโค้ดกลับมาใช้ซ้ำ</p>
+<p>หลังจากที่คุณได้เห็นการประกาศคลาสและสร้างออบเจ็คในเบื้องต้นแล้ว ต่อไปมาดูตัวอย่างเพิ่มเติมสำหรับการทำงานกับคลาสในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Person</span>:
+
+    <span style="color:#ff79c6">def</span> __init__(self, firstName, lastName):
+        self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">=</span> firstName
+        self<span style="color:#ff79c6">.</span>lastName <span style="color:#ff79c6">=</span> lastName
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">getName</span>(self):
+        <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39; &#39;</span> <span style="color:#ff79c6">+</span> self<span style="color:#ff79c6">.</span>lastName
+
+p <span style="color:#ff79c6">=</span> Person(<span style="color:#f1fa8c">&#39;Chase&#39;</span>, <span style="color:#f1fa8c">&#39;Rice&#39;</span>)
+p<span style="color:#ff79c6">.</span>career <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Singer&#39;</span>
+p<span style="color:#ff79c6">.</span>country <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;USA&#39;</span>
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Name: &#39;</span> <span style="color:#ff79c6">+</span> p<span style="color:#ff79c6">.</span>getName())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Career: &#39;</span> <span style="color:#ff79c6">+</span> p<span style="color:#ff79c6">.</span>career)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Country: &#39;</span> <span style="color:#ff79c6">+</span> p<span style="color:#ff79c6">.</span>country)
+
+p2 <span style="color:#ff79c6">=</span> Person(<span style="color:#f1fa8c">&#39;Max&#39;</span>, <span style="color:#f1fa8c">&#39;Graham&#39;</span>)
+p2<span style="color:#ff79c6">.</span>genres <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;Electronica&#39;</span>, <span style="color:#f1fa8c">&#39;trance&#39;</span>, <span style="color:#f1fa8c">&#39;tech house&#39;</span>, <span style="color:#f1fa8c">&#39;techno&#39;</span>]
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Name: &#39;</span> <span style="color:#ff79c6">+</span> p2<span style="color:#ff79c6">.</span>getName())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Genres: &#39;</span>, p2<span style="color:#ff79c6">.</span>genres)
+
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างคลาส <code>Person</code> ที่ประกอบไปด้วยแอตทริบิวต์ <code>firstName</code> และ <code>lastName</code> และเมธอด <code>getName()</code> สำหรับรับชื่อกับนามสกุลพร้อมกัน และเราได้กำหนดค่าให้กับแอตทริบิวต์ <code>career</code> และ <code>country</code> ในภายหลัง ซึ่งโดยปกติแล้วในการกำหนดแอตทริบิวต์เริ่มต้นควรจะทำในเมธอด <code>__init__()</code> ดังนั้น นี่จะทำให้คุณเห็นว่าในภาษา Python เราสามารถสร้างแอตทริบิวต์ใดๆ ในขณะที่โปรแกรมทำงานได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Name: Chase Rice
+Career: Singer
+Country: USA
+Name: Max Graham
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม คุณได้เห็นแล้วว่าการเขียนโปรแกรมในภาษา Python นั้นค่อนข้างยืดหยุ่น คุณไม่จำเป็นต้องประกาศแอตทริบิวต์ทั้งหมดไว้ในตอนแรกก็ได้ คุณอาจจะเพิ่มเข้ามาในภายหลังเฉพาะออบเจ็คที่ต้องการได้ เหมือนในออบเจ็ค <code>p2</code> ไม่ได้ต้องการมีแอตทริบิวต์เหมือนกับออบเจ็ค <code>p</code> แต่ทั้งสองยังมีแอตทริบิวต์บางอย่างที่เหมือนกัน</p>
+<h2 ref="constructor-และ-destructor" >Constructor และ Destructor</h2><a class="anchor" id="constructor-และ-destructor"></a>
+<p>ต่อมาเราจะพูดเกี่ยวกับการใช้งาน Constructor และ Destructor ในภาษา Python นั้นมีเมธอดพิเศษ (Special methods) ที่สร้างให้อัตโนมัติเมื่อคุณสร้างคลาสขึ้นมา เพื่อใช้งานเราจะต้อง override เมธอดเหล่านั้น เมธอดแรกคือ <code>__init__()</code> ซึ่งเมธอดนี้จะทำงานเมื่อออบเจ็คถูกสร้างสำเร็จ หรือเรียกว่า Constructor มันมักจะใช้ในการกำหนดแอตทริบิวต์และค่าเริ่มต้นให้กับออบเจ็ค ต่อมาคือเมธอด <code>__del__()</code> ซึ่งเมธอดนี้จะทำงานเมื่อออบเจ็คถูกทำลาย หรือเรียกว่า Destructor มาดูตัวอย่างการใช้งาน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Person</span>:
+
+    <span style="color:#ff79c6">def</span> __init__(self, firstName, lastName):
+        self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">=</span> firstName
+        self<span style="color:#ff79c6">.</span>lastName <span style="color:#ff79c6">=</span> lastName
+        <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Object was created&#39;</span>)
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">getName</span>(self):
+        <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39; &#39;</span> <span style="color:#ff79c6">+</span> self<span style="color:#ff79c6">.</span>lastName
+
+    <span style="color:#ff79c6">def</span> __del__(self):
+        <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Object was destroyed&#39;</span>)
+
+p <span style="color:#ff79c6">=</span> Person(<span style="color:#f1fa8c">&#39;Chase&#39;</span>, <span style="color:#f1fa8c">&#39;Rice&#39;</span>)
+<span style="color:#ff79c6">print</span>(p<span style="color:#ff79c6">.</span>getName())
+<span style="color:#ff79c6">del</span> p
+
+</code></pre></div><p>ในตัวอย่าง เราได้ทำการ override เมธอด <code>__init__()</code> มันถูกเรียกอัตโนมัติเมื่อเราสร้างออบเจ็คสำเร็จ จากคำสั่ง <code>Person('Chase', 'Rice')</code> หลังจากนั้นเราได้ทำการ override เมธอด <code>__del__()</code> ซึ่งเมธอดนี้จะถูกเรียกใช้งานก่อนที่ออบเจ็คจะถูกทำลาย ในโค้ดเราได้ทำลายออบเจ็คด้วยคำสั่ง <code>del p</code> ซึ่งจะทำให้ออบเจ็คถูกลบออกไปจากหน่วยความจำ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Object was created
+Chase Rice
+Object was destroyed
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม เมื่อสร้างออบเจ็คสำเร็จเราได้แสดงข้อความในเมธอด <code>__init__()</code> ว่าสร้างออบเจ็คสำเร็จแล้ว และเมื่อเราลบออบเจ็คโปรแกรมแสดงข้อความในเมธอด <code>__del__()</code> ว่าออบเจ็คถูกทำลายไปแล้ว ซึ่งการทำงานเหล่านี้จะเกิดขึ้นอัตโนมัติ แน่นอนว่าในภาษา Python เรามักจะใช้คอนสตรัคเตอร์เสมอ แต่ว่า Destructor มักจะไม่ได้ใช้บ่อยนัก อย่างไรก็ตามยังมีเมธอดพิเศษอื่นๆ อีกที่เรายังไม่ได้พูดถึงในบทนี้</p>
+<h2 ref="static-variables-และ-static-methods" >Static variables และ Static methods</h2><a class="anchor" id="static-variables-และ-static-methods"></a>
+<p>สำหรับเรื่องสุดท้ายที่คุณจะได้เรียนในบทนี้ คือการใช้งาน static variable และ static method โดย static variable หรือคลาสแอตทริบิวต์ คือตัวแปรที่ประกาศภายในคลาสซึ่งตัวแปรนี้จะแชร์กับออบเจ็คทุกอันที่สร้างจากคลาสนี้ ส่วน static method เป็นเมธอดที่สร้างไว้ในคลาสแต่ไม่ได้มีส่วนเกี่ยวกับข้องกับการจัดการออบเจ็ค มาดูตัวอย่างการใช้งาน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Box</span>:
+
+    <span style="color:#6272a4"># shared variable for all object create by this class</span>
+    color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;green&#39;</span>
+
+    <span style="color:#6272a4"># class method for object</span>
+    <span style="color:#ff79c6">def</span> __init__(self, width, height, dept):
+        self<span style="color:#ff79c6">.</span>width <span style="color:#ff79c6">=</span> width
+        self<span style="color:#ff79c6">.</span>height <span style="color:#ff79c6">=</span> height
+        self<span style="color:#ff79c6">.</span>dept <span style="color:#ff79c6">=</span> dept
+
+     <span style="color:#6272a4"># class method for object</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">getVolume</span>(self):
+        <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>width <span style="color:#ff79c6">*</span> self<span style="color:#ff79c6">.</span>height <span style="color:#ff79c6">*</span> self<span style="color:#ff79c6">.</span>dept
+
+    @staticmethod
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">compare</span>(a, b):
+        <span style="color:#ff79c6">if</span> a<span style="color:#ff79c6">.</span>getVolume() <span style="color:#ff79c6">&gt;</span> b<span style="color:#ff79c6">.</span>getVolume():
+            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;greater than&#39;</span>
+        <span style="color:#ff79c6">elif</span> a<span style="color:#ff79c6">.</span>getVolume() <span style="color:#ff79c6">==</span> b<span style="color:#ff79c6">.</span>getVolume():
+            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;equal&#39;</span>
+        <span style="color:#ff79c6">else</span>:
+            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;less than&#39;</span>
+
+a <span style="color:#ff79c6">=</span> Box(<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>)
+b <span style="color:#ff79c6">=</span> Box(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">5</span>)
+
+Box<span style="color:#ff79c6">.</span>color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;red&#39;</span>
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Box a volume = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> a<span style="color:#ff79c6">.</span>getVolume())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Box b volume = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> b<span style="color:#ff79c6">.</span>getVolume())
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Box a color = </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> a<span style="color:#ff79c6">.</span>color)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Box b color = </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> b<span style="color:#ff79c6">.</span>color)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Box a volume a is </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c"> box b&#39;</span> <span style="color:#ff79c6">%</span> Box<span style="color:#ff79c6">.</span>compare(a, b))
+
+</code></pre></div><p>ในตัวอย่าง เราได้ประกาศคลาส <code>Box</code> โดยคลาสนี้มีตัวแปรของคลาส คือ <code>color</code> นั่นหมายความว่าตัวแปรนี้จะถูกใช้งานร่วมกันกับทุกออบเจ็คที่สร้างจากคลาสนี้ ต่อมาภายในเมธอด <code>__init__()</code> เป็นการกำหนดข้อมูลให้กับออบเจ็คแต่ละอันที่จะมีความกว้าง ความยาว และความสูง และเมธอด <code>getVolume()</code> สำหรับรับปริมาตรของกล่อง</p>
+<p>ภายในคลาส <code>Box</code> เราได้สร้าง static method <code>compare()</code> โดยใช้ decorator <code>@staticmethod</code> นำหน้าก่อนหนึ่งบรรทัด เมธอดนี้ไม่ได้มีส่วนเกี่ยวข้องกับข้อมูลภายในคลาส สังเกตว่ามันไม่มีพารามิเตอร์ <code>self</code> ถูกส่งเข้ามา สำหรับการเรียกใช้งาน static variables หรือ static method นั้นจะไม่ขึ้นกับออบเจ็ค นั่นหมายความว่าเราจะใช้ชื่อของคลาสแทน ในคำสั่ง <code>Box.color = 'red'</code> เป็นการกำหนดสีให้กับกล่องทุกกล่องเป็นสีแดง และคำสั่ง <code>Box.compare(a, b)</code> เป็นการเปรียบเทียบปริมาตรของกล่องทางซ้ายว่ามากกว่าทางขวาหรือไม่</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Box a volume = 24
+Box b volume = 10
+Box a color = red
+Box b color = red
+Box a volume a is greater than box b
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม จะเห็นว่าเราได้ทำการเปลี่ยนค่าสีของกล่องเป็นสีแดงในคำสั่งเดียว แต่มันถูกนำไปใช้กับทุกกล่อง และเมธอดสำหรับเปรียบเทียบปริมาตรของกล่องมันสามารถใช้ได้โดยไม่ขึ้นกับออบเจ็คใดๆ นั่นหมายความว่า static method อาจจะเป็นเมธอดที่ทำงานเกี่ยวกับออบเจ็คที่สร้างจากคลาสนี้ แต่ไม่ได้เป็นเมธอดสำหรับจัดการข้อมูลในคลาสโดยตรง</p>
+<p>ในบทนี้ คุณได้เรียนรู้เกี่ยวกับคลาสและออบเจ็คในภาษา Python ซึ่งเป็นสิ่งที่คุณควรจะทำความเข้าใจเพื่อที่จะใช้ประโยชน์จาก OOP ซึ่งมันช่วยให้การเขียนโปรแกรมมีประสิทธิภาพและรวดเร็วขึ้น นอกจากนี้เรายังพูดเกี่ยวกับเมธอดพิเศษ Constructor และ Destructor และสมาชิกที่เป็น static ของคลาส สำหรับเนื้อหาของ OOP ยังไม่จบเพียงเท่านี้ มันยังมีการสืบทอด (Inheritance) ซึ่งคุณจะได้เรียนในบทต่อไป</p>
+<blockquote>
+<p>Reference : <a href="http://marcuscode.com/lang/python/classes-and-objects">http://marcuscode.com/lang/python/classes-and-objects</a></p>
+</blockquote>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/learning-python/21_inheritance/" title="22. Inheritance" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>22. Inheritance</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#คลาสคออะไร">คลาสคืออะไร</a></li>
+    <li><a href="#การสรางคลาสและออบเจค">การสร้างคลาสและออบเจ็ค</a></li>
+    <li><a href="#constructor-และ-destructor">Constructor และ Destructor</a></li>
+    <li><a href="#static-variables-และ-static-methods">Static variables และ Static methods</a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+		    
+		    <li>
+		    	
+		        <a href="https://example.comadmin/#/collections/pages/entries/tutorials/learning-python/20_classes/_index" target="blank">
+		        <i class="fab fa-github"></i>
+		        Improve this page</a>
+		    </li>
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>

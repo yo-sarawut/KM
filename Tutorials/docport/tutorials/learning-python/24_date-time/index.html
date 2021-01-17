@@ -1,0 +1,1565 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	24. Date &amp; Time (วันที่และเวลา) :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-17T23:37:26 &#43;07">
+<meta name="description" content="">
+
+
+
+<title>24. Date &amp; Time (วันที่และเวลา) :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/example.com";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/learning-python/24_date-time/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://example.com'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/example.com";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://example.com/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/9_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/13_list_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/20_classes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/22_thread/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/24_date-time/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/basic_functin/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/string_format/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://example.com">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/learning-python/">
+        Python by MascusCode
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        24. Date &amp; Time (วันที่และเวลา)
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>24. Date &amp; Time (วันที่และเวลา)</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#วนทและเวลาปจจบน"><strong>วันที่และเวลาปัจจุบัน</strong></a></li>
+    <li><a href="#การสรางออบเจคของวนทและเวลา"><strong>การสร้างออบเจ็คของวันที่และเวลา</strong></a></li>
+    <li><a href="#unix-timestamp"><strong>Unix timestamp</strong></a></li>
+    <li><a href="#การบวกลบวนทและเวลา"><strong>การบวกลบวันที่และเวลา</strong></a></li>
+    <li><a href="#คลาสและโมดลเกยวกบวนทและเวลา"><strong>คลาสและโมดูลเกี่ยวกับวันที่และเวลา</strong></a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <p>ในบทนี้ คุณจะได้เรียนรู้เกี่ยวกับวันที่และเวลาในภาษา Python เราจะพูดถึงการทำงานพื้นฐานเกี่ยวกับวันที่และเวลา เช่น การแสดงเวลาปัจจุบัน การบวกลบเวลา เขตเวลา และแนะนำคลาสและเมธอดเกีี่ยวกับวันที่และเวลา นี่เป็นเนื้อหาในบทนี้</p>
+<ul>
+<li>วันที่และเวลาปัจจุบัน</li>
+<li>การสร้างออบเจ็ควันที่และเวลา</li>
+<li>Unix timestamp</li>
+<li>การบวกลบวันที่และเวลา</li>
+<li>คลาสและโมดูลเกี่ยวกับวันที่และเวลา</li>
+</ul>
+<h2 ref="วนทและเวลาปจจบน" ><strong>วันที่และเวลาปัจจุบัน</strong></h2><a class="anchor" id="วนทและเวลาปจจบน"></a>
+<p>ในการเขียนโปรแกรมเกี่ยวกับเวลา สิ่งแรกที่เรามักทำคือการแสดงวันที่และเวลาปัจจุบันออกทางหน้าจอเพื่อแจ้งให้ผู้ใช้งานโปรแกรมได้ทราบ สำหรับตัวอย่างแรกในบทนี้ เราจะมาเขียนโปรแกรมเพื่อแสดงวันที่และเวลาปัจจุบันออกทางหน้าจอในภาษา Python</p>
+<p>current_time.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime
+
+<span style="color:#6272a4"># Get current date and time</span>
+now <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>today()
+
+<span style="color:#6272a4"># Display using difference formats</span>
+<span style="color:#ff79c6">print</span>(now)
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>isoformat())
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>ctime())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">2020-11-05 02:23:48.841250
+2020-11-05T02:23:48.841250
+Thu Nov  5 02:23:48 2020
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เราได้แสดงวันที่และเวลาปัจจุบันของระบบออกทางหน้าจอ เมื่อคุณรันตัวอย่างนี้ เวลาที่ได้จะเป็นเวลาปัจจุบันบนคอมพิวเตอร์ของคุณ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime
+
+
+</code></pre></div><p>เพื่อเข้าถึงวันที่และเวลาในภาษา Python เราสามารถใช้คลาส <code>datetime</code> ซึ่งเป็นคลาสจากโมดูล <code>datetime</code> คลาสนี้เป็นคลาสที่เราสามารถนำมาสร้างออบเจ็คของวันที่ที่ประกอบไปด้วยข้อมูลของวันที่และเวลาที่สามารถนำมาใช้งานในโปรแกรมได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">now <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>today()
+
+
+</code></pre></div><p>ในคำสั่งนี้เป็นการสร้างออบเจ็คของวันที่โดยการใช้คลาสเมธอด <code>datetime.today()</code> เมธอดนี้ส่งค่ากลับเป็นออบเจ็คของวันที่ของเวลาปัจจุบันในระบบหรือคอมพิวเตอร์ของเรา</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">print</span>(now)
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>isoformat())
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>ctime())
+
+
+</code></pre></div><p>จากนั้นเป็นการรับเอาค่าของเวลาในรูปแบบ String จากการเรียกใช้เมธอดบนออบเจ็ค ถ้าหากเราแสดงค่าออบเจ็คด้วยฟังก์ชัน <code>print()</code> โดยตรง ค่าที่ได้จะเป็นเวลาในรูปแบบ ISO หรือเราสามารถเรียกผ่านเมธอด <code>isoformat()</code> ตรงๆ ก็ได้ ส่วนเมธอด <code>ctime()</code> ส่งค่ากลับเป็นวันที่ในรูปแบบวันที่มาตฐานของภาษา C</p>
+<p>นอกจากนี้ เรายังสามารถเรียกใช้งานเมธอดอื่นบนออบเจ็คของวันที่เพื่ออ่านค่าอื่นๆ เกี่ยวกับเวลาได้ ยกตัวอย่างเช่น เราสามารถอ่านค่า Timestamp หรือจัดรูปแบบการแสดงผลของเวลาได้</p>
+<p><a href="http://timeinfo.py">timeinfo.py</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime
+
+now <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>today()
+
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>timestamp())
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>strftime(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">/%m/%Y %H:%M:%S&#34;</span>))
+<span style="color:#ff79c6">print</span>(now<span style="color:#ff79c6">.</span>timetuple())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม สำหรับการใช้งานเมธอดเพื่อเรียกดูข้อมูลเพิ่มเติมเกี่ยวกับออบเจ็คของวันทีี่</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">1604518694.336215
+05/11/2020 02:38:14
+time.struct_time(tm_year=2020, tm_mon=11, tm_mday=5, tm_hour=2, tm_min=38, tm_sec=14, tm_wday=3, tm_yday=310, tm_isdst=-1)
+
+
+</code></pre></div><p>ในตัวอย่าง เราสามารถใช้เมธอด <code>timestamp()</code> เพื่อรับเอาค่าเวลาในรูปแบบ Timestamp จากออบเจ็ควันที่ได้ ส่วนเมธอด <code>strftime()</code> ใช้สำหรับจัดรูปแบบการแสดงของเวลาตามตัวจัดรูปแบบที่ระบุ หรือการใช้เมธอด <code>struct_time()</code> ที่จะส่งค่ากลับเป็น Time tuple ที่ประกอบไปด้วยส่วนประกอบต่างๆ ของเวลา</p>
+<p>เราจะพูดเกี่ยวกับ Timestamp และการจัดรูปแบบการแสดงผลของเวลาอีกครั้งในอีกไม่ช้านี้ สำหรับตอนนี้มาดูเพิ่มเติมเกี่ยวกับการสร้างออบเจ็คของวันที่และเวลาในภาษา Python กันต่อ</p>
+<h2 ref="การสรางออบเจคของวนทและเวลา" ><strong>การสร้างออบเจ็คของวันที่และเวลา</strong></h2><a class="anchor" id="การสรางออบเจคของวนทและเวลา"></a>
+<p>ในตัวอย่างก่อนหน้าเราได้พูดถึงการรับเอาวันที่และเวลาปัจจุบันด้วยเมธอด <code>today()</code> ในตัวอย่างนี้ เราจะพูดถึงการสร้างออบเจ็คจากวันที่และเวลาที่กำหนด โดยการใช้คอนสตรัคเตอร์ของคลาส <code>datetime</code> ซึ่งนี่อาจมีประโยชน์เมื่อเรามีค่าของวันที่อยู่แล้วอาจจากฐานข้อมูลหรือไฟล์ และต้องการนำมาสร้างเป็นออบเจ็ควันที่เพื่อใช้งานในโปรแกรม</p>
+<p>ในตัวอย่างนี้แสดงการสร้างออบเจ็คของวันที่โดยการระบุส่วนของวันที่และเวลาเป็นตัวเลขด้วยคลาสคอนสตรัคเตอร์ <code>datetime</code></p>
+<p>create_date.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime
+
+birthDay <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">1980</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>)
+chrismasDay <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">25</span>)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;My birth day: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> birthDay<span style="color:#ff79c6">.</span>ctime())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Christmas day: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> chrismasDay<span style="color:#ff79c6">.</span>ctime())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">My birth day: Wed Mar 12 10:00:00 1980
+Christmas day: Fri Dec 25 00:00:00 2020
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เป็นการสร้างออบเจ็คของวันที่จากคลาส <code>datetime</code> สำหรับเก็บค่าวันเกิดและวันคริสมาสต์โดยการใช้คลาสคอนสตรัคเตอร์ ในการสร้างวันที่ด้วยวิธีนี้ จะทำให้เราสามารถสร้างออบเจ็คของวันที่สำหรับช่วงเวลาใดๆ ก็ได้ ซึ่งคอนสตรัคเตอร์จะรับพารามิเตอร์โดยมีรูปแบบดังนี้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">datetime(year, month, day, hour<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, minute<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, second<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, microsecond<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, tzinfo<span style="color:#ff79c6">=</span>None, <span style="color:#ff79c6">*</span>, fold<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>)
+
+
+</code></pre></div><p>เราจะต้องระบุส่วนต่างๆ ของเวลาที่ต้องการสร้างโดยเรียงจาก ปี เดือน และวัน ตามลำดับ ซึ่งค่าของวันที่ในสามพารามิเตอร์แรกจะต้องถูกส่งเสมอ ส่วนพารามิเตอร์ที่เหลือสามาารถที่จะละเว้นได้ ถ้าหากเราไม่ส่งค่าเริ่มต้นที่เป็น <code>0</code> จะถูกใช้แทนเหมือนกับในออบเจ็ค <code>chrismasDay</code></p>
+<p>ในบางกรณี คุณอาจต้องการสร้างวันที่จากรูปแบบอื่นๆ นอกจากตัวเลข ยกตัวอย่างเช่น เราอาจมีค่าของวันที่ที่เป็น String ในรูปแบบของ ISO หรือค่าเวลา Timestamp ซึ่งคลาส <code>datetime</code> มีเมธอดสนับสนุนการสร้างวันที่จากรูปแบบดังกล่าว ยกตัวอย่างเช่น</p>
+<p>create_date2.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime
+
+birthDay <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>fromisoformat(<span style="color:#f1fa8c">&#34;1980-03-12T10:00:00&#34;</span>)
+chrismasDay <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>fromtimestamp(<span style="color:#bd93f9">1608829200</span>)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;My birth day: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> birthDay<span style="color:#ff79c6">.</span>ctime())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Christmas day: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> chrismasDay<span style="color:#ff79c6">.</span>ctime())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">My birth day: Wed Mar 12 10:00:00 1980
+Christmas day: Fri Dec 25 00:00:00 2020
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เป็นการสร้างออบเจ็คของวันที่ที่เป็นวันเดียวกันกับในตัวอย่างก่อนหน้า แต่เราได้สร้างวันที่จากค่าของเวลาในรูปแบบ String และ Timestamp แทน และแนะนำการใช้งานสองเมธอดใหม่ที่ใช้ในการสร้าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">birthDay <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>fromisoformat(<span style="color:#f1fa8c">&#34;1980-03-12T10:00:00&#34;</span>)
+
+
+</code></pre></div><p>เมธอด <code>datetime.fromisoformat()</code> นั้นเป็นคลาสเมธอดที่ใช้สำหรับสร้างวันที่จาก String ของวันที่ในรูปแบบ ISO เราสามารถใช้มันกับค่าวันที่เพียงอย่างเดียวหรือวันที่ในรูปแบบเต็มก็ได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">chrismasDay <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>fromtimestamp(<span style="color:#bd93f9">1608829200</span>)
+
+
+</code></pre></div><p>ส่วนเมธอด <code>datetime.fromtimestamp()</code> ก็เป็นคลาสเมธอดเช่นเดียวกัน แต่เมธอดนี้ใช้สำหรับสร้างออบเจ็คของวันที่จากค่าเวลา Timestamp</p>
+<p>ในการใช้งานทั้งสองเมธอดสำหรับสร้างออบเจ็ค เราจะได้ออบเจ็คของวันที่ที่สามารถนำมาใช้งานได้ในโปรแกรมเหมือนกับการรับค่าเวลาจากเมธอด <code>today()</code> และการสร้างวันที่จากคลาสคอนสตรัคเตอร์ <code>datetime</code></p>
+<h2 ref="unix-timestamp" ><strong>Unix timestamp</strong></h2><a class="anchor" id="unix-timestamp"></a>
+<p>Unix timestamp หรือ Timestamp นั้นเป็นค่าของเวลาในรูปแบบของตัวเลขในหน่วยวินาที ที่เริ่มนับจาก Unix epoch หรือวันที่ 1 มกราคม 1970 เนื่องจาก Timestamp เป็นตัวเลข ดังนั้นเราสามารถใช้มันในการคำนวณ เช่น การบวกลบ หรือการหาผลต่างของเวลาได้</p>
+<p>ในตัวอย่างนี้ เราจะมาเขียนโปรแกรมเพื่อรับเอาค่า Timestamp ของเวลาปัจจุบันและจากออบเจ็คของวันที่เพื่อนำมาใช้งานในโปรแกรม</p>
+<p>current_timestamp.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime
+<span style="color:#ff79c6">from</span> time <span style="color:#ff79c6">import</span> time
+
+<span style="color:#6272a4"># Get current timestamp</span>
+ts1 <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>today()<span style="color:#ff79c6">.</span>timestamp()
+ts2 <span style="color:#ff79c6">=</span> time()
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Current timestamp&#34;</span>)
+<span style="color:#ff79c6">print</span>(ts1)
+<span style="color:#ff79c6">print</span>(ts2)
+
+<span style="color:#6272a4"># Creating date from timestamp</span>
+<span style="color:#6272a4"># Mon Jun 18 05:28:00 2007</span>
+date <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>fromtimestamp(<span style="color:#bd93f9">1182119280</span>)
+<span style="color:#ff79c6">print</span>(date)
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Current timestamp
+1604522143.585108
+1604522143.5851078
+2007-06-18 05:28:00
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เป็นการรับเอาค่า Timestamp ปัจจุบันและการสร้างออบเจ็คของวันที่จาก Timestamp ในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">ts1 <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>today()<span style="color:#ff79c6">.</span>timestamp()
+ts2 <span style="color:#ff79c6">=</span> time()
+
+
+</code></pre></div><p>ในการรับเอาค่า Timestamp ปัจจุบันในภาษา Python นั้นสามารถทำได้สองวิธีคือการใช้เมธอด <code>timestamp()</code> บนออบเจ็คของวันที่ หรือจะใช้ฟังก์ชัน <code>time()</code> จากโมดูล <code>time</code> ก็ได้ ทั้งสองรูปแบบให้ผลลัพธ์ที่เหมือนกัน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">date <span style="color:#ff79c6">=</span> datetime<span style="color:#ff79c6">.</span>fromtimestamp(<span style="color:#bd93f9">1182119280</span>)
+
+
+</code></pre></div><p>นอกจากนี้เรายังสามารถสร้างออบเจ็คของวันที่จาก Timestamp ได้โดยการใช้คลาสเมธอด <code>datetime.fromtimestamp()</code> เมธอดนี้ส่งค่ากลับเป็นออบเจ็ควันที่จากค่า Timestamp ดังกล่าว</p>
+<p>เราสามารถเรียกใช้งานเมธอด <code>timestamp()</code> บนออบเจ็คของวันที่ใดๆ เพื่อรับเอาค่าเวลา Timestamp บนออบเจ็คนั้นได้</p>
+<h2 ref="การบวกลบวนทและเวลา" ><strong>การบวกลบวันที่และเวลา</strong></h2><a class="anchor" id="การบวกลบวนทและเวลา"></a>
+<p>เวลาในภาษา Python นั้นสนับสนุนการดำเนินการกับเวลา เช่น การบวกและการลบกันของเวลา สำหรับการดำเนินการเหล่านี้เกี่ยวกับเวลา เราจำเป็นต้องแนะนำให้คุณรู้จักกับ <code>timedelta</code> ออบเจ็ค</p>
+<p><code>timedelta</code> ออบเจ็คเป็นออบเจ็คที่ใช้เก็บระยะเวลา หรือความแตกต่างระหว่างสองวันที่หรือช่วงเวลาใดๆ ยกตัวอย่างเช่น เพลงๆ หนึ่งมีความยาว 3 นาที 20 วินาที หรือแสงเดินทางจากดวงอาทิตย์มายังโลกใช้เวลาประมาณ 8 นาที ข้อมูลเหล่านี้สามารถแสดงได้ในรูปแบบของ <code>timedelta</code> ในภาษา Python นี่เป็นตัวอย่าง</p>
+<p>delta_time.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> timedelta
+
+dt1 <span style="color:#ff79c6">=</span> timedelta(minutes <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>, seconds <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>)
+dt2 <span style="color:#ff79c6">=</span> timedelta(minutes <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">8</span>)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Duration of a song&#34;</span>)
+<span style="color:#ff79c6">print</span>(dt1)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Light travel from the sun to the earth&#34;</span>)
+<span style="color:#ff79c6">print</span>(dt2)
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Duration of a song
+0:03:20
+Light travel from the sun to the earth
+0:08:00
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เราได้สร้างสอง <code>timedelta</code> ออบเจ็คสำหรับเก็บระยะเวลาของเพลง และระยะเวลาการเดินทางของแสงจากดวงอาทิตย์มายังโลก ในการสร้าง <code>timedelta</code> ออบเจ็ค เราสามารถระบุเพียง Keyword อาร์กิวเมนต์สำหรับส่วนของเวลาที่ต้องการได้ สำหรับอาร์กิวเมนต์อื่นๆ ที่ไม่ได้ถูกส่งจะมีค่าเริ่มต้นเป็น <code>0</code></p>
+<p>นี่เป็นรูปแบบเต็มของการสร้าง <code>timedelta</code> ออบเจ็คในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">timedelta(days<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, seconds<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, microseconds<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, milliseconds<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, minutes<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, hours<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, weeks<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>)
+
+
+</code></pre></div><p>ในรูปแบบการประกาศออบเจ็ค จะเห็นว่ามีพารามิเตอร์สำหรับหน่วยเวลาต่างๆ ที่สามารถใช้สร้างออบเจ็คได้ อย่างไรก็ตาม สำหรับการเก็บข้อมูลภายในของ <code>timedelta</code> ออบเจ็คนั้น ค่าที่ถูกเก็บจริงๆ จะมีเพียงแค่ <code>days</code>, <code>seconds</code> และ <code>microseconds</code> เท่านั้น นี่เป็นอีกตัวอย่าง</p>
+<p>timedelta_internal_data.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> timedelta
+
+dt1 <span style="color:#ff79c6">=</span> timedelta(weeks <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>, minutes <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>, seconds <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;dt1.days: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> dt1<span style="color:#ff79c6">.</span>days)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;dt1.seconds: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> dt1<span style="color:#ff79c6">.</span>seconds)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;dt1.microseconds: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> dt1<span style="color:#ff79c6">.</span>microseconds)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;dt1 Total second: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> dt1<span style="color:#ff79c6">.</span>total_seconds())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">dt1.days: 14
+dt1.seconds: 200
+dt1.microseconds: 0
+dt1 Total second: 1209800
+
+
+</code></pre></div><p>ในตัวอย่างนี้ แสดงให้เห็นว่า <code>timedelta</code> ออบเจ็คแปลงอาร์กิวเมนต์ที่เราใช้ในตอนสร้างให้เหลือเพียง <code>days</code>, <code>seconds</code> และ <code>microseconds</code> เท่านั้น เราสามารถเรียกใช้เมธอด <code>total_seconds()</code> เพื่อรับเอาจำนวนวินาทีทั้งหมดของ <code>timedelta</code> ออบเจ็คได้</p>
+<p>ในภาษา Python การบวกลบออบเจ็คของเวลาจะเกี่ยวกับข้องกับ <code>timedelta</code> ออบเจ็ค ถ้าหากเราบวกเวลาเข้ากับ <code>timedelta</code> ออบเจ็ค เราจะได้ผลลัพธ์ของเวลาข้างหน้าตามระยะที่ถูกบวกเข้าไป ในทางกลับกัน เมื่อเราลบเวลาด้วย <code>timedelta</code> ออบเจ็ค เราจะได้เวลาที่ถอยหลังไปตามระยะเวลาที่ถูกลบออก</p>
+<p>ในตัวอย่างนี้มาดูการหาเวลาสิ้นสุดของการเล่นเพลง โดยที่เราทราบเวลาเริ่มต้นและความยาวของเพลงโดยการใช้การบวกวันที่เข้ากับ <code>timedelta</code> ออบเจ็ค</p>
+<p>time_addition.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime, timedelta
+
+start <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">0</span>)
+duration <span style="color:#ff79c6">=</span> timedelta(minutes <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>, seconds <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>)
+
+<span style="color:#6272a4"># Result is a new date object</span>
+end <span style="color:#ff79c6">=</span> start <span style="color:#ff79c6">+</span> duration
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;A song started playing at </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> start<span style="color:#ff79c6">.</span>ctime())
+
+<span style="color:#8be9fd;font-style:italic">min</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(duration<span style="color:#ff79c6">.</span>total_seconds() <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">60</span>)
+sec <span style="color:#ff79c6">=</span> duration<span style="color:#ff79c6">.</span>total_seconds() <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">60</span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;With duration of </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> minutes and </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> seconds&#34;</span> <span style="color:#ff79c6">%</span> (<span style="color:#8be9fd;font-style:italic">min</span>, sec))
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Time when the song end is </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> end<span style="color:#ff79c6">.</span>ctime())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">A song started playing at Sun Nov  1 10:05:00 2020
+With duration of 3 minutes and 20 seconds
+Time when the song end is Sun Nov  1 10:08:20 2020
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เป็นการบวกออบเจ็คของเวลาเข้ากับ <code>timedelta</code> ออบเจ็คซึ่งได้จะผลลัพธ์เป็นออบเจ็คของเวลาใหม่ที่เลื่อนเวลาไปข้างหน้าตามช่วงเวลาที่กำหนดใน <code>timedelta</code> ออบเจ็ค</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">start <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">0</span>)
+duration <span style="color:#ff79c6">=</span> timedelta(minutes <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>, seconds <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>)
+
+
+</code></pre></div><p>เราได้สร้างออบเจ็คของวันที่สำหรับเก็บเวลาเริ่มต้นของการเล่นเพลงๆ หนึ่ง จากนั้นสร้าง <code>timedelta</code> ออบเจ็คสำหรับเก็บความยาวของเพลงซึ่งมีระยะเวลาเป็น 3 นาทีกับ 20 วินาที</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">end <span style="color:#ff79c6">=</span> start <span style="color:#ff79c6">+</span> duration
+
+
+</code></pre></div><p>จากนั้นเป็นการบวกเวลาเริ่มต้นการเล่นกับระยะเวลาของเพลงเข้าด้วยกัน นี่จะทำให้เราได้ออบเจ็คใหม่ซึ่งเป็นเวลาในตอนที่เพลงจบพอดี</p>
+<p>นี่เป็นวิธีสำหรับการบวกวันที่และเวลากับ <code>timedelta</code> ออบเจ็คในภาษา Python เพื่อให้ได้เวลาใหม่โดยอ้างอิงจากออบเจ็คของเวลาที่ต้องการ</p>
+<p>ตัวอย่างต่อมาเป็นการลบออบเจ็คของวันที่ด้วย <code>timedelta</code> นี่จะทำให้เราได้เวลาใหม่ถอยหลังไปจากช่วงของเวลาที่ลบออกไป นี่เป็นตัวอย่างของโปรแกรมเพื่อหาว่าการก่อสร้างอาคารนี้ได้เริ่มต้นเมื่อไหร่</p>
+<p>time_subtraction.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime, timedelta
+
+completed_date <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2014</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>)
+duration <span style="color:#ff79c6">=</span> timedelta(days <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">453</span>, hours <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span>)
+
+started_date <span style="color:#ff79c6">=</span> completed_date <span style="color:#ff79c6">-</span> duration
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;The construction completed at </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> completed_date<span style="color:#ff79c6">.</span>ctime())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;The construction started at </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> started_date<span style="color:#ff79c6">.</span>ctime())
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">The construction completed at Tue Jun 10 12:00:00 2014
+The construction started at Thu Mar 14 08:00:00 2013
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เป็นโปรแกรมสำหรับคำนวณหาว่าการก่อสร้างเริ่มต้นขึ้นเมื่อไหร่ โดยสิ่งที่เราทราบคือวันที่ที่การก่อสร้างเสร็จสิ้น และระยะเวลาในการก่อสร้าง ดังนั้นการนำสองค่านี้มาลบกันจะทำให้เราได้รับวันที่เริ่มก่อสร้าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">completed_date <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2014</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>)
+duration <span style="color:#ff79c6">=</span> timedelta(days <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">453</span>, hours <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span>)
+
+
+</code></pre></div><p>ก่อนอื่นเราได้สร้างออบเจ็คของวันที่สำหรับเก็บวันที่ที่การก่อสร้างเสร็จสิ้นในตัวแปร <code>completed_date</code> จากนั้นสร้างออบเจ็ค <code>duration</code> สำหรับเก็บระยะเวลาการก่อสร้างที่ใช้ระยะเวลาทั้งสิ้น 453 วันกับอีก 4 ชั่วโมง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">started_date <span style="color:#ff79c6">=</span> completed_date <span style="color:#ff79c6">-</span> duration
+
+
+</code></pre></div><p>จากนั้นเป็นการลบวันที่ที่การก่อสร้างเสร็จสิ้นด้วยระยะเวลาในการก่อสร้าง จะทำได้เราได้รับเวลาเริ่มต้นของการก่อสร้างอาคารนี้</p>
+<p>ในการลบวันที่ด้วยออบเจ็คของ <code>timedelta</code> ผลลัพธ์ที่ได้จะเป็นออบเจ็คของวันที่ใหม่ที่หักลบออกจากช่วงเวลาใน <code>timedelta</code> ออบเจ็ค อย่างไรก็ตามการลบเวลาในภาษา Python นั้น เราสามารถลบออบเจ็คของสองวันที่ออกจากกันได้ เมื่อทำเช่นนี้จะทำให้เราได้ผลต่างของเวลาในรูปแบบของ <code>timedelta</code> ออบเจ็ค</p>
+<p>ในตัวอย่างต่อไปนี้ จะเป็นการแสดงวิธีการหาผลต่างของเวลาที่เกิดจากการลบกันระหว่างออบเจ็คของสองวันที่</p>
+<p>Mateo ใช้เวลาในการทำข้อสอบเริ่มจาก 8 นาฬิกา 30 นาที และเสร็จสิ้นในตอน 12 นาฬิกา 45 นาที เราต้องการทราบว่าเขาใช้เวลาทั้งหมดในการทำข้อสอบเท่าไร นี่เป็นตัวอย่างของโปรแกรมสำหรับคำนวณหาระยะทั้งหมดที่ Mateo ใช้ในการทำข้อสอบครั้งนี้</p>
+<p>time_difference.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> datetime, timedelta
+
+<span style="color:#6272a4"># Test started</span>
+start <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">30</span>, <span style="color:#bd93f9">0</span>)
+<span style="color:#6272a4"># Test ended</span>
+end <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">45</span>, <span style="color:#bd93f9">0</span>)
+
+<span style="color:#6272a4"># Result is a timedelta object</span>
+diff <span style="color:#ff79c6">=</span> end <span style="color:#ff79c6">-</span> start
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Time started </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c"> &#34;</span> <span style="color:#ff79c6">%</span> start<span style="color:#ff79c6">.</span>ctime())
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Time finihsed </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c"> &#34;</span> <span style="color:#ff79c6">%</span> end<span style="color:#ff79c6">.</span>ctime())
+
+total_seconds <span style="color:#ff79c6">=</span> diff<span style="color:#ff79c6">.</span>total_seconds()
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Time used to finish the test is </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> seconds&#34;</span> <span style="color:#ff79c6">%</span> total_seconds)
+
+<span style="color:#6272a4"># Format time by ourselves</span>
+hour <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(total_seconds <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">3600</span>)
+<span style="color:#8be9fd;font-style:italic">min</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(total_seconds <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">3600</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">60</span>)
+sec <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(total_seconds <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">60</span>)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Or </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> hours </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> mins </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c"> secs&#34;</span> <span style="color:#ff79c6">%</span> (hour, <span style="color:#8be9fd;font-style:italic">min</span>, sec))
+
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Time started Thu Nov  5 08:30:00 2020
+Time finished Thu Nov  5 12:45:00 2020
+Time used to finish the test is 15300 seconds
+Or 4 hours 15 mins 0 secs
+
+
+</code></pre></div><p>ในตัวอย่างนี้ เป็นการหาผลต่างของเวลาสองช่วงเวลาโดยการนำเวลามาลบกัน ผลลัพธ์ที่ได้จากการลบกันของออบเจ็คของเวลาคือ <code>timedelta</code> ออบเจ็ค</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">start <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">30</span>, <span style="color:#bd93f9">0</span>)
+end <span style="color:#ff79c6">=</span> datetime(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">45</span>, <span style="color:#bd93f9">0</span>)
+
+
+</code></pre></div><p>เรามีออบเจ็คของวันที่สำหรับเก็บเวลาเริ่มต้นและสิ้นสุดของการทำข้อสอบ เนื่องจากวันเริ่มต้นและวันสิ้นสุดเป็นวันเดียวกัน เราสามารถกำหนดวันที่เป็นอะไรก็ได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">diff <span style="color:#ff79c6">=</span> end <span style="color:#ff79c6">-</span> start
+
+
+</code></pre></div><p>จากนั้นเป็นการนำออบเจ็คของเวลาทั้งสองมาลบกัน นี่จะได้ผลลัพธ์เป็น <code>timedelta</code> ออบเจ็คที่เป็นผลต่างระหว่างวันที่ทั้งสอง นั่นคือเวลาทั้งหมดที่ Mateo ใช้ในการทำข้อสอบนั่นเอง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">total_seconds <span style="color:#ff79c6">=</span> diff<span style="color:#ff79c6">.</span>total_seconds()
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Time used to finish the test is </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> seconds&#34;</span> <span style="color:#ff79c6">%</span> total_seconds)
+
+
+</code></pre></div><p>เราสามารถใช้เมธอด <code>total_seconds()</code> เพื่อดูผลต่างของเวลาในหน่วยวินาที แต่เนื่องจากการแสดงเวลาในหน่วยของนาทีนั้นยากต่อการอ่าน เราจึงจัดรูปแบบการแสดงผลของเวลาโดยเริ่มจากหน่วยที่ใหญ่ที่สุดก่อนดังนี้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">hour <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(total_seconds <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">3600</span>)
+<span style="color:#8be9fd;font-style:italic">min</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(total_seconds <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">3600</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">60</span>)
+sec <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(total_seconds <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">60</span>)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Or </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> hours </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> mins </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c"> secs&#34;</span> <span style="color:#ff79c6">%</span> (hour, <span style="color:#8be9fd;font-style:italic">min</span>, sec))
+
+
+</code></pre></div><p>เนื่องจากเรามีเวลาทั้งหมดเป็นวินาที เราสามารถนำมันแยกออกเป็นหน่วยของชั่วโมง นาที และวินาทีได้ ซึ่งการแสดงผลแบบนี้จะทำให้เข้าใจง่ายกว่า</p>
+<h2 ref="คลาสและโมดลเกยวกบวนทและเวลา" ><strong>คลาสและโมดูลเกี่ยวกับวันที่และเวลา</strong></h2><a class="anchor" id="คลาสและโมดลเกยวกบวนทและเวลา"></a>
+<p>ในภาษา Python ยังมีคลาสอื่นๆ เกี่ยวกับวันที่และเวลาที่ยังไม่ได้พูดถึงในบทนี้ แต่จะแนะนำให้คุณรู้จักกับคลาสเหล่านั้นไว้ก่อน นี่เป็นรายชื่อของคลาสส่วนหนึ่งที่สามารถใช้ได้เมื่อต้องการทำงานกับวันที่และเวลาในภาษา Python</p>
+<ul>
+<li>คลาส <code>timedelta</code> เป็นออบเจ็คสำหรับเก็บระยะเวลาหรือผลต่างของเวลา</li>
+<li>คลาส <code>date</code> เป็นออบเจ็คที่เก็บข้อมูลเกี่ยวกับวันที่เท่านั้น คุณสามารถใช้คลาสนี้ได้เมื่อไม่ต้องการข้อมูลเกี่ยวกับเวลา</li>
+<li>คลาส <code>time</code> เป็นออบเจ็คที่เก็บข้อมูลเกี่ยวกับเวลาเท่านั้น คุณสามารถใช้คลาสนี้ได้เมื่อไม่ต้องการข้อมูลเกี่ยวกับวันที่</li>
+<li>คลาส <code>datetime</code> เป็นออบเจ็คที่เก็บข้อมูลทั้งวันที่และเวลา ซึ่งเป็นคลาสที่ใช้บ่อยและคุณได้รู้จักกับมันแล้วในบทนี้</li>
+<li>คลาส <code>timezone</code> เป็นออบเจ็คของเขตเวลาที่ใช้กำหนดเขตเวลาให้กับออบเจ็ควันที่และเวลา</li>
+</ul>
+<p>ในการเขียนโปรแกรม โดยทั่วไปแล้วมักใช้งานคลาส <code>datetime</code> เป็นหลัก แต่ในบางกรณี คุณอาจต้องการทำงานกับวันที่หรือเวลาเท่านั้น ในกรณีดังกล่าว คุณสามารถอ่านเพิ่มเติมเกี่ยวกับคลาสเฉพาะเหล่านี้ได้ที่นี่ <a href="https://docs.python.org/3/library/datetime.html"></a><a href="https://docs.python.org/3/library/datetime.html">https://docs.python.org/3/library/datetime.html</a></p>
+<p>ในบทนี้ คุณได้เรียนรู้เกี่ยวกับวันที่และเวลาในภาษา Python เราได้พูดถึงการนำค่าวันที่และเวลาปัจจุบันในระบบมาใช้ในโปรแกรมเพื่อแสดงผลหรือคำนวณ การสร้างออบเจ็คของเวลากับค่าวันที่และเวลาแบบกำหนดเอง และการดำเนินการกับเวลาเช่น การบวกและการลบเวลา</p>
+<p>Reference : <a href="http://marcuscode.com/lang/python/date-and-time"></a><a href="http://marcuscode.com/lang/python/date-and-time">http://marcuscode.com/lang/python/date-and-time</a></p>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/phyblas/" title="phyblas" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>phyblas</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#วนทและเวลาปจจบน"><strong>วันที่และเวลาปัจจุบัน</strong></a></li>
+    <li><a href="#การสรางออบเจคของวนทและเวลา"><strong>การสร้างออบเจ็คของวันที่และเวลา</strong></a></li>
+    <li><a href="#unix-timestamp"><strong>Unix timestamp</strong></a></li>
+    <li><a href="#การบวกลบวนทและเวลา"><strong>การบวกลบวันที่และเวลา</strong></a></li>
+    <li><a href="#คลาสและโมดลเกยวกบวนทและเวลา"><strong>คลาสและโมดูลเกี่ยวกับวันที่และเวลา</strong></a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+		    
+		    <li>
+		    	
+		        <a href="https://example.comadmin/#/collections/pages/entries/tutorials/learning-python/24_date-time/_index" target="blank">
+		        <i class="fab fa-github"></i>
+		        Improve this page</a>
+		    </li>
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1406 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	9. ฟังก์ชัน (Function) :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-17T23:37:27 &#43;07">
+<meta name="description" content="ในบทนี้ คุณจะได้เรียนรู้เกี่ยวกับฟังก์ชันในภาษา Python เราจะพูดถึงการสร้างและการใช้งานฟังก์ชันในเบื้องต้น และการเรียกใช้งานฟังก์ชันในรูปแบบต่างๆ ที่สำคัญ เช่น Default Argument และ Keyword Augment และมากไปกว่านั้น เราจะแนะนำให้คุณรู้จักกับ built-in ฟังก์ชันในภาษา Python">
+
+
+
+<title>9. ฟังก์ชัน (Function) :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://example.com/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/example.com";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/learning-python/9_function/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://example.com'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/example.com";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://example.com/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/9_function/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/13_list_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/20_classes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/22_thread/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/learning-python/24_date-time/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/basic_functin/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/string_format/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://example.com/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://example.com">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/learning-python/">
+        Python by MascusCode
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        9. ฟังก์ชัน (Function)
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>9. ฟังก์ชัน (Function)</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#การสรางฟงกชนในภาษา-python">การสร้างฟังก์ชันในภาษา Python</a></li>
+    <li><a href="#การเรยกใชงานฟงกชนในภาษา-python">การเรียกใช้งานฟังก์ชันในภาษา Python</a></li>
+    <li><a href="#default-argument-values">Default Argument Values</a></li>
+    <li><a href="#keyword-arguments">Keyword Arguments</a></li>
+    <li><a href="#lambda-expressions">Lambda Expressions</a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <p>ในบทนี้ คุณจะได้เรียนรู้เกี่ยวกับฟังก์ชันในภาษา Python เราจะพูดถึงการสร้างและการใช้งานฟังก์ชันในเบื้องต้น และการเรียกใช้งานฟังก์ชันในรูปแบบต่างๆ ที่สำคัญ เช่น Default Argument และ Keyword Augment และมากไปกว่านั้น เราจะแนะนำให้คุณรู้จักกับ built-in ฟังก์ชันในภาษา Python</p>
+<h2 ref="การสรางฟงกชนในภาษา-python" >การสร้างฟังก์ชันในภาษา Python</h2><a class="anchor" id="การสรางฟงกชนในภาษา-python"></a>
+<p>ฟังก์ชัน (Function) คือส่วนของโค้ดหรือโปรแกรมที่ทำงานเพื่อวัตถุประสงค์บางอย่าง ในภาษา Python คุณสามารถสร้างฟังก์ชันของคุณเองเพื่อให้ทำงานที่ต้องการ ในการเขียนโปรแกรมเรามักจะแยกโค้ดที่มีการทำงานเหมือนๆ กันเป็นฟังก์ชันเอาไว้ และเรียกใช้ฟังก์ชันนั้นซ้ำๆ ซึ่งเป็นแนวคิดของการนำโค้ดกลับมาใช้ใหม่ (Code reuse) นี่เป็นรูปแบบของการประกาศฟังก์ชันในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">function_name</span>(args<span style="color:#ff79c6">...</span>):
+    <span style="color:#6272a4"># statements</span>
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">function_name</span>(args<span style="color:#ff79c6">...</span>):
+    <span style="color:#6272a4"># statements</span>
+    <span style="color:#ff79c6">return</span> value
+</code></pre></div><p>ในรูปแบบของการประกาศฟังก์ชันในภาษา Python นั้นจะใช้คำสั่ง <code>def</code> และหลังจากนั้น <code>function_name</code> เป็นชื่อของฟังก์ชัน และในวงเล็บ <code>()</code> เป็นการกำหนดพารามิเตอร์ของฟังก์ชัน พารามิเตอร์ของฟังก์ชันนั้นสามารถมีจำนวนเท่าไหร่ก็ได้หรือไม่มีก็ได้ และเช่นเดียวกับภาษาอื่นๆ ฟังก์ชันอาจจะมีหรือไม่มีการส่งค่ากลับ สำหรับฟังก์ชันที่ไม่มีการ return ค่ากลับนั้น เรามักจะเรียกว่า โพรซีเยอร์ (Procedure) ต่อไปมาดูตัวอย่างการประกาศและใช้งานฟังก์ชันในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">hello</span>(name):
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Hello </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> name)
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">count_vowel</span>(<span style="color:#8be9fd;font-style:italic">str</span>):
+    vowel <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    <span style="color:#ff79c6">for</span> c <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">str</span>:
+        <span style="color:#ff79c6">if</span> c <span style="color:#ff79c6">in</span> (<span style="color:#f1fa8c">&#39;A&#39;</span>, <span style="color:#f1fa8c">&#39;E&#39;</span>, <span style="color:#f1fa8c">&#39;I&#39;</span>, <span style="color:#f1fa8c">&#39;O&#39;</span>, <span style="color:#f1fa8c">&#39;U&#39;</span>, <span style="color:#f1fa8c">&#39;a&#39;</span>, <span style="color:#f1fa8c">&#39;e&#39;</span>, <span style="color:#f1fa8c">&#39;i&#39;</span>, <span style="color:#f1fa8c">&#39;o&#39;</span>, <span style="color:#f1fa8c">&#39;u&#39;</span>):
+            vowel <span style="color:#ff79c6">=</span> vowel <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">return</span> vowel
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">area</span>(width, height):
+    c <span style="color:#ff79c6">=</span> width <span style="color:#ff79c6">*</span> height
+    <span style="color:#ff79c6">return</span> c
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างฟังก์ชันจำนวน 3 ฟังก์ชัน ฟังก์ชันแรกมีชื่อว่า <code>hello()</code> เป็นฟังก์ชันสำหรับแสดงข้อความทักทายจากที่ชื่อส่งเข้ามา ฟังก์ชันนี้มีหนึ่งพารามิเตอร์คือ <code>name</code> สำหรับรับชื่อที่ส่งเข้ามาในฟังก์ชัน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">count_vowel</span>(<span style="color:#8be9fd;font-style:italic">str</span>):
+    vowel <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    <span style="color:#ff79c6">for</span> c <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">str</span>:
+        <span style="color:#ff79c6">if</span> c <span style="color:#ff79c6">in</span> (<span style="color:#f1fa8c">&#39;A&#39;</span>, <span style="color:#f1fa8c">&#39;E&#39;</span>, <span style="color:#f1fa8c">&#39;I&#39;</span>, <span style="color:#f1fa8c">&#39;O&#39;</span>, <span style="color:#f1fa8c">&#39;U&#39;</span>, <span style="color:#f1fa8c">&#39;a&#39;</span>, <span style="color:#f1fa8c">&#39;e&#39;</span>, <span style="color:#f1fa8c">&#39;i&#39;</span>, <span style="color:#f1fa8c">&#39;o&#39;</span>, <span style="color:#f1fa8c">&#39;u&#39;</span>):
+            vowel <span style="color:#ff79c6">=</span> vowel <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">return</span> vowel
+</code></pre></div><p>ต่อมาฟังก์ชัน <code>count_vowel()</code> เป็นฟังก์ชันสำหรับนับจำนวนสระใน String ฟังก์ชันนี้มีหนึ่ง String พารามิเตอร์ ในการทำงานของฟังก์ชันนั้นเราใช้คำสั่ง For loop ในการวนอ่านค่าทีละตัวอักษรเพื่อตรวจสอบว่าเป็นสระหรือไม่ด้วยคำสั่ง <code>in</code> และตัวแปร <code>vowel</code> นั้นใช้สำหรับนับจำนวนสระที่พบใน String ในตอนท้ายเราได้ส่งค่าของจำนวนสระที่นับได้กลับไปด้วยคำสั่ง <code>return</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">area</span>(width, height):
+    c <span style="color:#ff79c6">=</span> width <span style="color:#ff79c6">*</span> height
+    <span style="color:#ff79c6">return</span> c
+</code></pre></div><p>และฟังกชันสุดท้ายคือฟังก์ชัน <code>area()</code> เป็นฟังก์ชันสำหรับหาพื้นที่ของรูปสี่เหลี่ยมด้านขนาน และฟังก์ชันมีพารามิเตอร์สองตัวสำหรับความกว้างและความยาวของสี่เหลี่ยม และฟังก์ชันทำการ return ผลลัพธ์ที่เป็นพื้นที่กลับไปด้วยคำสั่ง <code>return</code></p>
+<h2 ref="การเรยกใชงานฟงกชนในภาษา-python" >การเรียกใช้งานฟังก์ชันในภาษา Python</h2><a class="anchor" id="การเรยกใชงานฟงกชนในภาษา-python"></a>
+<p>หลังจากเราได้สร้างฟังก์ชันในตัวอย่างก่อนหน้าแล้ว ต่อไปเราจะมาเรียกใช้งานฟังก์ชันเหล่านั้น ในการเรียกใช้ฟังก์ชันนั้นเราจะใช้ชื่อของฟังก์ชันและส่งอาร์กิวเมนต์ให้สอดคล้องกับพารามิเตอร์ที่กำหนดไว้ในฟังก์ชัน ดังนั้นอาร์กิวเมนต์คือค่าที่ส่งเข้าไปในฟังก์ชันตอนใช้งาน ส่วนพารามิเตอร์นั้นคือตัวแปรทีกำหนดไว้ในฟังก์ชันเพื่อรับค่าจากอาร์กิวเมนต์ มาดูตัวอย่างการเรียกใช้งานฟังก์ชันในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">hello</span>(name):
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Hello </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> name)
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">count_vowel</span>(<span style="color:#8be9fd;font-style:italic">str</span>):
+    vowel <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    <span style="color:#ff79c6">for</span> c <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">str</span>:
+        <span style="color:#ff79c6">if</span> c <span style="color:#ff79c6">in</span> (<span style="color:#f1fa8c">&#39;A&#39;</span>, <span style="color:#f1fa8c">&#39;E&#39;</span>, <span style="color:#f1fa8c">&#39;I&#39;</span>, <span style="color:#f1fa8c">&#39;O&#39;</span>, <span style="color:#f1fa8c">&#39;U&#39;</span>, <span style="color:#f1fa8c">&#39;a&#39;</span>, <span style="color:#f1fa8c">&#39;e&#39;</span>, <span style="color:#f1fa8c">&#39;i&#39;</span>, <span style="color:#f1fa8c">&#39;o&#39;</span>, <span style="color:#f1fa8c">&#39;u&#39;</span>):
+            vowel <span style="color:#ff79c6">=</span> vowel <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">return</span> vowel
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">area</span>(width, height):
+    c <span style="color:#ff79c6">=</span> width <span style="color:#ff79c6">*</span> height
+    <span style="color:#ff79c6">return</span> c
+
+<span style="color:#6272a4"># calling functions</span>
+hello(<span style="color:#f1fa8c">&#39;Danny&#39;</span>)
+hello(<span style="color:#f1fa8c">&#39;Mateo&#39;</span>)
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Vowel in string = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> count_vowel(<span style="color:#f1fa8c">&#39;marcuscode.com&#39;</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Vowel in string = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> count_vowel(<span style="color:#f1fa8c">&#39;Python&#39;</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Area = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> area(<span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">4</span>))
+</code></pre></div><p>ในตัวอย่าง เป็นการเรียกใช้งานฟังก์ชันที่เราสร้างขึ้น เราได้เรียกใช้ฟังก์ชัน <code>hello()</code> และส่งอาร์กิวเมนต์ที่เป็น String เข้าไปยังฟังก์ชัน เราเรียกใช้ฟังก์ชันนี้สองครั้ง ซึ่งนี่เองเป็นการ reuse โค้ดในการเขียนโปรแกรม</p>
+<p>หลังจากนั้นเราเรียกใช้ฟังก์ชัน <code>count_vowel()</code> และฟังก์ชัน <code>area()</code> และส่งพารามิเตอร์ที่ถูกต้องไปยังฟังก์ชัน และเพราะว่าฟังก์ชันเหล่านี้มีการ return ค่ากลับ เราสามารถนำค่าเหล่านี้ไปใช้งานได้ต่อไป เราได้นำไปใช้กับฟังก์ชัน <code>print()</code> เพื่อจัดรูปแบบการแสดงผล</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Hello Danny
+Hello Mateo
+Vowel in string = 5
+Vowel in string = 1
+Area = 32
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม จากการเรียกใช้งานฟังก์ชันในภาษา Python</p>
+<h2 ref="default-argument-values" >Default Argument Values</h2><a class="anchor" id="default-argument-values"></a>
+<p>ในภาษา Python เราสามารถสร้างฟังก์ชันโดยการกำหนด Default Argument ให้กับฟังก์ชันพารามิเตอร์ได้ Default Argument เป็นการการกำหนดค่าเริ่มต้นให้กับอาร์กิวเมนต์ที่ส่งเข้ามายังฟังก์ชัน นั่นทำให้เราสามารถเรียกใช้งานฟังก์ชันโดยการส่งอาร์กิวเมนต์น้อยกว่าจำนวนที่กำหนดไว้ในฟังก์ชันได้ ซึ่งอำนวยความสะดวกในการใช้งานมากขึ้น มาดูตัวอย่างการสร้างและใช้งานฟังก์ชันกับ Default Argument</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">show_info</span>(name, salary <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">84360</span>, lang <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Python&#34;</span>):
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Name: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> name)
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Salary: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> salary)
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Language: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> lang)
+    <span style="color:#ff79c6">print</span>()
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างฟังก์ชัน <code>show_info()</code> สำหรับแสดงข้อมูลของโปรแกรมเมอร์ ข้อมูลที่จำเป็นต้องการจะแสดงนั้นมีชื่อ เงินเดือน และภาษาที่เขียน ในฟังก์ชันของเรานั้นมี 3 พารามิเตอร์ พารามิเตอร์แรก <code>name</code> นั้นเป็นพารามิเตอร์แบบปกติ และสองพารามิเตอร์นั้นเป็น Default Argument ซึ่งเรากำหนดค่าเริ่มต้นให้กับพารามิเตอร์โดยใช้เครื่องหมาย <code>=</code> ในการกำหนดพารามิเตอร์นั้น Default Argument ต้องอยู่หลังพารามิเตอร์แบบปกติเสมอ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback"># calling function
+show_info(&#39;Mateo&#39;)
+show_info(&#39;Mateo&#39;, 105000)
+show_info(&#39;Danny&#39;, 120000, &#39;Java&#39;)
+</code></pre></div><p>ในการเรียกใช้งานฟังก์ชันนั้น เราต้องทำการส่งค่าอาร์กิวเมนต์สำหรับพารามิเตอร์แบบปกติเสมอ ส่วนพารามิเตอร์แบบ Default Argument นั้นเป็นทางเลือก ในตัวอย่าง คำสั่งเราเรียกใช้ฟังก์ชันโดยอาร์กิวเมนต์เพียงหนึ่งตัวเข้าไป ทำให้สองอาร์กิวเมนต์ที่เหลือที่เป็น Default Argument ใช้ค่าเริ่มต้นของมันแทน คือ 84360 สำหรับเงินเดือน และ <code>&quot;Python&quot;</code> สำหรับภาษาเขียนโปรแกรม</p>
+<p>ต่อมาเราเรียกใช้ฟังก์ชันโดยการส่งสองอาร์กิวเมนต์เข้าไป ทำให้มีเพียงพารามิเตอร์สุดท้ายเท่านั้นที่ใช้ค่าเริ่มต้น และในคำสั่งสุดท้ายเป็นการส่งค่าครบจำนวนให้กับทุกอาร์กิวเมนต์</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">Name: Mateo
+Salary: <span style="color:#bd93f9">84360</span>
+Language: Python
+
+Name: Mateo
+Salary: <span style="color:#bd93f9">105000</span>
+Language: Python
+
+Name: Danny
+Salary: <span style="color:#bd93f9">120000</span>
+Language: Java
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม ในการเรียกใช้งานฟังก์ชันกับ Default Argument</p>
+<h2 ref="keyword-arguments" >Keyword Arguments</h2><a class="anchor" id="keyword-arguments"></a>
+<p>ในภาษา Python เราสามารถเรียกใช้งานฟังก์ชันในรูปแบบของ Keyword Argument โดยการใช้ชื่อของพารามิเตอร์สำหรับส่งอาร์กิวเมนต์ ในการใช้งานนั้น พารามิเตอร์ต้องมีการกำหนดในรูปแบบของ Default Argument ก่อน มาดูตัวอย่างการใช้งาน Keyword Arguments ในภาษา Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">create_button</span>(<span style="color:#8be9fd;font-style:italic">id</span>, color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#ffffff&#39;</span>, text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Button&#39;</span>, size <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">16</span>):  
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Button ID: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> <span style="color:#8be9fd;font-style:italic">id</span>)
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Attributes:&#39;</span>)
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Color: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> color)
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Text: </span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> text)
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Size: </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> px&#39;</span> <span style="color:#ff79c6">%</span> size)
+    <span style="color:#ff79c6">print</span>()
+
+create_button(<span style="color:#bd93f9">10</span>)
+create_button(<span style="color:#bd93f9">11</span>, color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#4286f4&#39;</span>, text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Sign up&#39;</span>)
+create_button(<span style="color:#8be9fd;font-style:italic">id</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">12</span>, color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#323f54&#39;</span>, size <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">24</span>)
+create_button(color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#1cb22b&#39;</span>, text <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Log in&#39;</span>, size <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">32</span>, <span style="color:#8be9fd;font-style:italic">id</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">13</span>)
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างฟังก์ชันสำหรับการสร้างปุ่ม ในการเรียกใช้งานฟังก์ชันนั้น เราสามารถเรียกโดยวิธีการส่งแบบ Keyword Argument ได้ในรูปแบบของ <code>argument = value</code> และสามารถสลับตำแหน่งของอาร์กิวเมนต์ได้ และในฟังก์ชันนั้นเรามีอาร์กิวเมนต์ <code>id</code> ซึ่งเป็นอาร์กิวเมนต์แบบปกติ สำหรับอาร์กิวเมนต์แบบปกติในการส่งค่านั้นต้องส่งเป็นลำดับแรกเสมอ เหมือนในคำสั่งการเรียกใช้งานสองคำสั่งแรก หรือสามารถส่งแบบ Keyword Argument ก็ได้เช่นกันเหมือนในคำสั่งที่สามและสี่</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Button ID: 10
+Attributes:
+Color: #ffffff
+Text: Button
+Size: 16 px
+
+Button ID: 11
+Attributes:
+Color: #4286f4
+Text: Sign up
+Size: 16 px
+
+Button ID: 12
+Attributes:
+Color: #323f54
+Text: Button
+Size: 24 px
+
+Button ID: 13
+Attributes:
+Color: #1cb22b
+Text: Log in
+Size: 32 px
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม เราได้เรียกใช้งานฟังก์ชันเพื่อสร้างปุ่ม 4 ปุ่มในรูปแบบต่างๆ ของการใช้ Keyword Argument</p>
+<p>ตัวอย่างของฟังก์ชันที่มีการใช้งานในรูปแบบของ Keyword Argument ก็คือ ฟังก์ชัน <code>print()</code> เราสามารถเปลี่ยนตัวคั่นระหว่างอาร์กิวเมนต์ และการแสดงผลลัพธ์ในตอนท้ายของฟังก์ชันได้ โดยการใช้ Keyword <code>sep</code> และ <code>end</code> ตามลำดับ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">print</span>(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>)
+<span style="color:#ff79c6">print</span>(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, sep <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;-&#39;</span>, end <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;/&#39;</span>)
+</code></pre></div><h2 ref="lambda-expressions" >Lambda Expressions</h2><a class="anchor" id="lambda-expressions"></a>
+<p>Lambda Expressions คือ anonymous function ที่เป็นฟังก์ชันที่มีการทำงานขนาดเล็กอยู่ภายในที่สามารถมีได้เพียง Expression เดียวเท่านั้น เราสามารถสร้างโดยใช้คำสั่ง <code>lambda</code> เราสามารถใช้ Lambda Expressions สร้างออบเจ็คของฟังก์ชันได้ และค่า return จะเป็นค่าที่ได้จากผลลัพธ์ของ Expression ของฟังก์ชัน มาดูตัวอย่างการใช้งาน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">f <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">lambda</span> x: x <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+<span style="color:#ff79c6">print</span>(f(<span style="color:#bd93f9">2</span>))
+<span style="color:#ff79c6">print</span>(f(<span style="color:#bd93f9">8</span>))
+
+g <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">lambda</span> a, b: (a <span style="color:#ff79c6">+</span> b) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span>
+<span style="color:#ff79c6">print</span>(g(<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">5</span>))
+<span style="color:#ff79c6">print</span>(g(<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">33</span>))
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">make_incrementor</span>(n):
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">lambda</span> x: x <span style="color:#ff79c6">+</span> n
+
+f <span style="color:#ff79c6">=</span> make_incrementor(<span style="color:#bd93f9">13</span>)
+<span style="color:#ff79c6">print</span>(f(<span style="color:#bd93f9">0</span>))
+<span style="color:#ff79c6">print</span>(f(<span style="color:#bd93f9">1</span>))
+<span style="color:#ff79c6">print</span>(f(<span style="color:#bd93f9">5</span>))
+</code></pre></div><p>ในตัวอย่าง เราได้สร้าง Lambda Expressions เป็นจำนวนสามฟังก์ชัน ฟังก์ชันแรกเป็นฟังก์ชันสำหรับเพิ่มตัวเลขขึ้น 1 และฟังก์ชันที่สองเป็นฟังก์ชันสำหรับหาค่าเฉลี่ยของตัวเลขสองจำนวน คุณจะสังเกตได้ว่าฟังก์ชันแรกนั้นมี 1 อาร์กิวเมนต์และฟังก์ชันที่สองนั้นมี 2 อาร์กิวเมนต์ และฟังก์ชันสุดท้ายนั้นเป็นการ return ฟังก์ชันกลับภายในฟังก์ชันอีกที และเป็นฟังก์ชันสำหรับเพิ่มตัวเลขขึ้นจำนวน n จากอาร์กิวเมนต์ที่ใส่เข้าไป</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">3
+9
+4.0
+21.5
+13
+14
+18
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<p>นอกจากนี้ Lambda Expressions ยังมีประโยชน์เพื่อใช้งานกับ built-in function เช่น ฟังก์ชัน <code>filter()</code> และฟังก์ชัน <code>map()</code> ในภาษา Python มันใช้เป็นอาร์กิวเมนต์ส่งเข้าไปในฟังก์ชัน เพื่อสร้าง Expression ให้กับฟังก์ชัน มาดูตัวอย่างการใช้งาน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">15</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">7</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">28</span>, <span style="color:#bd93f9">30</span>]
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">filter</span>(<span style="color:#ff79c6">lambda</span> x: x <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">5</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>, numbers)))
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">map</span>(<span style="color:#ff79c6">lambda</span> x: x <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">2</span>, numbers)))
+</code></pre></div><p>ในตัวอย่าง เรามีลิสต์ของตัวเลข Integer และเราได้ใช้ฟังก์ชัน <code>filter()</code> และฟังก์ชัน <code>map()</code> ซึ่งเป็นฟังก์ชันที่มีอาร์กิวเมนต์ตัวแรกเป็นฟังก์ชัน และตัวที่สองเป็นลิสต์ ในการทำงานของฟังก์ชัน <code>filter()</code> เราได้ใช้ฟังก์ชันกรองเอาตัวเลขที่ตรงกันกับ Lambda Expressions ซึ่งก็คือตัวเลขในลิสต์ที่หารด้วย 5 ลงตัว และในการใช้ฟังก์ชัน <code>map()</code> เป็นการเชื่อมโยงค่าในลิสต์ให้ตรงกับ Lambda Expressions คือการเพิ่มตัวเลขให้เป็นสองเท่า ซึ่งทั้งสองฟังก์ชันนี้ส่งค่ากลับเป็นออบเจ็ค และเราใช้ฟังก์ชัน <code>list()</code> เพื่อแปลงออบเจ็คให้เป็นสิสต์</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">[15, 5, 10, 30]
+[4, 30, 10, 14, 20, 6, 56, 60]
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<p>ในบทนี้ คุณได้เรียนรู้เกี่ยวกับการสร้างและใช้งานฟังก์ชันในภาษา Python และการเรียกใช้ฟังก์ชันในรูปแบบอื่นๆ เช่น Default Argument และ Keyword Argument และนอกจากนี้เรายังแนะนำให้คุณรู้จักกับการใช้งาน Lambda Expressions เพื่อสร้างฟังก์ชันขนาดเล็กแต่ช่วยอำนวยความสะดวกในการทำงานเป็นอย่างมาก และแนะนำให้คุณรู้จักกับ built-in function</p>
+<blockquote>
+<p>Reference : <a href="http://marcuscode.com">http://marcuscode.com</a></p>
+</blockquote>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/learning-python/10_string/" title="10. String" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>10. String</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#การสรางฟงกชนในภาษา-python">การสร้างฟังก์ชันในภาษา Python</a></li>
+    <li><a href="#การเรยกใชงานฟงกชนในภาษา-python">การเรียกใช้งานฟังก์ชันในภาษา Python</a></li>
+    <li><a href="#default-argument-values">Default Argument Values</a></li>
+    <li><a href="#keyword-arguments">Keyword Arguments</a></li>
+    <li><a href="#lambda-expressions">Lambda Expressions</a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+		    
+		    <li>
+		    	
+		        <a href="https://example.comadmin/#/collections/pages/entries/tutorials/learning-python/9_Function/_index" target="blank">
+		        <i class="fab fa-github"></i>
+		        Improve this page</a>
+		    </li>
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>
