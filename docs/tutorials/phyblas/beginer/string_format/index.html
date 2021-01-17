@@ -1,0 +1,1412 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	การจัดการกับสายอักขระ :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-18T00:09:27 &#43;07">
+<meta name="description" content="">
+
+
+
+<title>การจัดการกับสายอักขระ :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/yo-sarawut.github.io";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/phyblas/beginer/string_format/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://yo-sarawut.github.io'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/yo-sarawut.github.io";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/9_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/13_list_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/20_classes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/22_thread/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/24_date-time/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/basic_functin/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_format/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://yo-sarawut.github.io">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/phyblas/">
+        phyblas
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/phyblas/beginer/">
+        ผู้เริ่มต้น (Beginer)
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        การจัดการกับสายอักขระ
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>การจัดการกับสายอักขระ</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ความยาวของสายอกขระ"><strong>ความยาวของสายอักขระ</strong></a></li>
+    <li><a href="#การเขาถงสมาชกของสายอกขระ"><strong>การเข้าถึงสมาชิกของสายอักขระ</strong></a></li>
+    <li><a href="#การเปรยบเทยบสายอกขระ"><strong>การเปรียบเทียบสายอักขระ</strong></a></li>
+    <li><a href="#การตดชองวางหวทาย"><strong>การตัดช่องว่างหัวท้าย</strong></a></li>
+    <li><a href="#การแบงและเชอมรวมสายอกขระ"><strong>การแบ่งและเชื่อมรวมสายอักขระ</strong></a></li>
+    <li><a href="#การเปลยนตวพมพใหญพมพเลก"><strong>การเปลี่ยนตัวพิมพ์ใหญ่พิมพ์เล็ก</strong></a></li>
+    <li><a href="#การคนหาขอความทตองการภายในสายอกขระ"><strong>การค้นหาข้อความที่ต้องการภายในสายอักขระ</strong></a></li>
+    <li><a href="#ตรวจจดเรมและจดสนสด"><strong>ตรวจจุดเริ่มและจุดสิ้นสุด</strong></a></li>
+    <li><a href="#การแทนท"><strong>การแทนที่</strong></a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <h2 ref="ความยาวของสายอกขระ" ><strong>ความยาวของสายอักขระ</strong></h2><a class="anchor" id="ความยาวของสายอกขระ"></a>
+<p>สายอักขระอาจยาวเท่าใดก็ได้ การหาความยาวของสายอักขระทำได้เช่นเดียวกับลิสต์หรือทูเพิล คือใช้ฟังก์ชัน len</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39;กขคงจ&#39;</span>))  <span style="color:#6272a4"># ได้ 5</span>
+</code></pre></div><p>สายอักขระอาจจะมีความยาวเป็นศูนย์ก็ได้ ซึ่งเขียนแทนด้วยเครื่องหมายคำพูดติดกันสองตัวโดยไม่มีอะไรข้างใน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39;&#39;</span>))  <span style="color:#6272a4"># ได้ 0</span>
+</code></pre></div><p>ช่องว่างจะถูกนับรวมความยาวด้วย ต่อให้ไม่ได้อยู่ตรงกลางก็ตาม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39; &#39;</span>))  <span style="color:#6272a4"># ได้ 2</span>
+</code></pre></div><p>ภายในสายอักขระอักษรทุกตัวมีความยาวตัวละหน่วยเท่ากันหมด ไม่ว่าจะเป็นอักษรอะไรก็ตาม จะเป็นอักษร ASCII หรือไม่ก็ตาม<br>
+***ข้อนี้สำหรับไพธอน 3 ส่วนในไพธอน 2 จะแตกต่างออกไป  <a href="https://phyblas.hinaboshi.com/20151219">รายละเอียด</a></p>
+<h2 ref="การเขาถงสมาชกของสายอกขระ" ><strong>การเข้าถึงสมาชิกของสายอักขระ</strong></h2><a class="anchor" id="การเขาถงสมาชกของสายอกขระ"></a>
+<p>สายอักขระก็เป็นข้อมูลชนิดลำดับเช่นเดียวกับลิสต์หรือทูเพิล ดังนั้นสามารถเข้าถึงข้อมูลได้โดยใส่ลำดับสมาชิกในวงเล็บเหลี่ยม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;bestuurdersaansprakelijkheidsverzekering&#39;</span>  
+<span style="color:#ff79c6">print</span>(a[<span style="color:#bd93f9">0</span>])  <span style="color:#6272a4"># ได้ b  </span>
+<span style="color:#ff79c6">print</span>(a[<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>])  <span style="color:#6272a4"># ได้ g  </span>
+<span style="color:#ff79c6">print</span>(a[<span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">len</span>(a)<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>)])  <span style="color:#6272a4"># ได้ l</span>
+</code></pre></div><p>สามารถเข้าถึงทีละหลายตัวด้วยการใช้ : เช่นกัน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a[<span style="color:#bd93f9">29</span>:<span style="color:#bd93f9">40</span>]  <span style="color:#6272a4"># ได้ verzekering  </span>
+a[<span style="color:#bd93f9">0</span>:<span style="color:#bd93f9">40</span>:<span style="color:#bd93f9">2</span>]  <span style="color:#6272a4"># ได้ &#39;bsuresasrkljhisezkrn&#39;</span>
+</code></pre></div><p>การแก้ไขและเพิ่มข้อความในสายอักขระ<br>
+สายอักขระไม่สามารถแก้ไขข้อมูลอะไรได้ เช่นเดียวกับทูเพิล</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">b <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;เขาเป็นคนป่วย&#39;</span>  
+b[<span style="color:#bd93f9">9</span>:<span style="color:#bd93f9">11</span>] <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;ร&#39;</span>  <span style="color:#6272a4"># ได้ TypeError: &#39;str&#39; object does not support item assignment</span>
+</code></pre></div><p>แม้ว่าจะไม่สามารถแก้ไขข้อความข้างในได้ แต่ก็สามารถสร้างใหม่ทับตัวเก่าได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">b <span style="color:#ff79c6">=</span> b[:<span style="color:#bd93f9">9</span>]<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#39;ร&#39;</span><span style="color:#ff79c6">+</span>b[<span style="color:#bd93f9">11</span>:]  
+<span style="color:#ff79c6">print</span>(b)  <span style="color:#6272a4"># ได้ เขาเป็นคนรวย</span>
+</code></pre></div><p>ส่วนการเพิ่มข้อความในสายอักขระก็ทำได้โดยเอาสายอักขระเดิมมาบวกกับสิ่งที่ต้องการเพิ่ม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">c <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;เขาเป็นคนดี&#39;</span>  
+c <span style="color:#ff79c6">+=</span>  <span style="color:#f1fa8c">&#39;แต่พูด&#39;</span>  
+<span style="color:#ff79c6">print</span>(c)  <span style="color:#6272a4"># ได้ เขาเป็นคนดีแต่พูด</span>
+</code></pre></div><h2 ref="การเปรยบเทยบสายอกขระ" ><strong>การเปรียบเทียบสายอักขระ</strong></h2><a class="anchor" id="การเปรยบเทยบสายอกขระ"></a>
+<p>สายอักขระสามารถนำมาทำการเปรียบเทียบเพื่อหาค่าความจริงเท็จได้โดย เมื่อใช้เครื่องหมาย == จะให้ค่าเป็นจริงต่อเมื่อเหมือนกันทุกตัวอักษร</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;J&#39;</span>  <span style="color:#ff79c6">==</span>  <span style="color:#f1fa8c">&#39;j&#39;</span>)  <span style="color:#6272a4"># False เพราะพิมพ์เล็กกับพิมพ์ใหญ่ถือเป็นคนละตัว  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;J&#39;</span>  <span style="color:#ff79c6">==</span>  <span style="color:#f1fa8c">&#39;j&#39;</span><span style="color:#ff79c6">.</span>upper())  <span style="color:#6272a4">#True</span>
+</code></pre></div><p>เมื่อใช้เปรียบเทียบมากกว่า &gt; หรือน้อยกว่า &lt; จะเปรียบเทียบลำดับภายในยูนิโค้ดของอักษรนั้นทีละตัว โดยเลขที่มาก่อนถือว่าค่าน้อยกว่า หากเหมือนกันจึงจะพิจารณาตัวต่อไป</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;11&#39;</span>  <span style="color:#ff79c6">&gt;</span>  <span style="color:#f1fa8c">&#39;2&#39;</span>)  <span style="color:#6272a4"># False เพราะเลข 1 เทียบกับ 2 ก่อน  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;A&#39;</span>  <span style="color:#ff79c6">&gt;</span>  <span style="color:#f1fa8c">&#39;a&#39;</span>)  <span style="color:#6272a4"># False เพราะตัวพิมพ์ใหญ่มาก่อนตัวพิมพ์เล็ก  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;ü&#39;</span>  <span style="color:#ff79c6">&gt;</span>  <span style="color:#f1fa8c">&#39;z&#39;</span>)  <span style="color:#6272a4"># True เพราะ z เป็น ASCII แต่ ü ไม่ใช่  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;ม&#39;</span>  <span style="color:#ff79c6">&gt;</span>  <span style="color:#f1fa8c">&#39;美&#39;</span>)  <span style="color:#6272a4"># False เพราะอักษรไทยมาก่อนอักษรจีนในยูนิโค้ด  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;ア&#39;</span>  <span style="color:#ff79c6">&gt;</span>  <span style="color:#f1fa8c">&#39;あ&#39;</span>)  <span style="color:#6272a4"># True เพราะฮิรางานะมาก่อนคาตาคานะ</span>
+</code></pre></div><h2 ref="การตดชองวางหวทาย" ><strong>การตัดช่องว่างหัวท้าย</strong></h2><a class="anchor" id="การตดชองวางหวทาย"></a>
+<p>ช่องว่างที่หัวท้ายของสายอักขระสามารถทำให้หายไปได้โดยใช้เมธอด strip</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39; แม่นแล้ว &#39;</span>))  <span style="color:#6272a4"># ได้ 13  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39; แม่นแล้ว &#39;</span><span style="color:#ff79c6">.</span>strip())  <span style="color:#6272a4"># ได้ แม่นแล้ว  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39; แม่นแล้ว &#39;</span><span style="color:#ff79c6">.</span>strip()))  <span style="color:#6272a4"># ได้ 8</span>
+</code></pre></div><p>หากต้องการตัดแค่หัวหรือท้ายอย่างเดียวก็ใช้ lstrip หรือ rstrip โดย lstrip จะตัดเฉพาะหัว ส่วน rstrip จะตัดเฉพาะท้าย</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39; แม่นแล้ว &#39;</span><span style="color:#ff79c6">.</span>lstrip()))  <span style="color:#6272a4"># ได้ 11  </span>
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39; แม่นแล้ว &#39;</span><span style="color:#ff79c6">.</span>rstrip()))  <span style="color:#6272a4"># ได้ 10</span>
+</code></pre></div><h2 ref="การแบงและเชอมรวมสายอกขระ" ><strong>การแบ่งและเชื่อมรวมสายอักขระ</strong></h2><a class="anchor" id="การแบงและเชอมรวมสายอกขระ"></a>
+<p>สามารถแยกสายอักขระออกเป็นส่วนๆได้ด้วยเมธอด split โดยเมธอดนี้จะสร้างลิสต์ของสายอักขระแต่ละส่วนที่แยกได้ออกมา</p>
+<p>โดยในการแยกจำเป็นต้องระบุว่าจะใช้สัญลักษณ์อะไรเป็นตัวแยก โดยใส่เป็นอาร์กิวเมนต์ในเมธอด เช่นหากต้องการให้แยกตามจุลภาพ ,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">it <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;pasta, spaghetti, macaroni, lasagna, pizza&#39;</span>  
+ita <span style="color:#ff79c6">=</span> it<span style="color:#ff79c6">.</span>split(<span style="color:#f1fa8c">&#39;, &#39;</span>)  
+<span style="color:#ff79c6">print</span>(ita)  <span style="color:#6272a4"># ได้ [&#39;pasta&#39;, &#39;spaghetti&#39;, &#39;macaroni&#39;, &#39;lasagna&#39;, &#39;pizza&#39;]</span>
+</code></pre></div><p>หากไม่ใส่อาร์กิวเมนต์อะไรลงในเมธอดเลยจะแยกตามช่องว่าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">fr <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;croissant baguette éclair macaron madeleine&#39;</span>  
+fra <span style="color:#ff79c6">=</span> fr<span style="color:#ff79c6">.</span>split()  
+<span style="color:#ff79c6">print</span>(fra)  <span style="color:#6272a4"># ได้ [&#39;croissant&#39;, &#39;baguette&#39;, &#39;éclair&#39;, &#39;macaron&#39;, &#39;madeleine&#39;]</span>
+</code></pre></div><p>ในทางตรงข้ามมีเมธอดที่ชื่อ join เอาไว้ใช้รวมลิสต์ของสายอักขระเข้าเป็นสายอักขระอันเดียว</p>
+<p>join นั้นถือเป็นเมธอดของสายอักขระโดยทำกับสายอักขระที่เป็นตัวคั่นแล้วมีอาร์กิวเมนต์เป็นลิสต์ของสายอักขระที่ต้องการรวม</p>
+<p>วิธีการใช้อาจดูแล้วเข้าใจยากกว่า split อยู่หน่อยและอาจสับสนกันได้ ให้ดูตัวอย่างประกอบ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">f <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;ยานี้ดี&#39;</span>,  <span style="color:#f1fa8c">&#39;กินแล้วแข็ง&#39;</span>,  <span style="color:#f1fa8c">&#39;แรงไม่มี&#39;</span>,  <span style="color:#f1fa8c">&#39;โรคภัยไข้เจ็บเบียดเบียน&#39;</span>]  
+g <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;&#39;</span><span style="color:#ff79c6">.</span>join(f)  
+<span style="color:#ff79c6">print</span>(g)  <span style="color:#6272a4"># ได้ ยานี้ดีกินแล้วแข็งแรงไม่มีโรคภัยไข้เจ็บเบียดเบียน</span>
+</code></pre></div><p>ลองเขียนโปรแกรมสำหรับเชื่อมโดยไม่ใช้ join ดูก็สามารถทำได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">f <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;ยานี้ดี&#39;</span>,  <span style="color:#f1fa8c">&#39;กินแล้วแข็ง&#39;</span>,  <span style="color:#f1fa8c">&#39;แรงไม่มี&#39;</span>,  <span style="color:#f1fa8c">&#39;โรคภัยไข้เจ็บเบียดเบียน&#39;</span>]  
+g <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;&#39;</span>  
+<span style="color:#ff79c6">for</span>  s  <span style="color:#ff79c6">in</span>  f:  
+g <span style="color:#ff79c6">+=</span> s  
+<span style="color:#ff79c6">print</span>(g)
+</code></pre></div><p>ตัวเชื่อมอาจใช้เป็นอะไรก็ได้ เช่นเว้นวรรคก็ใช้ \n</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">h <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#39;</span><span style="color:#ff79c6">.</span>join([<span style="color:#f1fa8c">&#39;ooo&#39;</span>,<span style="color:#f1fa8c">&#39;o o&#39;</span>,<span style="color:#f1fa8c">&#39;ooo&#39;</span>])  
+<span style="color:#ff79c6">print</span>(h)
+</code></pre></div><p>จะได้สายอักขระที่มี ๓ บรรทัด</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">ooo  
+o o  
+ooo
+</code></pre></div><p>สำหรับการแยกสายอักขระโดยใช้การขึ้นบรรทัดใหม่เป็นตัวแยกอาจใช้เมธอด splitlines เช่นลองใช้กับสายอักขระตัวเมื่อครู่</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(h<span style="color:#ff79c6">.</span>splitlines())  <span style="color:#6272a4"># ได้กลับมาเป็น [&#39;ooo&#39;, &#39;o o&#39;, &#39;ooo&#39;]</span>
+</code></pre></div><p>หากต้องการแยกสายอักขระออกเป็นทีละตัวๆก็อาจทำได้ง่ายๆด้วยการใช้ list แปลงเป็นลิสต์ได้เลย</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#f1fa8c">&#39;กลุ่มก้อน&#39;</span>))  <span style="color:#6272a4"># ได้ [&#39;ก&#39;, &#39;ล&#39;, &#39;ุ&#39;, &#39;่&#39;, &#39;ม&#39;, &#39;ก&#39;, &#39;้&#39;, &#39;อ&#39;, &#39;น&#39;]</span>
+</code></pre></div><h2 ref="การเปลยนตวพมพใหญพมพเลก" ><strong>การเปลี่ยนตัวพิมพ์ใหญ่พิมพ์เล็ก</strong></h2><a class="anchor" id="การเปลยนตวพมพใหญพมพเลก"></a>
+<p>อักษรโรมันมักประกอบไปด้วยตัวพิมพ์เล็กและพิมพ์ใหญ่ ในภาษาไพธอนมีคำสั่งสำหรับเปลี่ยนข้อความในสายอักขระทั้งหมดเป็นพิมพ์เล็ก หรือพิมพ์ใหญ่ทั้งหมด นั่นคือใช้เมธอด upper และ lower</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;Die Flügel der Freiheit&#39;</span>  
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>upper())  <span style="color:#6272a4"># ได้ DIE FLÜGEL DER FREIHEIT  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>lower())  <span style="color:#6272a4"># ได้ die flügel der freiheit</span>
+</code></pre></div><p>อักษรกรีกเองก็มีตัวพิมพ์เล็กพิมพ์ใหญ่ สามารถใช้ได้ด้วย</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;Αστρονομία&#39;</span>  
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>upper())  <span style="color:#6272a4"># ΑΣΤΡΟΝΟΜΊΑ  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>lower())  <span style="color:#6272a4"># αστρονομία</span>
+</code></pre></div><p>***แต่ถ้าใช้ในไพธอน 2 มีข้อต้องระวัง    <a href="https://phyblas.hinaboshi.com/20151219">อ่านรายละเอียด</a></p>
+<p>สำหรับอักษรไทยไม่มีตัวพิมพ์เล็กพิมพ์ใหญ่จึงไม่มีผลอะไรกับเมธอดนี้</p>
+<p>ลองเขียนโปรแกรมให้สร้างสายอักขระขึ้นใหม่โดยเปลี่ยนคำที่เป็นตัวพิมพ์เล็กทั้งหมดให้เป็นตัวพิมพ์ใหญ่สลับกับตัวพิมพ์เล็ก</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;pneumoultramicroscopicossilicovulcanoconioticozinhos&#39;</span>  
+b <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;&#39;</span>  
+<span style="color:#ff79c6">for</span>  i  <span style="color:#ff79c6">in</span>  <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">0</span>,<span style="color:#8be9fd;font-style:italic">len</span>(a),<span style="color:#bd93f9">2</span>):  
+b <span style="color:#ff79c6">+=</span> a[i]<span style="color:#ff79c6">.</span>upper()  
+<span style="color:#ff79c6">if</span>(i<span style="color:#ff79c6">&lt;</span><span style="color:#8be9fd;font-style:italic">len</span>(a)<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>): b <span style="color:#ff79c6">+=</span> a[i<span style="color:#ff79c6">+</span><span style="color:#bd93f9">1</span>]  
+<span style="color:#ff79c6">print</span>(b)  <span style="color:#6272a4"># ได้ PnEuMoUlTrAmIcRoScOpIcOsSiLiCoVuLcAnOcOnIoTiCoZiNhOs</span>
+</code></pre></div><h2 ref="การคนหาขอความทตองการภายในสายอกขระ" ><strong>การค้นหาข้อความที่ต้องการภายในสายอักขระ</strong></h2><a class="anchor" id="การคนหาขอความทตองการภายในสายอกขระ"></a>
+<p>การจะตรวจว่าข้อความสั้นๆที่เราต้องการค้นนั้นอยู่ภายในสายอักขระยาวๆหรือไม่สามารถใช้ in เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#f1fa8c">&#39;Essen&#39;</span>  <span style="color:#ff79c6">in</span>  <span style="color:#f1fa8c">&#39;Sie sind das Essen und wir sind die Jäger&#39;</span>  <span style="color:#6272a4"># ได้ True</span>
+</code></pre></div><p>หากต้องการหาว่าคำที่ต้องการนั้นอยู่ในตำแหน่งไหนก็อาจทำการวนซ้ำเพื่อค้น เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">g <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;Sie sind das Essen und wir sind die Jäger&#39;</span>  
+s <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;Essen&#39;</span>  
+<span style="color:#ff79c6">if</span>(s  <span style="color:#ff79c6">in</span>  guren):  
+<span style="color:#ff79c6">for</span>  i  <span style="color:#ff79c6">in</span>  <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#8be9fd;font-style:italic">len</span>(g)):  
+<span style="color:#ff79c6">if</span>(s  <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">in</span>  g[i:]):  
+<span style="color:#ff79c6">print</span>(i<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>)  
+<span style="color:#ff79c6">break</span>  
+<span style="color:#ff79c6">else</span>:  <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;ไม่พบคำที่ต้องการหา&#39;</span>)
+</code></pre></div><p>ผลลัพธ์จะได้ 13</p>
+<p>อย่างไรก็ตามในภาษาไพธอนมีคำสั่งที่สามารถช่วยค้นหาได้โดยอัตโนมัติอยู่ นั่นคือ find</p>
+<p>โครงสร้าง</p>
+<p>สายอักขระ.find(คำที่ค้น, จุดเริ่มค้น, จุดสิ้นสุดการค้น)</p>
+<p>โดยที่จุดเริ่มต้นและสิ้นสุดอาจใส่หรือไม่ใส่ก็ได้ ถ้าไม่ใส่ก็จะค้นทั้งหมด</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">g <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;Sie sind das Essen und wir sind die Jäger&#39;</span>  
+<span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#39;Essen&#39;</span>))  <span style="color:#6272a4"># ได้ 13</span>
+</code></pre></div><p>หากค้นหาแล้วไม่พบ จะคืนค่า -1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#39;der&#39;</span>))  <span style="color:#6272a4"># ได้ -1</span>
+</code></pre></div><p>กรณีที่มีคำที่ค้นอยู่ ๒ ตัวขึ้นไป จะขึ้นตำแหน่งของตัวแรก</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#39;sind&#39;</span>))  <span style="color:#6272a4"># ได้ 4</span>
+</code></pre></div><p>หากต้องการให้ค้นไล่มาจากด้านหลังให้ใช้เมธอด rfind</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>rfind(<span style="color:#f1fa8c">&#39;sind&#39;</span>))  <span style="color:#6272a4"># ได้ 27</span>
+</code></pre></div><p>กรณีที่กำหนดจุดเริ่มต้นและจุดสิ้นสุด ถ้าตัวที่ต้องการหาไม่อยู่ในขอบเขตก็จะหาไม่พบ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#39;Sie&#39;</span>,<span style="color:#bd93f9">3</span>))  <span style="color:#6272a4"># ได้ -1 (คือหาไม่พบ)  </span>
+<span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#39;die&#39;</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">35</span>))  <span style="color:#6272a4"># ได้ 32  </span>
+<span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>find(<span style="color:#f1fa8c">&#39;die&#39;</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">32</span>))  <span style="color:#6272a4"># ได้ -1 (คือหาไม่พบ)</span>
+</code></pre></div><p>นอกจากนี้ยังมีเมธอด index และ rindex ซึ่งก็ใช้ค้นหาเหมือนกัน แต่ความต่างคือหากค้นหาแล้วไม่เจอจะขึ้นขัดข้องแทนที่จะคืนค่า -1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>index(<span style="color:#f1fa8c">&#39;Eren&#39;</span>))  <span style="color:#6272a4"># ได้ ValueError: substring not found</span>
+</code></pre></div><p>หากต้องการนับจำนวนคำที่ต้องการค้นว่ามีทั้งหมดกี่ตัวสามารถใช้เมธอด count</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(g<span style="color:#ff79c6">.</span>count(<span style="color:#f1fa8c">&#39;sind&#39;</span>))  <span style="color:#6272a4"># ได้ 2</span>
+</code></pre></div><h2 ref="ตรวจจดเรมและจดสนสด" ><strong>ตรวจจุดเริ่มและจุดสิ้นสุด</strong></h2><a class="anchor" id="ตรวจจดเรมและจดสนสด"></a>
+<p>ในการตรวจว่าข้อความขึ้นต้นและสิ้นสุดเป็นตัวที่ต้องการหรือไม่นั้น มีเมธอดเฉพาะที่สามารถใช้ได้ คือ startswith กับ endswith</p>
+<p>โครงสร้าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">สายอักขระ<span style="color:#ff79c6">.</span>startswith(คำที่ค้น, จุดเริ่มค้น, จุดสิ้นสุดการค้น)  
+สายอักขระ<span style="color:#ff79c6">.</span>endswith(คำที่ค้น, จุดเริ่มค้น, จุดสิ้นสุดการค้น)
+</code></pre></div><p>ตัวอย่าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;verbrennungsanlage&#39;</span>  
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>startswith(<span style="color:#f1fa8c">&#39;ver&#39;</span>))  <span style="color:#6272a4"># ได้ True  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>startswith(<span style="color:#f1fa8c">&#39;ver&#39;</span>,<span style="color:#bd93f9">3</span>))  <span style="color:#6272a4"># ได้ False  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>startswith(<span style="color:#f1fa8c">&#39;bren&#39;</span>,<span style="color:#bd93f9">3</span>))  <span style="color:#6272a4"># ได้ True  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>startswith(<span style="color:#f1fa8c">&#39;erb&#39;</span>,<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">7</span>))  <span style="color:#6272a4"># ได้ True  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>endswith(<span style="color:#f1fa8c">&#39;sanlage&#39;</span>))  <span style="color:#6272a4"># ได้ True  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>endswith(<span style="color:#f1fa8c">&#39;nung&#39;</span>,<span style="color:#bd93f9">7</span>))  <span style="color:#6272a4"># ได้ False  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>endswith(<span style="color:#f1fa8c">&#39;san&#39;</span>,<span style="color:#bd93f9">3</span>,<span style="color:#bd93f9">14</span>))  <span style="color:#6272a4"># ได้ True  </span>
+<span style="color:#ff79c6">print</span>(a<span style="color:#ff79c6">.</span>endswith(<span style="color:#f1fa8c">&#39;san&#39;</span>,<span style="color:#bd93f9">12</span>,<span style="color:#bd93f9">14</span>))  <span style="color:#6272a4"># ได้ False</span>
+</code></pre></div><h2 ref="การแทนท" ><strong>การแทนที่</strong></h2><a class="anchor" id="การแทนท"></a>
+<p>สามารถค้นหาอักษรที่ต้องการแล้วเขียนทับได้โดยใช้เมธอด replace<br>
+โครงสร้าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">สายอักขระ<span style="color:#ff79c6">.</span>replace(ข้อความที่จะให้ถูกแทนที่,ข้อความที่จะนำไปแทน,จำนวนที่จะแทน)  
+</code></pre></div><p>จำนวนที่แทนอาจไม่จำเป็นต้องใส่ก็ได้ หากไม่ใส่มีกี่ตัวก็จะถูกแทนหมด</p>
+<p>ตัวอย่าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">v <span style="color:#ff79c6">=</span>  <span style="color:#f1fa8c">&#39;ไก่จิกเด็กตายเด็กตายบนปากโอ่ง&#39;</span>  
+<span style="color:#ff79c6">print</span>(v<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#39;เด็กตาย&#39;</span>,<span style="color:#f1fa8c">&#39;เด็กเต้น&#39;</span>))  <span style="color:#6272a4"># ได้ ไก่จิกเด็กเต้นเด็กเต้นบนปากโอ่ง</span>
+</code></pre></div><p>กรณีที่กำหนดจำนวนก็จะถูกแทนแค่จำนวนนั้น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(v<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#39;เด็กตาย&#39;</span>,<span style="color:#f1fa8c">&#39;โดนเตียง&#39;</span>,<span style="color:#bd93f9">1</span>))  <span style="color:#6272a4"># ได้ ไก่จิกโดนเตียงเด็กตายบนปากโอ่ง</span>
+</code></pre></div><p>กรณีที่อยากลบข้อความก็ทำได้โดยปล่อยว่าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(v<span style="color:#ff79c6">.</span>replace(<span style="color:#f1fa8c">&#39;จิกเด็กตายเด็ก&#39;</span>,<span style="color:#f1fa8c">&#39;&#39;</span>))  <span style="color:#6272a4"># ได้ ไก่ตายบนปากโอ่ง</span>
+</code></pre></div><p><strong>อ้างอิง</strong></p>
+<p><a href="http://docs.python.jp/3/library/functions.html">http://docs.python.jp/3/library/functions.html</a><br>
+<a href="http://python.civic-apps.com/string-find">http://python.civic-apps.com/string-find</a><br>
+<a href="http://python.civic-apps.com/string-split-join">http://python.civic-apps.com/string-split-join</a><br>
+<a href="http://www.isl.ne.jp/pcsp/python/python19.html">http://www.isl.ne.jp/pcsp/python/python19.html</a></p>
+<blockquote>
+<p>Reference : <a href="https://phyblas.hinaboshi.com/tsuchinoko11">https://phyblas.hinaboshi.com/tsuchinoko11</a></p>
+</blockquote>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/phyblas/beginer/list/" title="การจัดการกับลิสต์ (List)" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>การจัดการกับลิสต์ (List)</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ความยาวของสายอกขระ"><strong>ความยาวของสายอักขระ</strong></a></li>
+    <li><a href="#การเขาถงสมาชกของสายอกขระ"><strong>การเข้าถึงสมาชิกของสายอักขระ</strong></a></li>
+    <li><a href="#การเปรยบเทยบสายอกขระ"><strong>การเปรียบเทียบสายอักขระ</strong></a></li>
+    <li><a href="#การตดชองวางหวทาย"><strong>การตัดช่องว่างหัวท้าย</strong></a></li>
+    <li><a href="#การแบงและเชอมรวมสายอกขระ"><strong>การแบ่งและเชื่อมรวมสายอักขระ</strong></a></li>
+    <li><a href="#การเปลยนตวพมพใหญพมพเลก"><strong>การเปลี่ยนตัวพิมพ์ใหญ่พิมพ์เล็ก</strong></a></li>
+    <li><a href="#การคนหาขอความทตองการภายในสายอกขระ"><strong>การค้นหาข้อความที่ต้องการภายในสายอักขระ</strong></a></li>
+    <li><a href="#ตรวจจดเรมและจดสนสด"><strong>ตรวจจุดเริ่มและจุดสิ้นสุด</strong></a></li>
+    <li><a href="#การแทนท"><strong>การแทนที่</strong></a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1531 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	23. Thread :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-18T00:09:27 &#43;07">
+<meta name="description" content="">
+
+
+
+<title>23. Thread :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/yo-sarawut.github.io";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/learning-python/22_thread/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://yo-sarawut.github.io'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/yo-sarawut.github.io";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/9_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/13_list_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/20_classes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/22_thread/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/24_date-time/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/basic_functin/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_format/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://yo-sarawut.github.io">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/learning-python/">
+        Python by MascusCode
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        23. Thread
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>23. Thread</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#thread-คออะไร"><strong>Thread คืออะไร</strong></a></li>
+    <li><a href="#การสราง-thread-ในภาษา-python"><strong>การสร้าง Thread ในภาษา Python</strong></a></li>
+    <li><a href="#การสรางคลาส-thread"><strong>การสร้างคลาส Thread</strong></a></li>
+    <li><a href="#การเขยนโปรแกรมแบบ-multi-thread"><strong>การเขียนโปรแกรมแบบ Multi-thread</strong></a></li>
+    <li><a href="#thread-joining"><strong>Thread Joining</strong></a></li>
+    <li><a href="#thread-synchronization"><strong>Thread synchronization</strong></a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <p>ในบทนี้ คุณจะได้เรียนรู้เกี่ยวกับ Thread ในภาษา Python เราจะพูดเกี่ยวกับการสร้างและใช้งาน Thread และวิธีการนำ Thread มาช่วยเพื่อเพิ่มประสิทธิภาพให้กับโปรแกรมของเรา</p>
+<h2 ref="thread-คออะไร" ><strong>Thread คืออะไร</strong></h2><a class="anchor" id="thread-คออะไร"></a>
+<p>Thread (เทร็ด) คือลำดับการทำงานของชุดคำสั่งโปรแกรมที่เล็กที่สุดซึ่งโดยทั่วไปแล้วจะอยู่ภายใน Process โดยที่ในหนึ่ง Process นั้นจะสามารถมีได้หลาย Thread การใช้งาน Thread จะทำให้เราสามารถเขียนโปรแกรมที่ทำงานแบบคู่ขนานและใช้ทรัพยากรบางอย่างร่วมกัน ยกตัวอย่างเช่น หน่วยความจำ เมื่อมีหลาย Thread ทำงานพร้อมกัน เราจะเรียกการเขียนโปรแกรมในรูปแบบนี้ว่า Multi-thread</p>
+<p><img src="http://marcuscode.com/media/92/marcuscode_hugHqlUH_1000.jpg" alt="http://marcuscode.com/media/92/marcuscode_hugHqlUH_1000.jpg"></p>
+<p>รูปภาพแสดงการทำงานของ Thread และ Process</p>
+<p>โดยทั่วไปแล้ว โปรแกรมที่เราเขียนในภาษา Python นั้นจะรันอยู่ภายใน Thread หลัก ซึ่งเป็น Thread เริ่มต้นเมื่อโปรแกรมของภาษา Python เริ่มทำงาน ซึ่งภายใน Thread หลักนี้เอง เราสามารถสร้าง Thread อื่นๆ เพื่อใช้ประโยชน์จากมันได้</p>
+<h2 ref="การสราง-thread-ในภาษา-python" ><strong>การสร้าง Thread ในภาษา Python</strong></h2><a class="anchor" id="การสราง-thread-ในภาษา-python"></a>
+<p>ในการสร้าง Thread นั้นเราสามารถสร้างได้จากคลาส <code>Thread</code> ที่อยู่ภายในโมดูล <code>threading</code> ซึ่งโมดูลนี้ประกอบไปด้วยคลาสต่างๆ ที่ใช้สำหรับสร้างและทำงานเกี่ยวกับ Thread นี่เป็นตัวอย่างการสร้าง Thread ในภาษา Python</p>
+<p>thread1.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> threading
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">thread_callback</span>():
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Hello inside Thread&#34;</span>)
+
+thr <span style="color:#ff79c6">=</span> threading<span style="color:#ff79c6">.</span>Thread(target<span style="color:#ff79c6">=</span>thread_callback)
+thr<span style="color:#ff79c6">.</span>start()
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Hello inside Thread
+
+</code></pre></div><p>ในตัวอย่าง เราได้สร้าง Thread อย่างง่ายขึ้นมา โดย Thread นี้ใช้สำหรับแสดงข้อความทักทายง่ายๆ จากภายใน Thread</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> threading
+
+</code></pre></div><p>คลาส <code>Thread</code> เป็นคลาสที่อยู่ภายใต้โมดูล <code>theading</code> ดังนั้นเราจึงต้องทำการ import โมดูลเข้ามาก่อนที่จะใช้งานคลาสที่ต้องการได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">thr <span style="color:#ff79c6">=</span> threading<span style="color:#ff79c6">.</span>Thread(target<span style="color:#ff79c6">=</span>thread_callback)
+thr<span style="color:#ff79c6">.</span>start()
+
+</code></pre></div><p>หลังจากนั้นเราสร้าง Thread ใหม่ขึ้นมาเก็บไว้ในตัวแปร <code>thr</code> ในคอนสตรัคเตอร์นั้นเราสามารถส่งอาร์กิวเมนต์ <code>target</code> ซึ่งจะต้องเป็นฟังก์ชันที่สามารถเรียกใช้งานได้ และฟังก์ชันนี้จะทำงานเมื่อเราเรียกเมธอด <code>start()</code> บนออบเจ็ค Thread เพื่อให้ Thread เริ่มทำงาน</p>
+<p>ในบางครั้ง คุณอาจจะต้องการส่งค่าเพื่อนำเข้าไปใช้งานในฟังก์ชัน callback คุณสามารถทำได้โดยการส่งผ่านอาร์กิวเมนต์ <code>args</code> ดังในตัวอย่างต่อไปนี้</p>
+<p>thread2.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> threading
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">thread_callback</span>(name, loop):
+    <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, loop <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>):
+        <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">%s</span><span style="color:#f1fa8c">: </span><span style="color:#f1fa8c">%i</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">%</span> (name, i))
+
+thr <span style="color:#ff79c6">=</span> threading<span style="color:#ff79c6">.</span>Thread(target<span style="color:#ff79c6">=</span>thread_callback, args<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;Thread-1&#34;</span>, <span style="color:#bd93f9">5</span>])
+thr<span style="color:#ff79c6">.</span>start()
+</code></pre></div><p>ในตัวอย่าง เราได้กำหนดค่าให้กับฟังก์ชัน <code>thread_callback</code> โดยการกำหนดผ่านอาร์กิวเมนต์ <code>args</code> ซึ่งเป็นอาเรย์ของค่าที่เราต้องการส่งเข้าไป เมื่อเราเรียกใช้งานเมธอด <code>start()</code> ค่าที่เราส่งผ่าน <code>args</code> จะถูกส่งเข้าไปยังพารามิเตอร์ <code>name</code> และ <code>loop</code> ตามลำดับ</p>
+<p>โดยที่ <code>name</code> นั้นเป็นชื่อที่เราต้องการกำหนดให้กับ Thread ส่วน <code>loop</code> นั้นเป็นจำนวนรอบที่เราต้องการแสดงตัวเลขภายใน Thread</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Thread-1: 1
+Thread-1: 2
+Thread-1: 3
+Thread-1: 4
+Thread-1: 5
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<h2 ref="การสรางคลาส-thread" ><strong>การสร้างคลาส Thread</strong></h2><a class="anchor" id="การสรางคลาส-thread"></a>
+<p>ในตัวอย่างก่อนหน้า เราได้สร้าง Thread ออบเจ็คจากคลาส Thread ซึ่งเป็นคลาสไลบรารี่ของภาษา Python ที่ใช้สำหรับสร้าง Thread ที่ไม่ซับซ้อนมาก อย่างไรก็ตาม คุณสามารถสร้างคลาส Thread ของคุณได้โดยการสืบทอดคลาสของคุณจากคลาส <code>Thread</code> นี่เป็นตัวอย่าง</p>
+<p>thread3.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> threading <span style="color:#ff79c6">import</span> Thread 
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">MyThread</span>(Thread):
+
+    <span style="color:#ff79c6">def</span> __init__(self, firstName):
+        Thread<span style="color:#ff79c6">.</span>__init__(self)
+        self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">=</span> firstName
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+        <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Hello &#34;</span> <span style="color:#ff79c6">+</span> self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; from &#34;</span> <span style="color:#ff79c6">+</span> self<span style="color:#ff79c6">.</span>name)
+
+thr1 <span style="color:#ff79c6">=</span> MyThread(<span style="color:#f1fa8c">&#34;Meteo&#34;</span>)
+thr2 <span style="color:#ff79c6">=</span> MyThread(<span style="color:#f1fa8c">&#34;Danny&#34;</span>)
+
+thr1<span style="color:#ff79c6">.</span>start()
+thr2<span style="color:#ff79c6">.</span>start()
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Hello Meteo from Thread-1
+Hello Danny from Thread-2
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างคลาสที่มีชื่อว่า <code>MyThread</code> และคลาสนี้ได้ทำการสืบทอดคลาสมาจากคลาส <code>Thread</code> ภายในคอนสตรัคเตอร์ของคลาสมีหนึ่งอาร์กิวเมนต์ <code>firstName</code> สำหรับกำหนดชื่อที่ต้องการแสดงการทักทายใน Thread</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Hello &#34;</span> <span style="color:#ff79c6">+</span> self<span style="color:#ff79c6">.</span>firstName <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; from &#34;</span> <span style="color:#ff79c6">+</span> self<span style="color:#ff79c6">.</span>name)
+</code></pre></div><p>คลาสที่ทำการสืบทอดมาจากคลาส <code>Thread</code> นั้นจะต้องทำการ override เมธอด <code>run()</code> ซึ่งเมธอดนี้จะทำงานเมื่อเราเรียกใช้งานเมธอด <code>start()</code> บนออบเจ็คของ Thread โดยเมธอดนี้ทำหน้าเหมือนกับเมธอด <code>thread_callback()</code> ในตัวอย่างก่อนหน้า</p>
+<p>ภายในเมธอด <code>run()</code> มีสองแอตทริบิวต์ที่เราแสดงออกมาทางหน้าจอ แอตทริบิวต์แรกคือ <code>self.firstName</code> ซึ่งเป็นชื่อของคนที่ต้องการกล่าวทักทายที่เราส่งมาในตอนสร้างออบเจ็ค และแอตทริบิวต์ที่สอง <code>self.name</code> นั้นเป็นแอตทริบิวต์ชื่อของ Thread ที่สืบทอดมาจากคลาส <code>Thread</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">thr1 <span style="color:#ff79c6">=</span> MyThread(<span style="color:#f1fa8c">&#34;Meteo&#34;</span>)
+thr2 <span style="color:#ff79c6">=</span> MyThread(<span style="color:#f1fa8c">&#34;Danny&#34;</span>)
+
+thr1<span style="color:#ff79c6">.</span>start()
+thr2<span style="color:#ff79c6">.</span>start()
+</code></pre></div><p>หลังจากนั้นเราได้นำคลาสที่เราสร้างขึ้นมาสร้างออบเจ็ค Thread โดยการส่งชื่อที่ต้องการให้โปรแกรมกล่าวคำทักทายผ่านทางคอนสตรัคเตอร์ของคลาส และเรียกใช้งานเมธอด <code>start()</code> เพื่อให้ Thread เริ่มทำงาน</p>
+<h2 ref="การเขยนโปรแกรมแบบ-multi-thread" ><strong>การเขียนโปรแกรมแบบ Multi-thread</strong></h2><a class="anchor" id="การเขยนโปรแกรมแบบ-multi-thread"></a>
+<p>Thread นั้นจะทำงานพร้อมกันแบบคู่ขนาน รวมทั้ง Thread หลักด้วย เพื่อแสดงให้คุณได้เห็น มาดูตัวอย่างของ Thread ที่มีการทำงานนานกว่าในตัวอย่างที่เราได้เห็นก่อนหน้า เราจะเขียนโปรแกรมเพื่อแสดงตัวเลข <code>1 - 5</code> จากภายใน Thread</p>
+<p>thread4.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> threading <span style="color:#ff79c6">import</span> Thread 
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Counter</span>(Thread):
+
+    <span style="color:#ff79c6">def</span> __init__(self, end):
+        Thread<span style="color:#ff79c6">.</span>__init__(self)
+        self<span style="color:#ff79c6">.</span>end <span style="color:#ff79c6">=</span> end
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+        <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, self<span style="color:#ff79c6">.</span>end <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>):
+            <span style="color:#ff79c6">print</span>(self<span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;: &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">str</span>(i))
+
+thr1 <span style="color:#ff79c6">=</span> Counter(<span style="color:#bd93f9">5</span>)
+thr2 <span style="color:#ff79c6">=</span> Counter(<span style="color:#bd93f9">5</span>)
+
+thr1<span style="color:#ff79c6">.</span>start()
+thr2<span style="color:#ff79c6">.</span>start()
+</code></pre></div><p>จากในโค้ดตัวอย่างนั้น คลาส <code>Counter</code> นั้นเป็นคลาสที่สืบทอดมาจากคลาส <code>Thread</code> หน้าที่ของมันคือการแสดงตัวเลขระหว่าง <code>1 - end</code> ภายใน Thread โดยที่ค่า <code>end</code> เป็นค่าที่ส่งเข้ามาในตอนสร้าง Thread</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+    <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, self<span style="color:#ff79c6">.</span>end <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>):
+        <span style="color:#ff79c6">print</span>(self<span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;: &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">str</span>(i))
+</code></pre></div><p>ภายในเมธอด <code>run()</code> เราได้เขียนคำสั่ง for loop เพื่อวนแสดงตัวเลขจาก <code>1 - end</code> โดยที่ในตอนสร้าง Thread ทั้งสองเราได้ส่งค่า <code>end</code> ซึ่งมีค่าเท่ากับ <code>5</code> ดังนั้น Thread จะแสดงตัวเลขจาก 1 - 5 นั่นเอง และนอกจากนี้เรายังได้แสดงชื่อของ Thread จากแอตทริบิวต์ <code>self.name</code> เพื่อบอกให้ทราบว่าตัวเลขทีแสดงนั้นทำงานอยู่ใน Thread ไหน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">thr1 <span style="color:#ff79c6">=</span> Counter(<span style="color:#bd93f9">5</span>)
+thr2 <span style="color:#ff79c6">=</span> Counter(<span style="color:#bd93f9">5</span>)
+
+thr1<span style="color:#ff79c6">.</span>start()
+thr2<span style="color:#ff79c6">.</span>start()
+</code></pre></div><p>หลังจากที่เราสร้างคลาสเสร็จสิ้น เราได้นำคลาสของเรามาสร้าง Thread ออบเจ็ค โดยการกำหนดค่าสิ้นสุดของการนับเป็น <code>5</code> ผ่านทางคอนสตรัคเตอร์ คุณสามารถเปลี่ยนเป็นค่าอื่นได้ เพื่อให้โปรแกรมนับไปถึงจำนวนที่ต้องการ</p>
+<p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Thread-1: 1
+Thread-2: 1
+Thread-1: 2
+Thread-2: 2
+Thread-1: 3
+Thread-2: 3
+Thread-1: 4
+Thread-1: 5
+Thread-2: 4
+Thread-2: 5
+</code></pre></div><p>จากตัวอย่างด้านบน เราสามารถเขียนในรูปแบบของฟังก์ชัน callback ได้ดังนี้ ซึ่งทั้งสองวิธีนั้นให้ผลลัพธ์ที่เหมือนกัน แต่ในวิธีนี้ คุณจะไม่สามารถเข้าถึงแอตทริบิวต์ <code>self.name</code> สำหรับชื่อของ Thread ที่สร้างอัตโนมัติได้ ดังนั้นถ้าหากต้องการกำหนดชื่อให้กับ Thread เราจำเป็นต้องกำหนดผ่านทางอาร์กิวเมนต์ <code>args</code> เพื่อส่งเข้าไปยังฟังก์ชันแทน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> threading <span style="color:#ff79c6">import</span> Thread
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">thread_callback</span>(name, end):
+    <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, end <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>):
+        <span style="color:#ff79c6">print</span>(name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;: &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">str</span>(i))
+
+thr1 <span style="color:#ff79c6">=</span> Thread(target<span style="color:#ff79c6">=</span>thread_callback, args<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;Thread-1&#39;</span>, <span style="color:#bd93f9">5</span>])
+thr2 <span style="color:#ff79c6">=</span> Thread(target<span style="color:#ff79c6">=</span>thread_callback, args<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;Thread-2&#39;</span>, <span style="color:#bd93f9">5</span>])
+
+thr1<span style="color:#ff79c6">.</span>start()
+thr2<span style="color:#ff79c6">.</span>start()
+</code></pre></div><h2 ref="thread-joining" ><strong>Thread Joining</strong></h2><a class="anchor" id="thread-joining"></a>
+<p>เมธอด <code>join()</code> นั้นเป็นเมธอดที่รอให้ Thread ทำงานให้จบก่อนที่จะทำในคำสั่งต่อไป เราใช้เมธอดนี้ในกรณีที่ต้องการรอการทำงานบางอย่างจาก Thread ยกตัวอย่างเช่น ก่อนที่จะทำงาน Thread ที่สองอาจจะต้องรอผลลัพธ์การทำงานจาก Thread แรกก่อน ดังนั้นก่อนที่เรียกใช้งาน Thread ที่สอง เราจำเป็นต้องรอให้ Thread แรกทำงานเสร็จก่อน มาดูตัวอย่าง</p>
+<p>thread_join1.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> threading <span style="color:#ff79c6">import</span> Thread 
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Counter</span>(Thread):
+
+    <span style="color:#ff79c6">def</span> __init__(self, end):
+        Thread<span style="color:#ff79c6">.</span>__init__(self)
+        self<span style="color:#ff79c6">.</span>end <span style="color:#ff79c6">=</span> end
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+        <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, self<span style="color:#ff79c6">.</span>end <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>):
+            <span style="color:#ff79c6">print</span>(self<span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;: &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">str</span>(i))
+
+thr1 <span style="color:#ff79c6">=</span> Counter(<span style="color:#bd93f9">5</span>)
+thr1<span style="color:#ff79c6">.</span>start()
+
+<span style="color:#6272a4"># Block until thread 1 is done </span>
+thr1<span style="color:#ff79c6">.</span>join()
+
+thr2 <span style="color:#ff79c6">=</span> Counter(<span style="color:#bd93f9">5</span>)
+thr2<span style="color:#ff79c6">.</span>start()
+</code></pre></div><p>ในตัวอย่าง เป็นโปรแกรมนับตัวเลขเหมือนในตัวอย่างก่อนหน้า แต่ในตัวอย่างนี้ เราต้องการให้โปรแกรมทำงานใน Thread แรกเสร็จก่อน แล้วค่อยทำ Thread ที่สองต่อ ดังนั้นก่อนที่จะเริ่มการทำงานของ Thread ที่สอง เราสามารถเรียกใช้งานเมธอด <code>join()</code> เพื่อให้โปรแกรมรอการทำงานใน Thread แรกให้เสร็จก่อนได้</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Thread-1: 1
+Thread-1: 2
+Thread-1: 3
+Thread-1: 4
+Thread-1: 5
+Thread-2: 1
+Thread-2: 2
+Thread-2: 3
+Thread-2: 4
+Thread-2: 5
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม สังเกตว่าโปรแกรมจะแสดงตัวเลขใน Thread แรกจนเสร็จก่อนแล้วค่อยทำงานใน Thread ที่สอง นั่นเป็นเพราะผลของคำสั่ง join() ที่เราเรียกใช้งานก่อน Thread ที่สองเริ่มต้นทำงานนั่นเอง</p>
+<p>อีกตัวอย่างสำหรับการใช้งานเมธอด <code>join()</code> คือเมื่อเราต้องการรอผลลัพธ์จากหลาย Thread ก่อนที่จะทำงานต่อ ต่อไปมาดูตัวอย่างโปรแกรมเรียงตัวเลขในลิสต์ โดยใช้ความสามารถจาก Thread เข้ามาช่วย นี่เป็นโค้ดของโปรแกรม</p>
+<p>thread_join2.py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> threading <span style="color:#ff79c6">import</span> Thread 
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">BubbleSorting</span>(Thread):
+
+    <span style="color:#ff79c6">def</span> __init__(self, numbers):
+        Thread<span style="color:#ff79c6">.</span>__init__(self)
+        self<span style="color:#ff79c6">.</span>numbers <span style="color:#ff79c6">=</span> numbers
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+        n <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(self<span style="color:#ff79c6">.</span>numbers)
+        <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">0</span>, n):
+            <span style="color:#ff79c6">for</span> j <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">0</span>, n <span style="color:#ff79c6">-</span> i <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>):
+                <span style="color:#ff79c6">if</span> self<span style="color:#ff79c6">.</span>numbers[j] <span style="color:#ff79c6">&gt;</span> self<span style="color:#ff79c6">.</span>numbers[j<span style="color:#ff79c6">+</span><span style="color:#bd93f9">1</span>]:
+                    temp <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>numbers[j]
+                    self<span style="color:#ff79c6">.</span>numbers[j] <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>numbers[j <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>]
+                    self<span style="color:#ff79c6">.</span>numbers[j <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> temp
+
+<span style="color:#6272a4"># List of numbers to sort</span>
+numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">14</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">17</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">11</span>]
+
+<span style="color:#6272a4"># Slice list into half and supply to each thread</span>
+thr1 <span style="color:#ff79c6">=</span> BubbleSorting(numbers[<span style="color:#bd93f9">0</span>:<span style="color:#bd93f9">6</span>])
+thr2 <span style="color:#ff79c6">=</span> BubbleSorting(numbers[<span style="color:#bd93f9">6</span>:<span style="color:#bd93f9">12</span>])
+
+thr1<span style="color:#ff79c6">.</span>start()
+thr2<span style="color:#ff79c6">.</span>start()
+
+<span style="color:#6272a4"># Wait for all threads to complete</span>
+thr1<span style="color:#ff79c6">.</span>join()
+thr2<span style="color:#ff79c6">.</span>join()
+
+<span style="color:#6272a4"># Obtain sorted lists from threads</span>
+list1 <span style="color:#ff79c6">=</span> thr1<span style="color:#ff79c6">.</span>numbers
+list2 <span style="color:#ff79c6">=</span> thr2<span style="color:#ff79c6">.</span>numbers
+
+len1 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(list1)
+len2 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(list2)
+
+<span style="color:#6272a4"># Merge sorted lists to final list</span>
+sorted_numbers <span style="color:#ff79c6">=</span> []
+i <span style="color:#ff79c6">=</span> j <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+<span style="color:#ff79c6">while</span> i <span style="color:#ff79c6">&lt;</span> len1 <span style="color:#ff79c6">and</span> j <span style="color:#ff79c6">&lt;</span> len2:
+    <span style="color:#ff79c6">if</span> list1[i] <span style="color:#ff79c6">&lt;=</span> list2[j]:
+        sorted_numbers<span style="color:#ff79c6">.</span>append(list1[i])
+        i <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">else</span>:
+        sorted_numbers<span style="color:#ff79c6">.</span>append(list2[j])
+        j <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+
+<span style="color:#ff79c6">while</span> (i <span style="color:#ff79c6">&lt;</span> len1):
+    sorted_numbers<span style="color:#ff79c6">.</span>append(list1[i])
+    i <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+
+<span style="color:#ff79c6">while</span> (j <span style="color:#ff79c6">&lt;</span> len2):
+    sorted_numbers<span style="color:#ff79c6">.</span>append(list1[j])
+    j <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Sorted from Thread-1:&#34;</span>)
+<span style="color:#ff79c6">print</span>(list1)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Sorted from Thread-2:&#34;</span>)
+<span style="color:#ff79c6">print</span>(list2)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Final sorted:&#34;</span>)
+<span style="color:#ff79c6">print</span>(sorted_numbers)
+</code></pre></div><p>และนี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Sorted from Thread-1:
+[1, 2, 4, 8, 14, 17]
+Sorted from Thread-2:
+[0, 3, 4, 11, 12, 16]
+Final sorted:
+[0, 1, 2, 3, 4, 4, 8, 11, 12, 14, 16, 17]
+</code></pre></div><p>ในตัวอย่าง เป็นโปรแกรมเรียงตัวเลขจากน้อยไปมาก โดยเราจะแบ่งลิสต์ของตัวเลขออกเป็นสองส่วนเท่าๆ กัน และส่งลิสต์เหล่านั้นเข้าไปจัดเรียงภายในคลาส <code>BubbleSorting</code> ด้วยอัลกอริทึม Bubble sort หลังจากทีทุก Thread เรียงตัวเลขเสร็จแล้ว เราได้นำลิสต์ทั้งสองมารวมกันใน Thread หลัก ต่อไปจะเป็นการอธิบายการทำงานของโค้ดในแต่ละส่วน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">BubbleSorting</span>(Thread):
+
+    <span style="color:#ff79c6">def</span> __init__(self, numbers):
+        Thread<span style="color:#ff79c6">.</span>__init__(self)
+        self<span style="color:#ff79c6">.</span>numbers <span style="color:#ff79c6">=</span> numbers
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">run</span>(self):
+        n <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(self<span style="color:#ff79c6">.</span>numbers)
+        <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">0</span>, n):
+            <span style="color:#ff79c6">for</span> j <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">0</span>, n <span style="color:#ff79c6">-</span> i <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>):
+                <span style="color:#ff79c6">if</span> self<span style="color:#ff79c6">.</span>numbers[j] <span style="color:#ff79c6">&gt;</span> self<span style="color:#ff79c6">.</span>numbers[j<span style="color:#ff79c6">+</span><span style="color:#bd93f9">1</span>]:
+                    temp <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>numbers[j]
+                    self<span style="color:#ff79c6">.</span>numbers[j] <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>numbers[j <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>]
+                    self<span style="color:#ff79c6">.</span>numbers[j <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> temp
+</code></pre></div><p>ในตอนแรกของโปรแกรม เราได้สร้างคลาส <code>BubbleSorting</code> คลาสนี้มีหน้าที่รับเอาลิสต์ของตัวเลขและนำมาเรียงจากน้อยไปมากด้วยอัลกอริทึม Bubble sort ที่เรากำหนดการทำงานไว้ในเมธอด <code>run()</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">14</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">17</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">11</span>]
+
+thr1 <span style="color:#ff79c6">=</span> BubbleSorting(numbers[<span style="color:#bd93f9">0</span>:<span style="color:#bd93f9">6</span>])
+thr2 <span style="color:#ff79c6">=</span> BubbleSorting(numbers[<span style="color:#bd93f9">6</span>:<span style="color:#bd93f9">12</span>])
+</code></pre></div><p>เรามีลิสต์ของตัวเลขที่ยังไม่ได้จัดเรียง และเราได้แบ่งลิสต์ออกเป็นสองลิสต์เท่าๆ กันและส่งเข้าไปยัง Thread เพื่อจัดเรียง หลังจากนั้นสั่งให้ Thread ทั้งสองเริ่มต้นทำงานด้วยเมธอด <code>start()</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">thr1<span style="color:#ff79c6">.</span>join()
+thr2<span style="color:#ff79c6">.</span>join()
+
+list1 <span style="color:#ff79c6">=</span> thr1<span style="color:#ff79c6">.</span>numbers
+list2 <span style="color:#ff79c6">=</span> thr2<span style="color:#ff79c6">.</span>numbers
+</code></pre></div><p>เนื่องจากว่าเราต้องการนำผลลัพธ์จาก Thread ทั้งสองมารวมกัน ดังนั้นเราได้เรียกใช้งานเมธอด <code>join()</code> เพื่อรอให้ Thread ทั้งสองเรียงตัวเลขให้เสร็จก่อน แล้วค่อยนำมาตัวเลขที่จัดเรียงแล้วออกมารวมกันอีกที</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">sorted_numbers <span style="color:#ff79c6">=</span> []
+i <span style="color:#ff79c6">=</span> j <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+<span style="color:#ff79c6">while</span> i <span style="color:#ff79c6">&lt;</span> len1 <span style="color:#ff79c6">and</span> j <span style="color:#ff79c6">&lt;</span> len2:
+    <span style="color:#ff79c6">if</span> list1[i] <span style="color:#ff79c6">&lt;=</span> list2[j]:
+        sorted_numbers<span style="color:#ff79c6">.</span>append(list1[i])
+        i <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">else</span>:
+        sorted_numbers<span style="color:#ff79c6">.</span>append(list2[j])
+        j <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+
+<span style="color:#ff79c6">while</span> (i <span style="color:#ff79c6">&lt;</span> len1):
+    sorted_numbers<span style="color:#ff79c6">.</span>append(list1[i])
+    i <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+
+<span style="color:#ff79c6">while</span> (j <span style="color:#ff79c6">&lt;</span> len2):
+    sorted_numbers<span style="color:#ff79c6">.</span>append(list1[j])
+    j <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</code></pre></div><p>หลังจากที่เราได้ลิสต์จากทั้งสอง Thread ที่จัดเรียงแล้ว เราสามารถนำลิสต์ที่เรียงแล้วนั้นมา Merge เข้าด้วยกันได้</p>
+<blockquote>
+<p>Time Complexity เนื่องจากการเรียงตัวเลขจากลิสต์นั้นใช้เวลา O(n^2) เมื่อ n คือจำนวนของสมาชิกภายในลิสต์ ดังนั้นจากการลดขนาดของลิสต์ออกเป็นครึ่งหนึ่งทำให้เราลดเวลาเหลือเพียง O(n/2^2) ซึ่งถือว่าเร็วขึ้นมากๆ เนื่องจากการนำลิสต์ที่จัดเรียงแล้วมาเรียงกันใช้เวลาเพียง O(n) คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับเรื่องนี้ได้ในวิชาอัลกอริทึมในหัวข้อ Time Complexity</p>
+</blockquote>
+<p>จากตัวอย่างก่อนหน้า เป็นเพียงการแสดงวิธีการใช้เมธอด <code>join()</code> เพื่อรอผลลัพธ์จากทั้งสอง Thread ให้ทำงานเสร็จเท่านั้น อย่างไรก็ตามในการเรียงข้อมูลในลิสต์นั้นคุณสามารถใช้เมธอด <code>sort()</code> ได้ ซึ่งนี่จะได้ผลลัพธ์เหมือนกับโปรแกรมด้านบน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#6272a4"># Achieve the same result</span>
+numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">14</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">17</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">16</span>, <span style="color:#bd93f9">11</span>]
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Initial list&#34;</span>)
+<span style="color:#ff79c6">print</span>(numbers)
+
+numbers<span style="color:#ff79c6">.</span>sort()
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Sorted list&#34;</span>)
+<span style="color:#ff79c6">print</span>(numbers)
+</code></pre></div><h2 ref="thread-synchronization" ><strong>Thread synchronization</strong></h2><a class="anchor" id="thread-synchronization"></a>
+<p>Thread synchronization คือการที่ Thread ตั้งแต่สอง Thread ขึ้นไปเข้าถึงขอบเขตของโปรแกรมบางส่วนพร้อมกันๆ ในเวลาเดียวกัน ยกตัวอย่างเช่น การเข้าถึงตัวแปรตัวเดียวกัน ซึ่งขอบเขตดังกล่าวนั้นเรียกว่า <strong>Critical section</strong> ซึ่งเมื่อเกิดเหตุการณ์นี้ขึ้นอาจทำให้โปรแกรมทำงานผิดพลาดหรือไม่ได้ผลลัพธ์อย่างที่คาดหวังได้ ดังนั้นในภาษา Python มีคลาสสำหรับจัดการเกี่ยวกับ Thread synchronization เช่น <code>Lock</code>, <code>RLock</code> และ <code>Semaphor</code> ซึ่งคุณจะได้เรียนรู้ในบทต่อไป</p>
+<p>ในบทนี้ เราได้ครอบคลุมเกี่ยวกับการใช้งาน Thread ในภาษา Python เบื้องต้น ในตอนนี้คุณสามารถใช้ประโยชน์จาก Thread เพื่อให้โปรแกรมทำงานแบบคู่ขนานกันได้</p>
+<p>Reference : <a href="http://marcuscode.com/lang/python/threads">http://marcuscode.com/lang/python/threads</a></p>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/learning-python/24_date-time/" title="24. Date &amp; Time (วันที่และเวลา)" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>24. Date &amp; Time (วันที่และเวลา)</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/learning-python/22_thread/">23. Thread</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#thread-คออะไร"><strong>Thread คืออะไร</strong></a></li>
+    <li><a href="#การสราง-thread-ในภาษา-python"><strong>การสร้าง Thread ในภาษา Python</strong></a></li>
+    <li><a href="#การสรางคลาส-thread"><strong>การสร้างคลาส Thread</strong></a></li>
+    <li><a href="#การเขยนโปรแกรมแบบ-multi-thread"><strong>การเขียนโปรแกรมแบบ Multi-thread</strong></a></li>
+    <li><a href="#thread-joining"><strong>Thread Joining</strong></a></li>
+    <li><a href="#thread-synchronization"><strong>Thread synchronization</strong></a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>

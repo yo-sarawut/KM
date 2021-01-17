@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/0_intro/</loc>
+    <lastmod>2021-01-01T11:02:05+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/</loc>
+    <lastmod>2021-01-01T11:02:05+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/3_structure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/advance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/4_type/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/basic_functin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/9_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/10_string/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_output/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/11_string_methods/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_format/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/12_list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/13_list_methods/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/dictionary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/15_dictionary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/beginer/module/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/17_module/17_module/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/read_files/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/write_files/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/create_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/recursive_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/20_classes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/lambda/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/21_inheritance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/22_thread/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/phyblas/intermediate/inheritance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/tutorials/learning-python/24_date-time/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/</loc>
+    <lastmod>2021-01-01T11:02:05+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/404.html</loc>
+    <lastmod>2020-09-08T20:40:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/_layout/</loc>
+    <lastmod>2020-08-20T15:41:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/_layout/footer/</loc>
+    <lastmod>2020-08-20T15:41:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/_layout/sidebar-before/</loc>
+    <lastmod>2020-08-20T11:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/_layout/sidebar-after/</loc>
+    <lastmod>2020-08-20T11:07:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/_layout/article-sidebar-after/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/_layout/netlifycms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/admin/config.yml</loc>
+  </url>
+  
+  <url>
+    <loc>https://yo-sarawut.github.io/admin/index.html/</loc>
+  </url>
+  
+</urlset>

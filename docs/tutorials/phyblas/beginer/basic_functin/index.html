@@ -1,0 +1,1344 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	ฟังก์ชันพื้นฐาน :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-18T00:09:27 &#43;07">
+<meta name="description" content="">
+
+
+
+<title>ฟังก์ชันพื้นฐาน :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/yo-sarawut.github.io";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/phyblas/beginer/basic_functin/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://yo-sarawut.github.io'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/yo-sarawut.github.io";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/9_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/13_list_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/20_classes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/22_thread/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/24_date-time/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/basic_functin/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_format/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://yo-sarawut.github.io">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/phyblas/">
+        phyblas
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/phyblas/beginer/">
+        ผู้เริ่มต้น (Beginer)
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        ฟังก์ชันพื้นฐาน
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>ฟังก์ชันพื้นฐาน</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ความหมายของฟงกชน"><strong>ความหมายของฟังก์ชัน</strong></a></li>
+    <li><a href="#อารกวเมนตหลายตว"><strong>อาร์กิวเมนต์หลายตัว</strong></a></li>
+    <li><a href="#คยเวรดของฟงกชน"><strong>คีย์เวิร์ดของฟังก์ชัน</strong></a></li>
+    <li><a href="#การคนกลบและการสงออก"><strong>การคืนกลับและการส่งออก</strong></a></li>
+    <li><a href="#ฟงกชน-input"><strong>ฟังก์ชัน input</strong></a></li>
+    <li><a href="#เมธอด"><strong>เมธอด</strong></a>
+      <ul>
+        <li><a href="#สรปเนอหา"><strong>สรุปเนื้อหา</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <h2 ref="ความหมายของฟงกชน" ><strong>ความหมายของฟังก์ชัน</strong></h2><a class="anchor" id="ความหมายของฟงกชน"></a>
+<p>คำว่า<strong>ฟังก์ชัน (function)</strong> เป็นคำที่น่าจะเคยได้ยินอยู่บ่อยๆ แต่คำนี้จริงๆมีความหมายอยู่หลากหลายมาก ขึ้นอยู่กับว่าคุยกันเรื่องอะไร</p>
+<p>หลายคนอาจเคยได้ยินคำนี้ครั้งแรกกันตอนเรียนคณิตศาสตร์ชั้นมัธยมศึกษา</p>
+<p>คำว่าฟังก์ชันในทางคณิตศาสตร์หมายถึงสิ่งที่แสดงความสัมพันธ์ระหว่างจำนวน โดยใส่ค่าตัวเลขลงไปจำนวนหนึ่ง แล้วจะได้ค่าตัวเลขอีกจำนวนหนึ่งคืนกลับมา เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">f(x) <span style="color:#ff79c6">=</span> (x<span style="color:#ff79c6">+</span><span style="color:#bd93f9">0.5</span>)<span style="color:#ff79c6">/</span><span style="color:#bd93f9">10</span>
+</code></pre></div><p>ในที่นี้ f เป็นฟังก์ชัน และ x คืออาร์กิวเมนต์ของฟังก์ชัน  อาร์กิวเมนต์ คือค่าที่อยู่ในวงเล็บหลังฟังก์ชัน เป็นค่าที่ป้อนให้กับฟังก์ชัน เพื่อให้ฟังก์ชัน นำค่านั้นไปดำเนินการทำอะไรบางอย่าง  ในที่นี้หากป้อนค่า x เป็น 0.5 ค่านี้ก็จะถูกนำไปคำนวณ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">f(<span style="color:#bd93f9">0.5</span>) <span style="color:#ff79c6">=</span> (<span style="color:#bd93f9">0.5</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">0.5</span>)<span style="color:#ff79c6">/</span><span style="color:#bd93f9">10</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.1</span>
+</code></pre></div><p>ผลที่ได้คือฟังก์ชันนี้คืน 0.1 ออกมา ค่า 0.1 นี้จะเรียกว่าค่าคืนกลับ (return)<br>
+ฟังก์ชันในทางภาษาคอมพิวเตอร์ ก็มีลักษณะคล้ายกันนี้ คือใส่ค่าอะไรบางอย่าง (อาร์กิวเมนต์) ลงไปแล้วก็จะมีค่าคืนกลับออกมา</p>
+<p>ในบทที่แล้วได้พูดถึงคำสั่ง int float str bool ซึ่งใช้แปลงชนิดของข้อมูลเพื่อให้เป็นชนิดตามนั้น โดยใส่ข้อมูลชนิดเก่าลงไปแล้วได้ค่าคืนกลับเป็นข้อมูลชนิดใหม่ เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.111</span>  
+b <span style="color:#ff79c6">=</span>  <span style="color:#8be9fd;font-style:italic">int</span>(a)  
+<span style="color:#ff79c6">print</span>(b)  <span style="color:#6272a4"># ได้ 1</span>
+</code></pre></div><p>ในตัวอย่างนี้ a เป็นจำนวนจริงซึ่งมีเลขทศนิยม แต่ใช้คำสั่ง int เพื่อแปลงเป็นจำนวนเต็มแล้วคืนค่ากลับมาแล้วเก็บค่าไว้ใน b ผลก็คือ b ได้ค่าเป็น 1 โดยเศษถูกปัดทิ้งหมด  คำสั่งที่ใช้แปลงชนิดข้อมูลเหล่านี้ถือว่าเป็นฟังก์ชันชนิดหนึ่งในภาษาไพธอน<br>
+ที่จริงหากว่ากันในรายละเอียดจริงๆแล้ว int float str bool เป็นชื่อคลาส (ชื่อชนิดข้อมูล) อย่างไรก็ตามชื่อคลาสสามารถใช้ทำหน้าที่เหมือนเป็นฟังก์ชันเพื่อสร้างออบเจกต์ในคลาสนั้นอยู่แล้ว จึงถือว่าเป็นฟังก์ชันด้วย  หรืออีกตัวอย่างหนึ่งคือฟังก์ชันที่ชือว่า len ซึ่งมีไว้สำหรับหาความยาวของสายอักขระ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#8be9fd;font-style:italic">len</span>(<span style="color:#f1fa8c">&#39;sawatdi&#39;</span>)  <span style="color:#6272a4"># ได้ 7</span>
+</code></pre></div><p>ในที่นี้ &lsquo;sawatdi&rsquo; เป็นอาร์กิวเมนต์ของฟังก์ชัน len แล้ว 7 เป็นค่าคืนกลับที่ได้มา  อย่างไรก็ตามฟังก์ชัน ในภาษาคอมพิวเตอร์นั้น นอกจากจะมีหน้าที่คืนค่ากลับมาแล้วก็ยัง มีอีกหน้าที่ที่สำคัญ นั่นคือดำเนินการบางอย่างให้เกิดผลอะไรบางอย่างขึ้น โดยอาจจะไม่มีการคืนค่ากลับมาเลยก็ได้  เช่นคำสั่ง print ซึ่งใช้มาตั้งแต่<a href="https://phyblas.hinaboshi.com/tsuchinoko02">บทที่ ๒</a> แล้ว ก็ถือเป็นฟังก์ชันชนิดหนึ่ง ซึ่งกรณีของ print นั้น อาร์กิวเมนต์ที่ใส่เข้าไปคือสิ่งที่เราต้องการให้แสดงผลออกมา เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;sawatdi&#39;</span>)
+</code></pre></div><p>ในที่นี้ &lsquo;sawatdi&rsquo; คืออาร์กิวเมนต์ เมื่อใส่ลงไปในฟังก์ชัน print ฟังก์ชันก็จะทำข้อความ ไปแสดงผลออกมาทางหน้าจอ  จะเห็นว่าไม่ว่าฟังก์ชันไหนก็ตาม จะมีรูปแบบเหมือนกันก็คือ ชื่อฟังก์ชัน ตามด้วยวงเล็บเปิดและปิด ( ) ซึ่งภายในวงเล็บจะใส่อาร์กิวเมนต์ที่ฟังก์ชันต้องการ  และฟังก์ชันก็จะนำค่าอาร์กิวเมนต์ไปทำอะไรบางอย่างและอาจมีการคืนค่ากลับมาหรือไม่ก็ได้<br>
+อีกอย่างที่ต้องเน้นสักหน่อยก็คืออาร์กิวเมนต์อาจเป็นค่าข้อมูลหรือตัวแปรที่เก็บข้อมูลอยู่ก็ได้ <br>
+ตัวแปรที่ถูกใช้เป็นอาร์กิวเมนต์ในฟังก์ชันมักจะไม่มีการเปลี่ยนแปลงอะไร แค่ถูกนำค่าไปใช้เท่านั้น เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">c <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2.222</span>  
+d <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">str</span>(c)  
+<span style="color:#ff79c6">print</span>(d)  <span style="color:#6272a4"># ได้ &#39;2.222&#39;  </span>
+<span style="color:#ff79c6">print</span>(c)  <span style="color:#6272a4"># ได้ 2.222</span>
+</code></pre></div><p>จะเห็นว่า c ถูกใช้ในฟังก์ชัน str เพื่อให้ได้ค่า d เป็นสายอักขระ แต่ว่า c ยังเป็นตัวเลขอยู่เหมือนเดิมไม่เปลี่ยนแปลง  อย่างไรก็ตาม ฟังก์ชันที่ทำให้เกิดความเปลี่ยนแปลงกับอาร์กิวเมนต์ที่ใส่เข้าไปก็มีอยู่เช่นกัน</p>
+<h2 ref="อารกวเมนตหลายตว" ><strong>อาร์กิวเมนต์หลายตัว</strong></h2><a class="anchor" id="อารกวเมนตหลายตว"></a>
+<p>อาร์กิวเมนต์ไม่จำเป็นที่จะต้องมีแค่ตัวเดียว อาจมีหลายตัวก็ได้ หากมีหลายตัวก็ ต้องคั่นด้วยเครื่องหมายจุลภาค , เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;a =&#39;</span>, <span style="color:#bd93f9">1</span>,  <span style="color:#f1fa8c">&#39;, b =&#39;</span>, <span style="color:#bd93f9">2</span>)  <span style="color:#6272a4"># ได้ a = 1 , b = 2</span>
+</code></pre></div><p>จะเห็นกว่าในนี้มีการใส่อาร์กิวเมนต์ถึง ๔ ตัว โดยแต่ละตัวก็คือสิ่งที่ต้องการให้แสดงผลออกมา โดยทั่วไปแล้วฟังก์ชัน print สามารถนำออกข้อมูลได้กี่อันก็ได้ จึงถือว่ามีอาร์กิวเมนต์ แบบไม่จำกัดจำนวน  จำนวนอาร์กิวเมนต์ที่แต่ละฟังก์ชันต้องการนั้นอาจไม่เท่ากัน บางฟังก์ชันอาจต้องการหลายตัว หรือบางฟังก์ชันอาจไม่ต้องใช้อาร์กิวเมนต์เลย ซึ่งในกรณีนั้นจะใส่เป็นวงเล็บเปิดแล้วก็ปิดทันที () เช่นฟังก์ชัน input ซึ่งจะยกตัวอย่างให้เห็นต่อไป</p>
+<h2 ref="คยเวรดของฟงกชน" ><strong>คีย์เวิร์ดของฟังก์ชัน</strong></h2><a class="anchor" id="คยเวรดของฟงกชน"></a>
+<p>นอกจาก อาร์กิวเมนต์แล้ว ฟังก์ชันยังอาจประกอบด้วยสิ่งที่เรียกว่าคีย์เวิร์ด (keyword) ซึ่งเป็นอีกสิ่งหนึ่งที่สามารถป้อนให้กับฟังก์ชันได้ แต่ต่างจากอาร์กิวเมนต์ตรงที่ว่า การป้อนคีย์เวิร์ดจะต้องใส่ชื่อของ คีย์เวิร์ดนั้น  ยกตัวอย่างการใช้คีย์เวิร์ดในฟังก์ชัน print</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;ฉันมีความสุข&#39;</span>,<span style="color:#f1fa8c">&#39;555&#39;</span>,<span style="color:#f1fa8c">&#39;๕๕๕&#39;</span>,<span style="color:#f1fa8c">&#39;อยากหัวเราะดังๆ&#39;</span>,sep<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;(^_^)&#39;</span>)
+</code></pre></div><p>ผลลัพธ์</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">ฉันมีความสุข(^_^)555(^_^)๕๕๕(^_^)อยากหัวเราะดังๆ
+</code></pre></div><p>ตัวอย่าง นี้จะเห็นว่าประกอบไปด้วยอาร์กิวเมนต์ ๔ ตัว และด้านหลังอาร์กิวเมนต์ หลังจุลภาคตัวสุดท้ายจะเห็น sep=&rsquo;(^_^)&rsquo; ซึ่ง sep นี้ก็คือคีย์เวิร์ดที่ใส่เพิ่มลงไปนั่นเอง<br>
+ความหมายของ sep ในฟังก์ชัน print ก็คือคำที่ใช้แยกระหว่างอาร์กิวเมนต์แต่ละตัวที่ใส่ลงไป ดังนั้นจึงจะเห็นได้ว่ามี (^_^) ปรากฏขึ้นมาแทรก  โดยปกติแล้วถ้าหาก ไม่พิมพ์ sep ลงไปฟังก์ชันก็ยังทำงานได้ปกติ เพียงแต่ตัวคั่นระหว่างแต่ละอาร์กิวเมนต์จะกลายเป็นการเว้นวรรค ดังที่เห็นในตัวอย่างที่แล้ว การเพิ่มคีย์เวิร์ดเข้ามาจึงเป็นแค่การแต่งเสริมเพิ่มเติม  นอกจาก sep แล้วก็ยังมีคีย์เวิร์ดสำคัญอีกตัวคือ end ซึ่งเป็นตัวกำหนดการสิ้นสุดประโยค</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;การฝึกฝนที่ไม่มีความเจ็บปวดมันไม่มีความหมาย&#39;</span>,end<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39; &#39;</span>)  
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;เพราะคนเราไม่สามารถได้อะไรมาโดยที่ไม่ต้องเสียสละอะไร&#39;</span>,end<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39; &#39;</span>)  
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;แต่ว่าเมื่อทนความเจ็บปวดนั้นและก้าวผ่านมันไปได้&#39;</span>,end<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;&#39;</span>)  
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;ถึงตอนนั้นคนเราก็จะมีจิตใจที่แกร่งกล้าไม่แพ้ใครๆ&#39;</span>,end<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;!&#39;</span>)
+</code></pre></div><p>(<a href="http://hinaboshi.com/walidet/628020490550059">ที่มาของประโยค</a>)</p>
+<p>ผลลัพธ์</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">การฝึกฝนที่ไม่มีความเจ็บปวดมันไม่มีความหมาย เพราะคนเราไม่สามารถได้อะไรมาโดยที่ไม่ต้องเสียสละอะไร แต่ว่าเมื่อทนความเจ็บปวดนั้นและก้าวผ่านมันไปได้ถึงตอนนั้นคนเราก็จะมี จิตใจที่แกร่งกล้าไม่แพ้ใครๆ!
+</code></pre></div><p>โดยปกติแล้วถ้าไม่ใส่คีย์เวิร์ด end ลงไปพอจบฟังก์ชัน print จะมีการขึ้นบรรทัดใหม่ นั่นเพราะโดยปกติถูกกำหนดให้สิ้นสุดด้วย \n ซึ่งหมายถึงขึ้นบรรทัดใหม่ แต่ถ้าใส่ end ลงไปเราจะสามารถเปลี่ยนเป็นจบด้วยอะไรก็ได้ ถ้าต้องการให้ติดกันเลยก็พิมพ์ '&rsquo;<br>
+ทั้ง sep และ end ใช้ได้เฉพาะไพธอน 3 ส่วนไพธอน 2 จะใช้วิธีที่ต่างกันออกไป<br>
+<a href="https://phyblas.hinaboshi.com/20151217#print">รายละเอียด</a></p>
+<h2 ref="การคนกลบและการสงออก" ><strong>การคืนกลับและการส่งออก</strong></h2><a class="anchor" id="การคนกลบและการสงออก"></a>
+<p>มีอีกเรื่องที่พูดถึงไปแล้วเล็กน้อยใน<a href="https://phyblas.hinaboshi.com/tsuchinoko02">บทที่ ๒</a> แต่ก็ควรต้องนำมากล่าวย้ำตรงนี้ด้วย นั่นคือความแตกต่างระหว่างระหว่าง<strong>การคืนกลับ (return)</strong> และ<strong>การส่งออก (output)</strong> ซึ่งอาจสร้างความสับสนได้  การคืนกลับหมายถึงการที่ได้ค่าอะไรออกมา จากฟังก์ชันหรือการคำนวณต่าง ๆ โดยค่าที่ได้มานั้น จะยังไม่ปรากฏออกมาให้เห็น แต่เก็บอยู่ภายในหน่วยความจำของเครื่อง</p>
+<p>ส่วนการส่งออกนั้นหมายถึงการที่ค่านั้นถูกนำออกมาแสดงผล ให้เราได้เห็น โดยทั่วไปคือออกมาบนหน้าจอ เป็นข้อความ ซึ่งการส่งออกที่พื้นฐานที่สุดก็คือการใช้ฟังก์ชัน print<br>
+ฟังก์ชัน print นั้นไม่ได้ทำให้เกิดค่าอะไรคืนกลับมา แต่แค่ทำหน้าที่ส่งออกค่าที่เราป้อนเข้าไปให้<br>
+ที่อาจทำให้สับสนได้คือ เวลาที่คำนวณหรือใช้ฟังก์ชันอะไรที่มีค่าคืนกลับมาแล้วไม่มีตัวแปรอะไรมารับ หากทำผ่านเชลมันจะส่งค่าที่คืนกลับมาให้เห็นด้วย ในขณะที่ถ้าทำผ่านอีดิเตอร์ จะไม่มีการส่งออกมาแสดงผล  เช่นหากพิมพ์ float(&lsquo;129.3&rsquo;) ในเชลก็จะได้ค่า 129.3 ออกมาพร้อมแสดงออกมาทันทีโดยไม่ต้องใช้ print  อย่างไรก็ตาม ความจริงแล้วการแสดงผลค่าคืนกลับผ่านทางเชลนั้นไม่ได้เหมือนฟังก์ชัน print เสมอไป และฟังก์ชันที่สามารถส่งออกข้อมูลมาแสดงผลได้ก็ไม่ได้มีแต่ print ซึ่งตรงนี้จะค่อยมาพูดกันต่อไป</p>
+<h2 ref="ฟงกชน-input" ><strong>ฟังก์ชัน input</strong></h2><a class="anchor" id="ฟงกชน-input"></a>
+<p>สิ่งที่ตรงข้ามกับการส่งออกข้อมูลก็คือการป้อนเข้า (input)  ในภาษาไพธอนฟังก์ชัน ที่ใช้ในการป้อนเข้าข้อมูลชื่อฟังก์ชัน input ตัวอย่างการใช้ ลองพิมพ์ตามนี้ลงในเชล</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#8be9fd;font-style:italic">input</span>()
+</code></pre></div><p>เสร็จแล้วโปรแกรมก็จะให้เราพิมพ์ข้อความอะไรบางอย่างใส่เพิ่มลงไป ก็ให้พิมพ์อะไรก็ได้ลงไปแล้วกด enter  เสร็จแล้วข้อความที่ใส่ลงไปนั้นก็จะถูกเก็บอยู่ในตัวแปร a  จากนั้นลองใช้คำสั่ง print เพื่อพิมพ์สิ่งที่เก็บอยู่ในตัวแปร a ออกมา</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;a คือ&#39;</span>,a)
+</code></pre></div><p>ก็จะได้ข้อความที่เราพิมพ์ลงไปนั้นออกมา  นี่เป็นวิธีการใช้ฟังก์ชัน input เพื่อรับค่ามาเก็บไว้ในตัวแปร ในที่นี้จะเห็นว่า input ป็นฟังก์ชัน ที่ทำหน้าที่ทั้งดำเนินการอะไรบางอย่างซึ่งในที่นี้คือสั่งให้ รับค่าจากคีย์บอร์ด และสุดท้ายก็ยังคืนค่ากลับออกมาด้วย  อย่างไรก็ตามฟังก์ชัน input นั้นที่จริงแล้วไม่ได้ทำหน้าที่แค่รับค่าเพียงอย่างเดียว แต่ยังสามารถทำหน้าที่แสดงผลข้อความไปด้วยในเวลาเดียวกันด้วย  ในตัวอย่างข้างต้น จะเห็นว่าในวงเล็บหลัง input นั้นว่างเปล่า ไม่ได้ใส่อะไรลงไป แต่ที่จริงแล้วฟังก์ชัน input เองก็สามารถใส่อาร์กิวเมนต์ลงไปได้ ซึ่งพอใส่ลงไปแล้ว สิ่งนั้นจะกลายเป็น ข้อความที่เราต้องการให้แสดงผลออกมาก่อนที่จะให้ป้อนข้อความ  โดยทั่วไปเหมือนเป็น ข้อความที่ใช้บอกให้ผู้ใช้รู้ว่าจะต้องป้อนอะไร ขอยกตัวอย่างการใช้ เช่น ลองพิมพ์</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;จงป้อนค่าอะไรสักอย่าง: &#39;</span>)
+</code></pre></div><p>จากนั้นก็จะมีข้อความขึ้นว่า</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">จงป้อนค่าอะไรสักอย่าง:
+
+</code></pre></div><p>แล้วจึงตามด้วยส่วนที่ให้พิมพ์ข้อความอยู่ทางขวาของข้อความ  การทำงานของ input ก็เป็นอย่างที่เห็นนี้ อาจชวนให้สับสนได้ง่าย ต้องจำไว้ว่าข้อความในอาร์กิวเมนต์ของ input เป็นเพียงแค่ข้อความที่สื่อสาร กับผู้ใช้ว่าควรจะกรอกข้อมูลอะไร แต่ไม่ได้มีผลอะไรกับข้อมูลที่ป้อนเข้าไป  สิ่งที่ต้องเน้นอีกอย่าง คือ ข้อมูลที่ป้อนเข้าไปด้วยฟังก์ชัน input นี้จะเป็นสายอักขระ หากต้องการจะได้ค่าเป็นจำนวนจริงหรือจำนวนเต็มก็จะต้องแปลงอีกที เช่น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">a <span style="color:#ff79c6">=</span>  <span style="color:#8be9fd;font-style:italic">float</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;จงป้อนตัวเลขลงไป: &#39;</span>))
+</code></pre></div><p>จากนั้นก็ลองป้อนค่าตัวเลขอะไรบางอย่างเข้าไป<br>
+แต่ถ้าป้อนค่าที่ไม่ใช่ตัวเลขลงไป เช่นใส่ตัวหนังสือปนลงไปด้วยก็จะขัดข้องทันที<br>
+ทั้งหมดที่ว่ามานี้เป็นเรื่องของไพธอน 3 ส่วนในไพธอน 2 จะมีความแตกต่างออกไปพอสมควร</p>
+<ul>
+<li><a href="https://phyblas.hinaboshi.com/20151217#input">รายละเอียด</a></li>
+</ul>
+<h2 ref="เมธอด" ><strong>เมธอด</strong></h2><a class="anchor" id="เมธอด"></a>
+<p>ในภาษาไพธอนและอีกหลายภาษาที่เน้นการเขียนโปรแกรมเชิงวัตถุนั้นนอกจากฟังก์ชันแล้วยังมีคำสั่งอีกอีกชนิดหนึ่งซึ่งซึ่งมีลักษณะพิเศษเฉพาะ เรียกว่า<strong>เมธอด (method)</strong> ซึ่งก็อาจถือเป็นฟังก์ชันชนิดหนึ่ง เพียงแต่จะมีความจำเพาะต่อออบเจ็กต์</p>
+<p>เมธอดจะถูกนิยามควบคู่ไปกับออบเจ็กต์แต่ละชนิด โดยออบเจ็กต์แต่ละชนิดจะมีเมธอดไม่เหมือนกัน เมธอดจะไม่ปรากฏขึ้นเดี่ยวๆเหมือนอย่างฟังก์ชันทั่วไป  เวลาเขียนเมธอดจะเขียน ตามหลังวัตถุที่ต้องการใช้เมธอดนั้น โดยใช้จุด . คั่น  ขอยกตัวอย่างเช่น ออบเจ็กต์ชนิดจำนวนจริงมีเมธอดที่ชื่อว่า is_integer() คือเมธอดสำหรับตรวจว่าค่าของจำนวนจริงนั้นเป็นจำนวนเต็มในทางคณิตศาสตร์หรือ ไม่ (คือมีค่าเลขทศนิยมเป็น 0 หรือไม่) ถ้าเป็นก็คืนค่า True ถ้าไม่ใช่ก็คืนค่า False</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">x <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3.0</span>  
+x<span style="color:#ff79c6">.</span>is_integer()  <span style="color:#6272a4"># ได้ผลเป็น True</span>
+</code></pre></div><p>แต่</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">(<span style="color:#bd93f9">3.1</span>)<span style="color:#ff79c6">.</span>is_integer()  <span style="color:#6272a4"># ได้ผลเป็น False แต่ถ้าใช้เมธอดกับวัตถุผิดชนิด</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-py" data-lang="py">(<span style="color:#bd93f9">3</span>)<span style="color:#ff79c6">.</span>is_integer()  <span style="color:#6272a4"># จะได้ AttributeError: &#39;int&#39; object has no attribute &#39;is_integer&#39;</span>
+</code></pre></div><p>เพราะข้อมูลชนิดจำนวนเต็มไม่มีเมธอด is_integer ต้องเป็นข้อมูลชนิดจำนวนจริงเท่านั้นถึงจะมี</p>
+<p>วงเล็บที่อยู่ด้านหลังนั้นสามารถใส่อาร์กิวเมนต์หรือคีย์เวิร์ดลงไปได้เช่นกันหากเมธอดนั้นเป็นเมธอดที่ต้องการหรือสามารถใส่เพิ่มอาร์กิวเมนต์หรือคีย์เวิร์ดได้</p>
+<h3 ref="สรปเนอหา" ><strong>สรุปเนื้อหา</strong></h3><a class="anchor" id="สรปเนอหา"></a>
+<ul>
+<li>ฟังก์ชันคือสิ่งที่ทำให้เกิดการดำเนินการทำอะไรบางอย่าง หรืออาจคืนค่าอะไรบางอย่างกลับออกมา</li>
+<li>คลาสหรือชนิดของข้อมูล เช่น str int float bool นั้น ไม่ใช่ฟังก์ชันโดยตรงแต่ก็สามารถทำหน้าที่เหมือนฟังก์ชัน โดยมีหน้าที่แปลงชนิดข้อมูลให้กลายเป็นคลาสนั้น</li>
+<li>ฟังก์ชันจะต้องลงท้ายด้วยวงเล็บ () และอาจมีอาร์กิวเมนต์หรือคีย์อยู่ภายใน</li>
+<li>ส่วนเมธอดคือฟังก์ชันที่จำเพาะต่อออบเจ็กต์แต่ละชนิด เวลาใช้จะต้องเขียนตามหลังวัตถุโดยคั่นด้วยจุด . และต้องมีวงเล็บ () ต่อท้ายเช่นกัน</li>
+</ul>
+<p>ยังมีฟังก์ชันและเมธ็อดอีกมากมาย ในบทนี้แค่ยกมาให้เห็นตัวอย่างบางส่วนให้พอเริ่มเห็นภาพ เมื่อผ่านไปถึงบทต่อๆไปก็จะได้รู้จักเพิ่มขึ้นเรื่อยๆและจะเริ่มคุ้นชินกับการใช้</p>
+<p><strong>อ้างอิง</strong></p>
+<ul>
+<li><a href="http://docs.python.jp/3/library/functions.html">http://docs.python.jp/3/library/functions.html</a></li>
+<li><a href="http://docs.python.jp/3/tutorial/inputoutput.html">http://docs.python.jp/3/tutorial/inputoutput.html</a></li>
+</ul>
+<blockquote>
+<p>Reference : <a href="https://phyblas.hinaboshi.com/tsuchinoko04">https://phyblas.hinaboshi.com/tsuchinoko04</a></p>
+</blockquote>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/phyblas/beginer/string_output/" title="การแสดงผลตัวอักษร" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>การแสดงผลตัวอักษร</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ความหมายของฟงกชน"><strong>ความหมายของฟังก์ชัน</strong></a></li>
+    <li><a href="#อารกวเมนตหลายตว"><strong>อาร์กิวเมนต์หลายตัว</strong></a></li>
+    <li><a href="#คยเวรดของฟงกชน"><strong>คีย์เวิร์ดของฟังก์ชัน</strong></a></li>
+    <li><a href="#การคนกลบและการสงออก"><strong>การคืนกลับและการส่งออก</strong></a></li>
+    <li><a href="#ฟงกชน-input"><strong>ฟังก์ชัน input</strong></a></li>
+    <li><a href="#เมธอด"><strong>เมธอด</strong></a>
+      <ul>
+        <li><a href="#สรปเนอหา"><strong>สรุปเนื้อหา</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>

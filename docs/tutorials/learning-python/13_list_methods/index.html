@@ -1,0 +1,1324 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	13. List Methods (ลิสต์ เมธอด) :: DocPort Documentation
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-01-18T00:09:26 &#43;07">
+<meta name="description" content="">
+
+
+
+<title>13. List Methods (ลิสต์ เมธอด) :: DocPort Documentation</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://yo-sarawut.github.io/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/yo-sarawut.github.io";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/tutorials/learning-python/13_list_methods/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://yo-sarawut.github.io'>DocPort Documentation</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"  rel="noopener">
+                  Download
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/docport-theme/credits/"  rel="noopener">
+                  Credits
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/yo-sarawut.github.io";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+          <a href="/tutorials/">Tutorials</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/">Python by MascusCode</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/0_intro/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/0_intro/">Introduction</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/3_structure/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/3_structure/">3. โครงสร้างของภาษา Python</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/4_type/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/4_type/">4. ตัวแปรและประเภทข้อมูล</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/9_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/9_function/">9. ฟังก์ชัน (Function)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/10_string/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/10_string/">10. String</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/11_string_methods/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/11_string_methods/">11. String methods</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/12_list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/12_list/">12. List (ลิสต์)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/13_list_methods/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/15_dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/15_dictionary/">15. Dictionary</a>
+      
+        
+      
+    </li>
+              
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/20_classes/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/20_classes/">21. Classes &amp; Objects</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/21_inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/21_inheritance/">22. Inheritance</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/22_thread/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/22_thread/">23. Thread</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/learning-python/24_date-time/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/learning-python/24_date-time/">24. Date &amp; Time (วันที่และเวลา)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/">phyblas</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/">ผู้เริ่มต้น (Beginer)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/basic_functin/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/basic_functin/">ฟังก์ชันพื้นฐาน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_output/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_output/">การแสดงผลตัวอักษร</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/string_format/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/string_format/">การจัดการกับสายอักขระ</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/list/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/list/">การจัดการกับลิสต์ (List)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/dictionary/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/dictionary/">ดิกชันนารี (Dictionary)</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/beginer/module/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/beginer/module/">การเรียกใช้มอดูล (Module)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/">ระดับกลาง(Intermediate)</a>
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/read_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/read_files/">การอ่านข้อมูลจากไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/write_files/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/write_files/">การเขียนข้อมูลลงไฟล์</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/create_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/create_function/">การสร้างฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/recursive_function/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/recursive_function/">ฟังก์ชันเวียนเกิด</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/lambda/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/lambda/">คำสั่งพิเศษที่เกี่ยวข้องกับฟังก์ชัน</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/intermediate/inheritance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/intermediate/inheritance/">การรับทอด</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+              
+
+    <li data-nav-id="https://yo-sarawut.github.io/tutorials/phyblas/advance/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/tutorials/phyblas/advance/">ระดับสูง(Advance)</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+		
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://yo-sarawut.github.io">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/">
+        Tutorials
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/tutorials/learning-python/">
+        Python by MascusCode
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        13. List Methods (ลิสต์ เมธอด)
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>13. List Methods (ลิสต์ เมธอด)</h1>
+        
+
+		
+										
+		
+
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#การใชงานเมธอดของ-list">การใช้งานเมธอดของ List</a></li>
+    <li><a href="#การใชงานฟงกชนกบ-list">การใช้งานฟังก์ชันกับ List</a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <p>ในบทนี้ เราจะพูดถึงการใช้งาน List เมธอด ในภาษา Python เนื่องจาก List เป็นออบเจ็ค ดังนั้น Python จึงได้ให้เมธอดต่างๆ สำหรับทำงานพื้นฐานกับ List ที่ช่วยอำนวยความสะดวกในการทำงานเป็นอย่างมาก นอกจากนี้ เรายังจะพูดถึงการใช้งาน built-in function กับ List ถึงแม้ในภาษา Python นั้นมีเมธอดและฟังก์ชันเป็นจำนวนมาก แต่เราจะมาดูตัวอย่างการใช้งานเฉพาะที่สำคัญ</p>
+<h2 ref="การใชงานเมธอดของ-list" >การใช้งานเมธอดของ List</h2><a class="anchor" id="การใชงานเมธอดของ-list"></a>
+<p>ตัวอย่างแรกของการใช้เมธอดของ List นั้นจะเป็นการใช้งานเมธอดเพื่อทำงานพื้นฐานกับ List คือการเพิ่มและลบข้อมูลออกจาก List โปรแกรมของเราเป็นการใช้ List เพื่อเก็บรายชื่อ หลังจากนั้นเราใช้เมธอดต่างๆ กับเพื่อจัดการกับข้อมูลภาย List นี่เป็นโค้ดการทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">names <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;David&#39;</span>, <span style="color:#f1fa8c">&#39;Johnny&#39;</span>, <span style="color:#f1fa8c">&#39;Dennis&#39;</span>, <span style="color:#f1fa8c">&#39;Jason&#39;</span>]
+
+<span style="color:#6272a4"># add 2 names to the end of the list</span>
+names<span style="color:#ff79c6">.</span>append(<span style="color:#f1fa8c">&#39;Andy&#39;</span>)
+names<span style="color:#ff79c6">.</span>append(<span style="color:#f1fa8c">&#39;Rene&#39;</span>)
+<span style="color:#ff79c6">print</span>(names)
+
+<span style="color:#6272a4"># add a name at position 3</span>
+names<span style="color:#ff79c6">.</span>insert(<span style="color:#bd93f9">2</span>, <span style="color:#f1fa8c">&#39;Mike&#39;</span>)
+<span style="color:#ff79c6">print</span>(names)
+
+<span style="color:#6272a4"># remove 2 specific names</span>
+names<span style="color:#ff79c6">.</span>remove(<span style="color:#f1fa8c">&#39;David&#39;</span>)
+names<span style="color:#ff79c6">.</span>remove(<span style="color:#f1fa8c">&#39;Johnny&#39;</span>)
+<span style="color:#ff79c6">print</span>(names)
+
+<span style="color:#6272a4"># pop the last item fro the list</span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Popped item =&#39;</span>, names<span style="color:#ff79c6">.</span>pop())
+<span style="color:#ff79c6">print</span>(names)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Popped item =&#39;</span>, names<span style="color:#ff79c6">.</span>pop())
+<span style="color:#ff79c6">print</span>(names)
+
+<span style="color:#6272a4"># clear all items</span>
+names<span style="color:#ff79c6">.</span>clear()
+<span style="color:#ff79c6">print</span>(names)
+
+</code></pre></div><p>ในตัวอย่าง เราได้สร้างตัวแปร List ขึ้นมาและกำหนดสมาชิกให้กับตัวแปร โดยมีสมาชิกที่เป็น String จำนวน 4 ตัว หลังจากนั้นเราใช้เมธอด <code>append()</code> ในการเพิ่มอีกสองชื่อเข้ามา โดยเมธอดนี้จะทำการเพิ่มข้อมูลใหม่เข้าไปยังท้ายของ List ต่อมาเราใช้เมธอด <code>insert()</code> เพื่อเพิ่มสมาชิกไปยังตำแหน่งที่ต้องการ เราได้เพิ่ม <code>'Mike'</code> ไปยังตำแหน่งที่ 3 ของ List ทำให้ในตอนนี้ List ของเรามีสมาชิกทั้งหมด 7 ตัว</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">names<span style="color:#ff79c6">.</span>remove(<span style="color:#f1fa8c">&#39;David&#39;</span>)
+names<span style="color:#ff79c6">.</span>remove(<span style="color:#f1fa8c">&#39;Johnny&#39;</span>)
+
+</code></pre></div><p>หลังจากนั้นเป็นการใช้งานเมธอด <code>remove()</code> เพื่อนำออกข้อมูลใน List เราได้ทำการลบสองรายชื่อ คือ <code>'David'</code> และ <code>'Johnny'</code> ออกไปจาก List โดยเมธอดจะทำการลบข้อมูลแรกที่เจอใน List ออกไปในกรณีที่ข้อมูลนั้นมีเหมือนกันมากกว่าหนึ่งใน List แต่ในการใช้งานเมธอดคุณต้องตรวจสอบให้แน่ใจว่าข้อมูลนั้นมีอยู่จริง ไม่เช่นนั้นจะทำให้เกิดข้อผิดพลาดขึ้น</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Popped item =&#39;</span>, names<span style="color:#ff79c6">.</span>pop())
+<span style="color:#ff79c6">print</span>(names)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Popped item =&#39;</span>, names<span style="color:#ff79c6">.</span>pop())
+<span style="color:#ff79c6">print</span>(names)
+
+</code></pre></div><p>ต่อมาเป็นการนำข้อมูลออกจาก List ด้วยการใช้เมธอด <code>pop()</code> การทำงานของเมธอดนั้นจะนำข้อมูลที่อยู่ท้ายสุดของ List และส่งค่านั้นกลับมา และเนื่องจาก List มีเมธอด <code>append()</code> และ <code>pop()</code> ดังนั้น เราจึงสามารใช้ List เหมือนกับการทำงานของ Stack ได้ และเมธอด <code>clear()</code> นั้นสำหรับลบข้อมูลออกจาก List ทั้งหมด</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">[<span style="color:#f1fa8c">&#39;David&#39;</span>, <span style="color:#f1fa8c">&#39;Johnny&#39;</span>, <span style="color:#f1fa8c">&#39;Dennis&#39;</span>, <span style="color:#f1fa8c">&#39;Jason&#39;</span>, <span style="color:#f1fa8c">&#39;Andy&#39;</span>, <span style="color:#f1fa8c">&#39;Rene&#39;</span>]
+[<span style="color:#f1fa8c">&#39;David&#39;</span>, <span style="color:#f1fa8c">&#39;Johnny&#39;</span>, <span style="color:#f1fa8c">&#39;Mike&#39;</span>, <span style="color:#f1fa8c">&#39;Dennis&#39;</span>, <span style="color:#f1fa8c">&#39;Jason&#39;</span>, <span style="color:#f1fa8c">&#39;Andy&#39;</span>, <span style="color:#f1fa8c">&#39;Rene&#39;</span>]
+[<span style="color:#f1fa8c">&#39;Mike&#39;</span>, <span style="color:#f1fa8c">&#39;Dennis&#39;</span>, <span style="color:#f1fa8c">&#39;Jason&#39;</span>, <span style="color:#f1fa8c">&#39;Andy&#39;</span>, <span style="color:#f1fa8c">&#39;Rene&#39;</span>]
+Popped item <span style="color:#ff79c6">=</span> Rene
+[<span style="color:#f1fa8c">&#39;Mike&#39;</span>, <span style="color:#f1fa8c">&#39;Dennis&#39;</span>, <span style="color:#f1fa8c">&#39;Jason&#39;</span>, <span style="color:#f1fa8c">&#39;Andy&#39;</span>]
+Popped item <span style="color:#ff79c6">=</span> Andy
+[<span style="color:#f1fa8c">&#39;Mike&#39;</span>, <span style="color:#f1fa8c">&#39;Dennis&#39;</span>, <span style="color:#f1fa8c">&#39;Jason&#39;</span>]
+[]
+
+</code></pre></div><p>นี่เป็นผลการทำงานของโปรแกรมในการใช้งานเมธอดเพื่อเพิ่มและลบข้อมูลกับ List ในรูปแบบต่างๆ</p>
+<p>มาดูตัวอย่างในการใช้งาน List กับเมธอดเพิ่มเติมในภาษา Python ที่เป็นโปรแกรมในการเก็บชื่อของผลไม้ เราได้ทำการประกาศ List <code>fruits</code> และกำหนดสมาชิก 6 ตัวให้กับ List แต่มี <code>'apple'</code> ที่มี 2 ตัวใน List นี่เป็นโค้ดการทำงานของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">fruits <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;banana&#39;</span>, <span style="color:#f1fa8c">&#39;orange&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;grape&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;peach&#39;</span>]
+
+<span style="color:#ff79c6">print</span>(fruits)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;</span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> apples in list&#39;</span> <span style="color:#ff79c6">%</span> fruits<span style="color:#ff79c6">.</span>count(<span style="color:#f1fa8c">&#39;apple&#39;</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;</span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> banana in list&#39;</span> <span style="color:#ff79c6">%</span> fruits<span style="color:#ff79c6">.</span>count(<span style="color:#f1fa8c">&#39;banana&#39;</span>))
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Index of grape is </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> fruits<span style="color:#ff79c6">.</span>index(<span style="color:#f1fa8c">&#39;grape&#39;</span>))
+
+fruits<span style="color:#ff79c6">.</span>sort()
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Sorted&#39;</span>, fruits)
+
+fruits<span style="color:#ff79c6">.</span>reverse()
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Reversed&#39;</span>, fruits)
+
+</code></pre></div><p>ในตัวอย่าง เรามี List ในการเก็บรายชื่อของผลไม้ เมธอด <code>count()</code> ใช้สำหรับนับจำนวนออบเจ็คที่ตรงกันกับที่ระบุภายใน List เราได้ทำการนับ <code>'apple'</code> และ <code>'banana'</code> ใน List และแสดงจำนวนที่ได้ออกทางหน้าจอ เมธอด <code>index()</code> นั้นใช้สำหรับหาตำแหน่ง Index ของออบเจ็คตัวแรกที่พบใน List เราได้ใช้เมธอดเพื่อหา Index ของ <code>'grape'</code> และแสดงผลตำแหน่งที่ได้</p>
+<p>เมธอด <code>sort()</code> ใช้สำหรับเรียงข้อมูลภายใน List ตามตัวอักษรจากก่อนไปทีหลัง ในกรณีที่ข้อมูลใน List เป็นตัวเลขจะเป็นการเรียงจากน้อยไปหามากแทน คุณสามารถใช้ Keyword argument ที่ชื่อว่า <code>reverse</code> โดยกำหนดให้เป็น True หากต้องการเรียงจากมากไปหาน้อย ซึ่งโดยปกติแล้วค่านี้จะมีค่าเป็น False และเมธอด <code>reverse()</code> ใช้สำหรับย้อนกลับข้อมูลภายใน List จากตำแหน่งแรกไปตำแหน่งสุดท้ายและในทางกลับกัน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">[<span style="color:#f1fa8c">&#39;banana&#39;</span>, <span style="color:#f1fa8c">&#39;orange&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;grape&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;peach&#39;</span>]
+<span style="color:#bd93f9">2</span> apples <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">list</span>
+<span style="color:#bd93f9">1</span> banana <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">list</span>
+Index of grape <span style="color:#ff79c6">is</span> <span style="color:#bd93f9">3</span>
+Sorted [<span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;banana&#39;</span>, <span style="color:#f1fa8c">&#39;grape&#39;</span>, <span style="color:#f1fa8c">&#39;orange&#39;</span>, <span style="color:#f1fa8c">&#39;peach&#39;</span>]
+Reversed [<span style="color:#f1fa8c">&#39;peach&#39;</span>, <span style="color:#f1fa8c">&#39;orange&#39;</span>, <span style="color:#f1fa8c">&#39;grape&#39;</span>, <span style="color:#f1fa8c">&#39;banana&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;apple&#39;</span>]
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม</p>
+<p>ในสองตัวอย่างก่อนหน้า เป็นการใช้งานเมธอดต่างๆ ของ List อย่างไรก็ตามยังมีเมธอดอื่นๆ อีกที่เราไม่ได้กล่าวถึง นี่เป็นรายการเมธอดทั้งหมดของ List ในภาษา Python</p>
+<p><a href="13%20List%20Methods%20(%E0%B8%A5%E0%B8%B4%E0%B8%AA%E0%B8%95%E0%B9%8C%20%E0%B9%80%E0%B8%A1%E0%B8%98%E0%B8%AD%E0%B8%94)%203106ed60cccd40578a61f1d39e13791c/Untitled%20Database%2070ceed576f644b93840e82c8fe7fb16c.csv">Untitled</a></p>
+<h2 ref="การใชงานฟงกชนกบ-list" >การใช้งานฟังก์ชันกับ List</h2><a class="anchor" id="การใชงานฟงกชนกบ-list"></a>
+<p>ในภาษา Python นั้นมี built-in function ที่สามารถใช้งานกับโครงสร้างข้อมูลทั่วไปได้ เช่น List Tupple หรือ Dictionary ฟังก์ชันเหล่านี้อำนวยความสะดวกเป็นอย่างมาก เช่น การนับจำนวนสมาชิก การหาค่าน้อยสุดหรือค่ามากสุด เป็นต้น ต่อไปมาดูตัวอย่างการใช้งานฟังก์ชันที่สามารถใช้ได้กับ List</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">1</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">3</span>, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">10</span>]
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;</span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c"> numbers in list&#39;</span> <span style="color:#ff79c6">%</span> <span style="color:#8be9fd;font-style:italic">len</span>(numbers))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Min number = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> <span style="color:#8be9fd;font-style:italic">min</span>(numbers))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Max number = </span><span style="color:#f1fa8c">%d</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> <span style="color:#8be9fd;font-style:italic">max</span>(numbers))
+
+</code></pre></div><p>ในตัวอย่าง เป็นการใช้งานฟังก์ชันกับ List ของตัวเลข โดยฟังก์ชัน <code>len()</code> ที่เรารู้จักกันดีนั้นใช้สำหรับนับจำนวนของออบเจ็คภายใน List อย่างไรก็ตามฟังก์ชันนี้สามารถใช้งานได้กับข้อมูลประเภทอื่นๆ เหมือนกัน เช่น ใช้กับ Tuple Dictionary หรือการหาความยาวของ String ฟังก์ชัน <code>min()</code> สำหรับหาค่าที่น้อยที่สุดใน List และฟังก์ชัน <code>max()</code> นั้นสำหรับหาค่าที่มากที่สุด</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(<span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">2</span>)))
+
+tuple1 <span style="color:#ff79c6">=</span> (<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>)
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">list</span>(tuple1))
+</code></pre></div><p>ต่อไปเป็นการใช้งานฟังก์ชัน <code>list()</code> ในการแปลงข้อมูลประเภทต่างๆ ไปเป็น List ในคำสั่งแรกเป็นการแปลงข้อมูลจากออบเจ็คลำดับของตัวเลขที่สร้างจากฟังก์ชัน <code>range()</code> เป็น List และในคำสั่งที่สองเป็นการแปลง Tuple ให้เป็น List</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">8 numbers in list
+Min number = -5
+Max number = 12
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+[1, 2, 3, 4, 5]
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม ในการใช้ฟังก์ชันกับ List</p>
+<p>ในบทนี้ เราได้ครอบคลุมการใช้งานเมธอดของ List ในภาษา Python คุณได้เห็นตัวอย่างในการใช้งานเมธอดกับ List ในการเขียนโปรแกรมแบบต่างๆ นอกจากนี้ ยังทราบถึงการใช้งาน built-in function ที่สามารถใช้งานกับ List ได้</p>
+<blockquote>
+<p>Reference : <a href="http://marcuscode.com">http://marcuscode.com</a></p>
+</blockquote>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/tutorials/learning-python/15_dictionary/" title="15. Dictionary" style="margin-right: 0px;">
+            <div>
+                <p>Next page</p>
+                <label>15. Dictionary</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/tutorials/learning-python/13_list_methods/">13. List Methods (ลิสต์ เมธอด)</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#การใชงานเมธอดของ-list">การใช้งานเมธอดของ List</a></li>
+    <li><a href="#การใชงานฟงกชนกบ-list">การใช้งานฟังก์ชันกับ List</a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+			
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<style type="text/css">
+
+.footer-gray {
+  width: 100%;
+  color: #888;
+}
+
+.footer-custom {
+  font: normal normal 12px/1.4 sans-serif;
+  /*max-width: 1008px;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.footer-custom:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-lists:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-hdr {
+  color: white;
+  font: 22px/1.4  sans-serif;
+  margin: 1em 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .ftr-hdr {
+    font-size: 18px;
+  }
+}
+
+.footer-list-wrap {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 568px) {
+  .footer-list-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-list-wrap {
+    width: 25%;
+  }
+}
+
+.ftr-links-sub {
+  padding: 0;
+  margin: 0;
+}
+
+.ftr-links-sub:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.ftr-links-sub li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  color: #888;
+  font: normal normal 12px sans-serif;
+  text-transform: uppercase;
+  /*width: 150px;*/
+}
+
+.footer-custom a,
+.footer-custom a:link,
+.footer-custom a:visited,
+.ftr-links-sub li .link {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 0;
+  display: block;
+}
+
+.footer-custom .footer-legal a {
+  display: inline;
+}
+
+.footer-custom a:hover,
+.footer-custom a:active,
+.ftr-links-sub li .link:hover {
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-custom a, .footer-custom a:link, .footer-custom a:visited, .ftr-links-sub li .link {
+    padding: 0;
+  }
+}
+/* BEGIN EMAIL CAPTURE STYLES*/
+
+.footer-email {
+  text-align: center;
+}
+
+#ftrEmailForm {
+  height: 44px;
+}
+
+#ftrEmailForm .error {
+  display: none;
+  color: red;
+  text-align: left;
+}
+
+#ftrEmailForm #ftrEmailInput {
+  background: none repeat scroll 0 0 #FFF;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  color: #888;
+  float: left;
+  font: normal normal 14px/1.4 sans-serif;
+  padding: 5px;
+  width: 70%;
+  height: 100%;
+}
+
+#ftrEmailForm #ftrEmailInput:hover {
+  border: 1px solid #888;
+}
+
+#ftrEmailForm #ftrEmailInput:focus {
+  border: 1px solid #ef9223;
+  outline: #ef9223 auto 5px;
+}
+
+#ftrEmailForm .button {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  border: 1px solid #DFDFDF;
+  box-sizing: border-box;
+  color: #000;
+  font: normal bold 18px/1 sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFF;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -ms-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: -o-linear-gradient(top, white 0, #e1e1e1 100%);
+  background: linear-gradient(to bottom, white 0, #e1e1e1 100%);
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+#ftrEmailForm .button:hover,
+#ftrEmailForm .button:active {
+  background: black;
+  color: #FFF;
+  outline: none;
+}
+/* BEGIN SOCIAL STYLES*/
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-social ul:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.footer-social li {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-lists {
+    width: 100%;
+  }
+  .footer-email {
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  .footer-social {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-lists {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-email {
+    width: 33.3333%;
+  }
+  .footer-social {
+    width: 33.3333%;
+    float: right;
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  padding: 15px 0 0;
+  clear: left;
+}
+
+.footer-payment {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-legal {
+    width: 66.6666%;
+    float: left;
+  }
+  .footer-payment {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment {
+    text-align: left;
+  }
+}
+
+.footer-payment ul {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footer-payment ul li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer-payment ul li.ftr-stella {
+    margin-left: 0;
+  }
+}
+
+
+</style>
+  <div class="footer-gray">
+    <div class="footer-custom">
+      <div class="footer-lists">
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Order Something</h6>
+          <ul class="ftr-links-sub">
+            <li>800-123-4567</li>
+          </ul>
+          <h6 class="ftr-hdr">International</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">France</a></li>
+            <li><a href="#" rel="nofollow">Cape Verde</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">Customer Service</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Contact Us</a></li>
+            <li><a href="#" rel="nofollow">Ordering</a></li>
+            <li><a href="#" rel="nofollow">Shipping &amp; Delivery</a></li>
+            <li><a href="#" rel="nofollow">Returns</a></li>
+            <li><a href="#" rel="nofollow">Gift Cards</a></li>
+            <li><a href="#" rel="nofollow">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">About DocPort</h6>
+          <ul class="ftr-links-sub">
+            <li><a href="#" rel="nofollow">Our Company</a></li>
+            <li><a href="#" rel="nofollow">Careers</a></li>
+            <li><a href="#" rel="nofollow">Affiliate Program</a></li>
+            <li><a href="#" rel="nofollow"><strong>Shop Our Catalog</strong></a></li>
+            <li><a href="#" rel="nofollow">DocPort BLOG</a></li>
+          </ul>
+        </div>
+        <div class="footer-list-wrap">
+          <h6 class="ftr-hdr">My Account</h6>
+          <ul class="ftr-links-sub">
+            <art:content rule="!loggedin">
+              <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+            <art:content rule="loggedin">
+              <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+              <li><span class="link">Track My Order</span></li>
+            </art:content>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-email">
+        <h6 class="ftr-hdr">Sign up for exclusive offers and inspiration</h6>
+        <div id="ftr-email" class="ftr-email-form">
+          <form id="ftrEmailForm" method="post" action="#">
+            <div class="error">Please enter a valid email address</div>
+            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address"/>
+          </form>
+        </div>
+        <div class="ftr-email-privacy-policy"></div>
+      </div>
+      <div class="footer-social">
+        <h6 class="ftr-hdr">Follow Us</h6>
+        <ul>
+          <li>
+            <a href="#" title="Facebook">
+              <img width="24" height="24" alt="Like us on Facebook" src="/images/fb.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Google+">
+              <img width="24" height="24" alt="Follow us on Google+" src="/images/gplus.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img width="24" height="24" alt="Follow us on Pinterest" src="/images/pin-badge.png">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img width="24" height="24" alt="Follow us on Instagram" src="/images/instagram-badge.png">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Twitter">
+              <img width="67" alt="Follow us on Twitter" src="/images/twitter.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; Docport MIT Licence. | <a href="#" rel="nofollow">Privacy Policy</a> | <a href="#" rel="nofollow">Terms of Use</a> | <a href="#" rel="nofollow">Terms of Sale</a></p>
+        <p>Docport is free Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+        <p>Various aspects of this website are ...blablabla</p>
+      </div>
+    </div>
+  </div>
+  <!--/.footer-gray-->
+	    
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>
