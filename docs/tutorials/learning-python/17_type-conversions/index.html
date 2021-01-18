@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	Introduction :: DocPort Documentation
+	17. Type conversions :: DocPort Documentation
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-01-18T23:35:42 &#43;07">
-<meta name="description" content="MarcusCode เป็นเว็บไซต์ที่ให้คุณสามารถเรียนการเขียนโปรแกรมคอมพิวเตอร์ โดยบทเรียนนั้นเป็นเนื้อหาพื้นฐานและเข้าใจง่าย และที่สำคัญมันฟรี มีบทเรียนในการเขียนโปรแกรมในภาษา Python ในพื้นฐานจนถึงระดับสูงแยกตามบท ซึ่งเนื้อหาที่เว็บไซต์นี้สอนนั้นจะกระชับและตรงประเด็น ทำให้ผู้ที่ศึกษาตามสามารถเข้าใจถึงหลักการของภาษาไพธอนได้อย่างรวดเร็ว ตัวอย่างของเนื้อหาที่สอน เช่น โครงสร้างของภาษาไพธอน ตัวแปรและประเภทข้อมูล ตัวดำเนินการ อาเรย์และฟังก์ชัน">
+<meta name="description" content="ในบทนี้ คุณจะได้เรียนการแปลงประเภทข้อมูลในภาษา Python โดยการใช้ built-in ฟังก์ชัน เนื่องจากในการเขียนโปรแกรมนั้นเรามักจะทำงานกับข้อมูลหลายประเภท ดังนั้น มันจึงมีความจำเป็น ที่คุณอาจจะต้องการแปลงข้อมูลประเภทหนึ่ง ไปเป็นประเภทหนึ่ง เช่น การแปลงตัวเลขให้เป็น String หรือแปลง String เป็นตัวเลข เป็นต้น">
 
 
 
-<title>Introduction :: DocPort Documentation</title>
+<title>17. Type conversions :: DocPort Documentation</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="tutorials/learning-python/0_intro/"
+  <body data-url="tutorials/learning-python/17_type-conversions/"
 
   class="">
 
@@ -190,7 +190,7 @@
         <ul>
               
 
-    <li data-nav-id="./tutorials/learning-python/0_intro/" class="dd-item parent active
+    <li data-nav-id="./tutorials/learning-python/0_intro/" class="dd-item
         item_level_$level
         ">
 
@@ -325,7 +325,7 @@
     </li>
               
 
-    <li data-nav-id="./tutorials/learning-python/17_type-conversions/" class="dd-item
+    <li data-nav-id="./tutorials/learning-python/17_type-conversions/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -730,7 +730,7 @@
   
     <li class="active">
       
-        Introduction
+        17. Type conversions
       
     </li>
 
@@ -751,7 +751,7 @@
 		
 
 		
-			<h1>Introduction</h1>
+			<h1>17. Type conversions</h1>
         
 
 		
@@ -771,7 +771,10 @@
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction-python">Introduction Python</a></li>
+    <li><a href="#ฟงกชนแปลงขอมลในภาษา-python">ฟังก์ชันแปลงข้อมูลในภาษา Python</a></li>
+    <li><a href="#การแปลง-string-เปนตวเลข">การแปลง String เป็นตัวเลข</a></li>
+    <li><a href="#การใชฟงกชนแปลงขอมลในภาษา-python">การใช้ฟังก์ชันแปลงข้อมูลในภาษา Python</a></li>
+    <li><a href="#การใชฟงกชนแปลงขอมลประเภท-sequence-และ-set">การใช้ฟังก์ชันแปลงข้อมูลประเภท Sequence และ Set</a></li>
   </ul>
 </nav>
 	</div>
@@ -784,16 +787,184 @@
 
 
 	<div class="content">
-	    <p>MarcusCode เป็นเว็บไซต์ที่ให้คุณสามารถเรียนการเขียนโปรแกรมคอมพิวเตอร์ โดยบทเรียนนั้นเป็นเนื้อหาพื้นฐานและเข้าใจง่าย และที่สำคัญมันฟรี มีบทเรียนในการเขียนโปรแกรมในภาษา Python ในพื้นฐานจนถึงระดับสูงแยกตามบท ซึ่งเนื้อหาที่เว็บไซต์นี้สอนนั้นจะกระชับและตรงประเด็น ทำให้ผู้ที่ศึกษาตามสามารถเข้าใจถึงหลักการของภาษาไพธอนได้อย่างรวดเร็ว ตัวอย่างของเนื้อหาที่สอน เช่น โครงสร้างของภาษาไพธอน ตัวแปรและประเภทข้อมูล ตัวดำเนินการ อาเรย์และฟังก์ชัน</p>
-<h2 ref="introduction-python" >Introduction Python</h2><a class="anchor" id="introduction-python"></a>
-<p>Python เป็นภาษาเขียนโปรแกรมระดับสูงที่ใช้กันอย่างกว้างขวางในการเขียนโปรแกรมสำหรับวัตถุประสงค์ทั่วไป ภาษา Python นั้นสร้างโดย Guido van Rossum และถูกเผยแพร่ครั้งแรกในปี 1991 Python นั้นเป็นภาษาแบบ interprete ที่ถูกออกแบบโดยมีปรัญชาที่จะทำให้โค้ดอ่านได้ง่ายขึ้น และโครงสร้างของภาษานั้นจะทำให้โปรแกรมเมอร์สามารถเข้าใจแนวคิดการเขียนโค้ดโดยใช้บรรทัดที่น้อยลงกว่าภาษาอย่าง C++ และ Java ซึ่งภาษานั้นถูกกำหนดให้มีโครงสร้างที่ตั้งใจให้การเขียนโค้ดเข้าใจง่ายทั้งในโปรแกรมเล็กไปจนถึงโปรแกรมขนาดใหญ่</p>
-<p>Python นั้นมีคุณสมบัติเป็นภาษาเขียนโปรแกรมแบบไดนามิกส์ และมีระบบการจัดการหน่วยความจำอัตโนมัติ และสนับสนุนการเขียนโปรแกรมหลายรูปแบบ ที่ประกอบไปด้วย การเขียนโปรแกรมเชิงวัตถุ imperative การเขียนโปรแกรมแบบฟังก์ชัน และการเขียนโปรแกรมแบบขั้นตอน มันมีไลบรารี่ที่ครอบคลุมการทำงานอย่างหลากหลาย ตัวแปรภาษา (Interpreter) ของภาษา Python นั้นมีให้ใช้ในหลายระบบปฏิบัติการ ทำให้โค้ดของภาษา Python สามารถรันในระบบต่างๆ ได้อย่างกว้างขวาง CPython นั้นเป็นการพัฒนาในขั้นตั้นของ Python ซึ่งเป็นโปรแกรมแบบ open source และมีชุมชนสำหรับเป็นต้นแบบในการพัฒนา เนื่องจากมันได้มีการนำไปพัฒนากระจายไปอย่างหลากหลาย CPython นั้นจึงถูกจัดการโดยองค์กรไม่แสวงหาผลกำไรอย่าง Python Software Foundation</p>
-<p><img src="http://marcuscode.com/media/52/marcuscode_UIW0qoob_1000.png" alt="http://marcuscode.com/media/52/marcuscode_UIW0qoob_1000.png"></p>
-<p>ภาษา Python นั้นกำเนิดขึ้นในปลายปี 1980 และการพัฒนาของมันนั้นเริ่มต้นในเดือนธันวาคม 1989 โดย Guido van Rossum ที่ Centrum Wiskunde &amp; Informatica (CWI) ในประเทศเนเธอร์แลนด์ เนื่องในผู้ประสบความสำเร็จในการสร้างภาษา ABC ที่มีความสามารถสำหรับการ exception handling และการติดต่อผสานกับระบบปฏิบัติการ Amoeba ซึ่ง Van Rossum นั้นเป็นผู้เขียนหลักของภาษา Python และเขาทำหน้าเป็นกลางในการตัดสินใจสำหรับทิศทางการพัฒนาของภาษา Python</p>
-<p>หลังจากคุณได้เสร็จสิ้นบทเรียนของภาษา Python นี้ คุณจะรู้จักกับภาษา Python และโครงสร้างของภาษา และคุณจะสามารถเขียนโปรแกรมด้วยภาษา Python ตั้งแต่การสร้างแอพพลิเคชันอย่างง่ายไปจนถึงโปรแกรมการคำนวณที่ซับซ้อน และเข้าใจหลักการที่สำคัญในการเขียนโปรแกรมทั้งในพื้นฐานและในขั้นสูงที่เป็นการเขียนโปรแกรมแบบเชิงวัตถุ เราจะพาคุณติดตั้งภาษา Python และแนะนำให้คุณรู้จักกับเครื่องมือที่ใช้ในการพัฒนาโปรแกรมอย่างเช่น IDLE ซึ่งเนื้อหาเหล่านี้เป็นพื้นฐานที่สำคัญที่จะทำให้คุณสามารถนำไปพัฒนาทักษะการเขียนโปรแกรมภาษา Python ของคุณในขั้นสูงต่อไป เช่น การพัฒนาเว็บไซต์ การสร้างเกม ฐานข้อมูล เน็ตเวิร์ค การจัดการกราฟฟิค เป็นต้น.</p>
-<blockquote>
-<p>Reference : <a href="http://marcuscode.com/lang/python">http://marcuscode.com/lang/python</a></p>
-</blockquote>
+	    <p>ในบทนี้ คุณจะได้เรียนการแปลงประเภทข้อมูลในภาษา Python โดยการใช้ built-in ฟังก์ชัน เนื่องจากในการเขียนโปรแกรมนั้นเรามักจะทำงานกับข้อมูลหลายประเภท ดังนั้น มันจึงมีความจำเป็นที่คุณอาจจะต้องการแปลงข้อมูลประเภทหนึ่งไปเป็นประเภทหนึ่ง เช่น การแปลงตัวเลขให้เป็น String หรือแปลง String เป็นตัวเลข เป็นต้น</p>
+<h2 ref="ฟงกชนแปลงขอมลในภาษา-python" >ฟังก์ชันแปลงข้อมูลในภาษา Python</h2><a class="anchor" id="ฟงกชนแปลงขอมลในภาษา-python"></a>
+<p>ในภาษา Python คุณสามารถใช้ built-in ฟังก์ชันที่มีอยู่สำหรับแปลงประเภทข้อมูล โดยฟังก์ชันเหล่านั้นจะมีชื่อที่เหมือนกับประเภทของมัน (ซึ่งเป็นชื่อของคลาส) ยกตัวอย่างเช่น ฟังก์ชัน  <code>int()</code>  ใช้แปลงข้อมูลประเภทใดๆ ให้เป็นตัวเลขจำนวนเต็ม และ  <code>str()</code>  ใช้แปลงข้อมูลประเภทใดๆ ให้เป็น String นี่เป็นตารางของฟังก์ชันสำหรับแปลงข้อมูลในภาษา Python</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int(x [,base])</td>
+<td>แปลงออบเจ็ค x จากฐานที่กำหนด base ให้เป็น Integer</td>
+</tr>
+<tr>
+<td>long(x [,base] )</td>
+<td>แปลงออบเจ็ค x จากฐานที่กำหนด base ให้เป็น Long</td>
+</tr>
+<tr>
+<td>float(x)</td>
+<td>แปลงออบเจ็ค x ให้เป็น Floating point number</td>
+</tr>
+<tr>
+<td>complex(real [,im])</td>
+<td>สร้างตัวเลขจำนวนเชิงซ้อนจากค่า real และค่า imagine</td>
+</tr>
+<tr>
+<td>str(x)</td>
+<td>แปลงออบเจ็ค x ให้เป็น String</td>
+</tr>
+<tr>
+<td>repr(x)</td>
+<td>แปลงออบเจ็ค x ให้เป็น String expression</td>
+</tr>
+<tr>
+<td>eval(str)</td>
+<td>ประเมินค่าของ String</td>
+</tr>
+<tr>
+<td>tuple(s)</td>
+<td>แปลง Sequence ให้เป็น Tuple</td>
+</tr>
+<tr>
+<td>list(s)</td>
+<td>แปลง Sequence ให้เป็น List</td>
+</tr>
+<tr>
+<td>set(s)</td>
+<td>แปลง Sequence ให้เป็น Tuple</td>
+</tr>
+<tr>
+<td>dict(d)</td>
+<td>แปลงออบเจ็คให้เป็น Dictionary</td>
+</tr>
+<tr>
+<td>frozenset(s)</td>
+<td>แปลงออบเจ็คให้เป็น Frozen set</td>
+</tr>
+<tr>
+<td>chr(x)</td>
+<td>แปลงค่าของ Integer ให้เป็น Unicode Char</td>
+</tr>
+<tr>
+<td>ord(x)</td>
+<td>แปลง Charterer ให้เป็นค่า Integer</td>
+</tr>
+<tr>
+<td>hex(x)</td>
+<td>แปลง Integer ให้เป็น Hex string</td>
+</tr>
+<tr>
+<td>oct(x)</td>
+<td>แปลง Integer ให้เป็น Oct string</td>
+</tr>
+</tbody>
+</table>
+<h2 ref="การแปลง-string-เปนตวเลข" >การแปลง String เป็นตัวเลข</h2><a class="anchor" id="การแปลง-string-เปนตวเลข"></a>
+<p>หลังจากที่คุณได้เห็นฟังก์ชันสำหรับแปลงข้อมูลในภาษา Python แล้ว ต่อไปจะเป็นตัวอย่างในการใช้งานฟังก์ชันเหล่านี้ ตัวอย่างแรกจะเป็นโปรแกรมในการแปลงข้อมูลจาก String ไปเป็นตัวเลข ซึ่งเป็นสิ่งที่พบได้บ่อยมาก เราจะเขียนโปรแกรมในการรับค่า String จากทางคีย์บอร์ดและแปลงให้เป็นตัวเลขแบบต่างๆ นี่เป็นโค้ดของโปรแกรม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#6272a4"># convert string to int</span>
+s <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;Enter integer number: &#39;</span>)
+n <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(s)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Type of s is &#39;</span>, <span style="color:#8be9fd;font-style:italic">type</span>(s))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Type of n is &#39;</span>, <span style="color:#8be9fd;font-style:italic">type</span>(n))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Value of n is&#39;</span>, n)
+
+<span style="color:#6272a4"># convert string to float</span>
+s2 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#39;Enter floating number: &#39;</span>)
+f <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(s2)
+
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Type of s2 is &#39;</span>, <span style="color:#8be9fd;font-style:italic">type</span>(s2))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Type of f is &#39;</span>, <span style="color:#8be9fd;font-style:italic">type</span>(f))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;Value of f is&#39;</span>, f)
+
+</code></pre></div><p>ในตัวอย่าง โปรแกรมของเรานั้นได้แบ่งออกเป็นสองส่วน ส่วนแรกเป็นการแปลง String ไปเป็น Integer และในส่วนต่อมาเป็นการแปลง String ไปเป็น Float โปรแกรมได้ทำการรับค่า String จากคีย์บอร์ดด้วยฟังก์ชัน  <code>input()</code>  และเราใช้ฟังก์ชัน  <code>int()</code>  และ  <code>float()</code>  เพื่อแปลงข้อมูลจาก String เป็น Integer และ Float ตามลำดับ และฟังก์ชัน  <code>type()</code>  นั้นใช้สำหรับดูประเภทข้อมูลของออบเจ็คในรูปแบบคลาส Prototype ของมัน</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Enter integer number: 10
+Type of s is  &lt;class &#39;str&#39;&gt;
+Type of n is  &lt;class &#39;int&#39;&gt;
+Value of n is 10
+Enter floating number: 3.5
+Type of s2 is  &lt;class &#39;str&#39;&gt;
+Type of f is  &lt;class &#39;float&#39;&gt;
+Value of f is 3.5
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม โดยเราได้กรอกค่าเป็น 10 และ 3.5 ตามลำดับ ซึ่งค่าที่กรอกนั้นเป็น String และหลังจากนั้นเราแปลงเป็นตัวเลขและแสดงผลประเภทและค่าของมันออกทางหน้าจอ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">str</span>(<span style="color:#bd93f9">10</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">20</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">str</span>(<span style="color:#bd93f9">1.234</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#8be9fd;font-style:italic">str</span>([<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>]))
+
+</code></pre></div><p>คุณยังสามารถแปลงข้อมูลจากประเภทอื่นๆ ให้เป็น String ได้โดยการใช้ฟังก์ชัน  <code>str()</code>  ซึ่งออบเจ็คส่วนมากนั้นสามารถใช้ได้กับฟังก์ชันนี้ ในตัวอย่างของทั้งสามคำสั่ง เป็นการแปลงจาก Integer Floating number และ List ไปเป็น String ตามลำดับ</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">30
+1.234
+[1, 2, 3, 4, 5, 6]
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรมในการแปลงออบเจ็คอื่นให้เป็น String</p>
+<h2 ref="การใชฟงกชนแปลงขอมลในภาษา-python" >การใช้ฟังก์ชันแปลงข้อมูลในภาษา Python</h2><a class="anchor" id="การใชฟงกชนแปลงขอมลในภาษา-python"></a>
+<p>ในภาษา Python นอกจากฟังก์ชันที่ทำงานกับ String และตัวเลขแล้ว ยังมีฟังก์ชันอื่นๆ อีกเป็นจำนวนมากสำหรับการแปลงข้อมูล มาดูตัวอย่างการใช้งานฟังก์ชันเพิ่มเติม</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#6272a4"># convert integer to char</span>
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;65 to char =&#39;</span>, <span style="color:#8be9fd;font-style:italic">chr</span>(<span style="color:#bd93f9">65</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;70 to char =&#39;</span>, <span style="color:#8be9fd;font-style:italic">chr</span>(<span style="color:#bd93f9">70</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;97 to char =&#39;</span>, <span style="color:#8be9fd;font-style:italic">chr</span>(<span style="color:#bd93f9">97</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;196 to char =&#39;</span>, <span style="color:#8be9fd;font-style:italic">chr</span>(<span style="color:#bd93f9">196</span>))
+<span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;473 to char =&#39;</span>, <span style="color:#8be9fd;font-style:italic">chr</span>(<span style="color:#bd93f9">473</span>))
+
+<span style="color:#6272a4"># convert char to integer</span>
+site <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;marcuscode.com&#39;</span>
+
+<span style="color:#ff79c6">for</span> s <span style="color:#ff79c6">in</span> site:
+    <span style="color:#ff79c6">print</span>(s, <span style="color:#f1fa8c">&#39; = &#39;</span>, <span style="color:#8be9fd;font-style:italic">ord</span>(s))
+
+</code></pre></div><p>โดยปกติแล้วตัวอักษรทุกตัวในคอมพิวเตอร์จะมีรหัสของมันที่เป็นตัวเลข ในตัวอย่าง เป็นการใช้งานฟังก์ชัน  <code>chr()</code>  สำหรับแปลงค่า Integer ให้เป็นรหัสตัวอักษร Unicode โดย 65 นั้นเป็นรหัสของตัวอักษรพิมพ์ใหญ่ตัวแรกในภาษาอังกฤษ (<code>A</code>) 70 นั้นเป็นรหัสของตัวอักษร  <code>F</code>  97 เป็นรหัสของตัวอักษรพิมพ์เล็กตัวแรกในภาษาอังกฤษ (<code>a</code>) 196 เป็นของตัวอักษร  <code>Ä</code>  และ 473 เป็นของตัวอักษร  <code>Ǚ</code>  ตามลำดับ โดยที่รหัส Unicode นั้นสามารถแสดงถึงตัวอักษรทุกตัวที่มีในโลก</p>
+<p>ในทางกลับกัน ฟังก์ชัน  <code>ord()</code>  ใช้สำหรับแปลงจากตัวอักษรไปเป็นค่า Integer ของมัน ในตัวอย่าง เรามี String ในตัวแปร  <code>site</code>ที่เก็บค่า  <code>'marcuscode.com'</code>  และใช้คำสั่ง For loop วนอ่านตัวอักษรและแสดงผลค่า Integer ของตัวอักษรแต่ละตัวภายใน String</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">65 to char = A
+70 to char = F
+97 to char = a
+196 to char = Ä
+473 to char = Ǚ
+m  =  109
+a  =  97
+r  =  114
+c  =  99
+u  =  117
+s  =  115
+c  =  99
+o  =  111
+d  =  100
+e  =  101
+.  =  46
+c  =  99
+o  =  111
+m  =  109
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรมจากการใช้งานฟังก์ชัน  <code>chr()</code>  และฟังก์ชัน  <code>ord()</code>  สำหรับการแปลงข้อมูลระหว่างตัวอักษรกับค่า Integer ของมัน</p>
+<h2 ref="การใชฟงกชนแปลงขอมลประเภท-sequence-และ-set" >การใช้ฟังก์ชันแปลงข้อมูลประเภท Sequence และ Set</h2><a class="anchor" id="การใชฟงกชนแปลงขอมลประเภท-sequence-และ-set"></a>
+<p>ในภาษา Python มีฟังก์ชันสำหรับทำงานกับ Sequence และ Set โดยปกติแล้วฟังก์ชันเหล่านี้สามารถที่จะแปลงไปกลับได้ เช่น การแปลงจาก Tuple ไปยัง List ด้วยฟังก์ชัน  <code>list()</code>  และหลังจากนั้นทำการแปลงจาก List เป็น Tuple ด้วยฟังก์ชัน  <code>tuple()</code>  เป็นต้น ฟังก์ชัน  <code>dict()</code>  แปลงข้อมูลแบบ Mapping ให้เป็น Dictionary ส่วนฟังก์ชัน  <code>set()</code>  นั้นแปลงข้อมูลแบบ Sequence ใดๆ ให้เป็น Set มาดูตัวอย่าง</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">a <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">list</span>((<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>)) <span style="color:#6272a4"># tuple to list</span>
+b <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">tuple</span>([<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>]) <span style="color:#6272a4"># list to tuple</span>
+c <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">set</span>([<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>]) <span style="color:#6272a4"># list to set</span>
+d <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">dict</span>(one<span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>, two <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>, three <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>) <span style="color:#6272a4"># mapping to dict</span>
+e <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">dict</span>([(<span style="color:#f1fa8c">&#39;one&#39;</span>, <span style="color:#bd93f9">1</span>), (<span style="color:#f1fa8c">&#39;two&#39;</span>, <span style="color:#bd93f9">2</span>), (<span style="color:#f1fa8c">&#39;three&#39;</span>, <span style="color:#bd93f9">3</span>)]) <span style="color:#6272a4"># iterable list to dict</span>
+
+<span style="color:#ff79c6">print</span>(a)
+<span style="color:#ff79c6">print</span>(b)
+<span style="color:#ff79c6">print</span>(c)
+<span style="color:#ff79c6">print</span>(d)
+<span style="color:#ff79c6">print</span>(e)
+
+</code></pre></div><p>ในตัวอย่าง เป็นการแปลงข้อมูลโดยการใช้งานฟังก์ชันต่างๆ ในสามตัวแปรแรก เป็นการแปลงข้อมูลแบบ Sequence ให้เป็นออบเจ็คที่ต้องการ ในตัวแปร  <code>a</code>  เป็นการแปลงข้อมูลจาก Tuple ไปยัง List ในตัวแปร  <code>b</code>  เป็นการแปลงข้อมูลจาก List ไปยัง Tuple ส่วนในตัวแปร  <code>c</code>  เป็นการแปลงจาก List เป็น Set และในสองคำสั่งสุดท้าย ตัวแปร  <code>d</code>  เป็นการแปลงข้อมูลแบบ Mapping เป็น Dictionary ตัวแปร  <code>e</code>  แปลงจาก List ของออบเจ็คเป็น Dictionary</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">[1, 2, 3, 4, 5]
+(1, 2, 3, 4, 5)
+{1, 2, 3, 4, 5}
+{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3}
+{&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3}
+
+</code></pre></div><p>นี่เป็นผลลัพธ์การทำงานของโปรแกรมในการใช้งานฟังก์ชันแปลงข้อมูลประเภท Sequence และ Set</p>
+<p>ในบทนี้ เราได้แนะนำให้คุณรู้จักกับฟังก์ชันในการแปลงประเภทข้อมูลในภาษา Python ที่จะมีความจำเป็นเมื่อโปรแกรมของเรานั้นทำงานกับข้อมูลที่หลากหลายประเภทและต้องการเปลี่ยนประเภทข้อมูลประเภทหนึ่งไปอีกประเภทหนึ่ง เราได้แสดงตัวอย่างการใช้งานฟังก์ชันต่างๆ เช่น การแปลง String เป็นตัวเลข การแปลง Integer เป็น Char และการใช้งานฟังก์ชันเกี่ยวกับ Sequence และ Set อย่างไรก็ตามมีฟังก์ชันอีกจำนวนมากที่เราไม่สามารถให้ตัวอย่างได้ทั้งหมด แต่มันคงไม่อยากเกินไปสำหรับคุณที่จะลองใช้งานฟังก์ชันเหล่านั้น</p>
+<p>Reference : <a href="http://marcuscode.com/lang/python/type-conversions">http://marcuscode.com/lang/python/type-conversions</a></p>
 
 		</div>
 
@@ -804,10 +975,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="tutorials/learning-python/3_structure/" title="3. โครงสร้างของภาษา Python" style="margin-right: 0px;">
+		<a class="next" href="tutorials/learning-python/18_module/" title="18. โมดูล (Module)" style="margin-right: 0px;">
             <div>
                 <p>Next page</p>
-                <label>3. โครงสร้างของภาษา Python</label>
+                <label>18. โมดูล (Module)</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -832,12 +1003,15 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
     <nav>
         <ul >
-            <li><a href="tutorials/learning-python/0_intro/">Introduction</a></li>
+            <li><a href="tutorials/learning-python/17_type-conversions/">17. Type conversions</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction-python">Introduction Python</a></li>
+    <li><a href="#ฟงกชนแปลงขอมลในภาษา-python">ฟังก์ชันแปลงข้อมูลในภาษา Python</a></li>
+    <li><a href="#การแปลง-string-เปนตวเลข">การแปลง String เป็นตัวเลข</a></li>
+    <li><a href="#การใชฟงกชนแปลงขอมลในภาษา-python">การใช้ฟังก์ชันแปลงข้อมูลในภาษา Python</a></li>
+    <li><a href="#การใชฟงกชนแปลงขอมลประเภท-sequence-และ-set">การใช้ฟังก์ชันแปลงข้อมูลประเภท Sequence และ Set</a></li>
   </ul>
 </nav>
 </div>
@@ -855,11 +1029,6 @@
 		    
 		    
 			
-		      <li>
-		          <i class='fas fa-calendar'></i>
-		          Last update on 01 January 2021
-		      </li>
-		    
 		    
 
     	</ul>
