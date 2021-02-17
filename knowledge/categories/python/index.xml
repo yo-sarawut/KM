@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Dragon</title>
+    <link>https://example.com/categories/python/</link>
+    <description>Recent content in Python on Dragon</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://example.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Class Examples</title>
+      <link>https://example.com/post/python-class-example/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/python-class-example/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;def charge(self):
+    self.charge_level = 100
+    print(&#39;The vehicle is now charged.&#39;)
+
+def fuel_up(self):
+    print(&#39;This vehicle has no fuel tank!&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+### **Instances as attributes**
+
+You can store an instance of a class in a different class attribute. This makes it possible for classes to work together to model complex situations.
+
+### **A Battery class**
+
+```python
+class Battery:
+    def __init__(self, size=85):
+        self.size = size
+        self.charge_level = 0
+ 
+    def get_range(self):
+        if self.size == 85:
+            return 260
+        elif self.size == 100:
+            return 315
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;storing-an-instance-of-a-class-in-an-attribute&#34;&gt;&lt;strong&gt;Storing an instance of a class in an attribute&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ElectricVehicle&lt;/span&gt;(Vehicle):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, brand, model, type):
+        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__init__(brand, model, type)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;battery &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Battery()
+ 
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charge&lt;/span&gt;(self):
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;battery&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;charge_level &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;
+ 
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;The vehicle is fully charged.&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;using-the-instance&#34;&gt;&lt;strong&gt;Using The Instance&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;electric_vehicle &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ElectricVehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Tesla&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CyberTruck&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Truck&amp;#39;&lt;/span&gt;)
+electric_vehicle&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;charge()
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(electric_vehicle&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;battery&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get_range())
+electric_vehicle&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drive()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;The vehicle is fully charged.
+260
+The CyberTruck is now driving.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;importing-classes&#34;&gt;&lt;strong&gt;Importing Classes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Class files grow in size as you add features and functionality. In order to keep your program files uncluttered, you can store your classes in modules and import the classes you need into your main program as needed.&lt;/p&gt;
+&lt;h3 id=&#34;storing-classes-in-a-file&#34;&gt;&lt;strong&gt;Storing classes in a file&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;vehicle.py&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Vehicle&lt;/span&gt;:
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Vehicle Class data and methods&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+ 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Battery&lt;/span&gt;:
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Batter Class data and methods&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+ 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ElectricVehicle&lt;/span&gt;(Vehicle):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;ElectricVehicle Class data and methods&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;importing-individual-classes-from-a-module&#34;&gt;&lt;strong&gt;Importing individual classes from a module&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;vehicle_objects.py&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; vehicle &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Vehicle, ElectricVehicle
+a_mini &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Vehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Cooper&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Mini&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Car&amp;#39;&lt;/span&gt;)
+a_mini&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fuel_up()
+a_mini&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drive()
+a_tesla &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ElectricVehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Tesla&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Model 3&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Car&amp;#39;&lt;/span&gt;)
+a_tesla&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;charge()
+a_tesla&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drive()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;importing-an-entire-module&#34;&gt;&lt;strong&gt;Importing an entire module&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; vehicle
+a_mini &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Vehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Cooper&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Mini&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Car&amp;#39;&lt;/span&gt;)
+a_mini&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fuel_up()
+a_mini&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drive()
+a_tesla &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ElectricVehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Tesla&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Model 3&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Car&amp;#39;&lt;/span&gt;)
+a_tesla&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;charge()
+a_tesla&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drive()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;understandingselfin-python&#34;&gt;&lt;strong&gt;Understanding self in Python&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;You can see that the first parameter of a method is always &lt;strong&gt;&lt;code&gt;self&lt;/code&gt;&lt;/strong&gt;. Self is not a keyword, you can actually name that first parameter whatever you like. It does make great sense to use &lt;strong&gt;&lt;code&gt;self&lt;/code&gt;&lt;/strong&gt; however, as it is a convention that is recommended you use self so that as people who read your code will know what you’re talking about. So the first argument is self, which is a reference to the object, not the class, to the object. When an object is created from the class, &lt;strong&gt;&lt;code&gt;self&lt;/code&gt;&lt;/strong&gt; will reference that object. It provides a way to make other variables and objects available everywhere in a class. The &lt;strong&gt;&lt;code&gt;self&lt;/code&gt;&lt;/strong&gt; variable is automatically passed to each method that’s called through an object, which is why it’s listed first in every method definition. Variables attached to &lt;strong&gt;&lt;code&gt;self&lt;/code&gt;&lt;/strong&gt; are available everywhere in the class.&lt;/p&gt;
+&lt;h3 id=&#34;understanding__init__&#34;&gt;&lt;strong&gt;Understanding &lt;strong&gt;init&lt;/strong&gt;()&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;&lt;strong&gt;init&lt;/strong&gt;()&lt;/strong&gt; method is a function that belongs to a class, just like other methods. What is important regarding &lt;strong&gt;&lt;code&gt;__init__()&lt;/code&gt;&lt;/strong&gt; is that it’s called automatically every time you instantiate a new object from a class. In other words, it is a &lt;em&gt;constructor&lt;/em&gt; function.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;storing-objects-in-a-list&#34;&gt;&lt;strong&gt;Storing objects in a list&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://vegibit.com/how-to-use-python-lists/&#34;&gt;Lists&lt;/a&gt;&lt;/strong&gt; can hold as few or as many things as you want them to. In addition to all the other types you can store in a list, objects can be stored in lists as well. Let’s see a few examples of how this works. Here’s an example showing how to instantiate a group of rental vehicles, and ensure all the vehicles are ready to drive.&lt;/p&gt;
+&lt;h3 id=&#34;a-collection-of-rental-vehicles&#34;&gt;&lt;strong&gt;A collection of rental vehicles&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; vehicle &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Vehicle, ElectricVehicle
+gas_fleet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+electric_fleet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+ 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;):
+    vehicle &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Vehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Honda&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Civic&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Car&amp;#39;&lt;/span&gt;)
+    gas_fleet&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(vehicle)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;):
+    evehicle &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ElectricVehicle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Nissan&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Leaf&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Car&amp;#39;&lt;/span&gt;)
+    electric_fleet&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(evehicle)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; vehicle &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; gas_fleet:
+    vehicle&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fuel_up()
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; evehicle &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; electric_fleet:
+    evehicle&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;charge()
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Gas vehicles: {len(gas_fleet)}&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Electric vehicles: {len(electric_fleet)}&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;learn-more-about-python-classes&#34;&gt;&lt;strong&gt;Learn More About Python Classes&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bitdegree.org/learn/python-class&#34;&gt;Understanding How Python Class Works&lt;/a&gt; (Bit Degree)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.to/codemouse92/dead-simple-python-classes-42f7&#34;&gt;Dead Simple Python: Classes&lt;/a&gt; (Dev.to)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://techsparx.com/software-development/python/classes.html&#34;&gt;Understanding how Python classes work&lt;/a&gt; (Tech Sparx)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://opensource.com/article/19/7/get-modular-python-classes&#34;&gt;Make your code more modular with Python classes&lt;/a&gt; (Open Source)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/better-programming/python-how-object-and-class-attributes-work-8edf4ed9caa4&#34;&gt;How Instance and Class Attributes Work&lt;/a&gt; (Medium)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dzone.com/articles/python-class-attributes-vs-instance-attributes&#34;&gt;Class Attribute vs. Instance Attribute In Python&lt;/a&gt; (Dzone)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.python.org/3/tutorial/classes.html&#34;&gt;Python Classes&lt;/a&gt; (Python Docs)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerearth.com/practice/python/object-oriented-programming/classes-and-objects-i/tutorial/&#34;&gt;Python Classes and Methods&lt;/a&gt; (Hacker Earth)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.quora.com/How-do-Python-Classes-work&#34;&gt;How do Python Classes work?&lt;/a&gt; (Quora)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-construct-classes-and-define-objects-in-python-3&#34;&gt;How To Construct Classes and Define Objects in Python 3&lt;/a&gt; (Digital Ocean)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vegibit.com/python-abstract-base-classes/&#34;&gt;Python Abstract Base Classes&lt;/a&gt; (Vebibit)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.educba.com/abstract-class-in-python/&#34;&gt;Abstract Class in Python&lt;/a&gt; (Educba)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/&#34;&gt;Python Classes and Object Oriented Programming&lt;/a&gt; (Jeff Knupp)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/552329/how-do-python-classes-work&#34;&gt;How do python classes work?&lt;/a&gt; (Stack Overflow)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/&#34;&gt;Introduction to Classes and Inheritance in Python&lt;/a&gt; (Jess Hamrick)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python-class-examples-summary&#34;&gt;&lt;strong&gt;Python Class Examples Summary&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;If you want to do object-oriented programming in Python, then you need a good understanding of how Classes work. In this collection of python class examples, we had a look at what classes are, how to create and use a class, what instance attributes are, how to modify attributes, how to use inheritance, and how to follow proper naming conventions.&lt;/p&gt;
+&lt;p&gt;Reference : &lt;a href=&#34;https://vegibit.com/python-class-examples/&#34;&gt;https://vegibit.com/python-class-examples/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
