@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.75.0-DEV" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Michael Vahn">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A class is the basis of all data in Python, everything is an object in Python, and a class is how an object is defined. They are the foundation of object-oriented programming and represent real-world things you want to model in your programs.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://example.com/post/python-class-example/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:400,700|Sarabun:400,700|Roboto+Mono|Lato&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academia.min.bb5ab09ea511c063bce928c9c03b5ec3.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://example.com/post/python-class-example/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Dragon">
+  <meta property="og:url" content="https://example.com/post/python-class-example/">
+  <meta property="og:title" content="Python Class Examples | Dragon">
+  <meta property="og:description" content="A class is the basis of all data in Python, everything is an object in Python, and a class is how an object is defined. They are the foundation of object-oriented programming and represent real-world things you want to model in your programs."><meta property="og:image" content="https://example.com/post/python-class-example/featured.png">
+  <meta property="twitter:image" content="https://example.com/post/python-class-example/featured.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2021-02-17T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2021-02-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Python Class Examples | Dragon</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Dragon</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>dropdown</span><span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/#"><span>dropdown 1</span></a>
+            </li>
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/#!"><span>dropdown 2</span></a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/post/python-class-example/featured_hu472750092bd45a183f0e52bcea5d20d7_482099_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        <span
+          class="article-header-caption">Image credit: <a href="https://unsplash.com/photos/CpkOjOcXdUY"><strong>Unsplash</strong></a></span>
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">Python Class Examples</h1>
+
+      
+      <p class="page-subtitle">A class is the basis of all data in Python, everything is an object in Python, and a class is how an object is defined. They are the foundation of object-oriented programming and represent real-world things you want to model in your programs.</p>
+      
+
+      
+
+
+
+<meta content="2021-02-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2021-02-17 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Michael Vahn</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Feb 17, 2021</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/python/">Python</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <pre><code>def charge(self):
+    self.charge_level = 100
+    print('The vehicle is now charged.')
+
+def fuel_up(self):
+    print('This vehicle has no fuel tank!')
+</code></pre>
+<pre><code>
+### **Instances as attributes**
+
+You can store an instance of a class in a different class attribute. This makes it possible for classes to work together to model complex situations.
+
+### **A Battery class**
+
+```python
+class Battery:
+    def __init__(self, size=85):
+        self.size = size
+        self.charge_level = 0
+ 
+    def get_range(self):
+        if self.size == 85:
+            return 260
+        elif self.size == 100:
+            return 315
+</code></pre><h3 id="storing-an-instance-of-a-class-in-an-attribute"><strong>Storing an instance of a class in an attribute</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ElectricVehicle</span>(Vehicle):
+    <span style="color:#66d9ef">def</span> __init__(self, brand, model, type):
+        super()<span style="color:#f92672">.</span>__init__(brand, model, type)
+        self<span style="color:#f92672">.</span>battery <span style="color:#f92672">=</span> Battery()
+ 
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">charge</span>(self):
+        self<span style="color:#f92672">.</span>battery<span style="color:#f92672">.</span>charge_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+ 
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The vehicle is fully charged.&#39;</span>)
+</code></pre></div><h3 id="using-the-instance"><strong>Using The Instance</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">electric_vehicle <span style="color:#f92672">=</span> ElectricVehicle(<span style="color:#e6db74">&#39;Tesla&#39;</span>, <span style="color:#e6db74">&#39;CyberTruck&#39;</span>, <span style="color:#e6db74">&#39;Truck&#39;</span>)
+electric_vehicle<span style="color:#f92672">.</span>charge()
+<span style="color:#66d9ef">print</span>(electric_vehicle<span style="color:#f92672">.</span>battery<span style="color:#f92672">.</span>get_range())
+electric_vehicle<span style="color:#f92672">.</span>drive()
+</code></pre></div><pre><code>The vehicle is fully charged.
+260
+The CyberTruck is now driving.
+
+</code></pre><hr>
+<h2 id="importing-classes"><strong>Importing Classes</strong></h2>
+<p>Class files grow in size as you add features and functionality. In order to keep your program files uncluttered, you can store your classes in modules and import the classes you need into your main program as needed.</p>
+<h3 id="storing-classes-in-a-file"><strong>Storing classes in a file</strong></h3>
+<p><strong><code>vehicle.py</code></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vehicle</span>:
+    <span style="color:#e6db74">&#34;&#34;&#34;Vehicle Class data and methods&#34;&#34;&#34;</span>
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Battery</span>:
+    <span style="color:#e6db74">&#34;&#34;&#34;Batter Class data and methods&#34;&#34;&#34;</span>
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ElectricVehicle</span>(Vehicle):
+    <span style="color:#e6db74">&#34;&#34;&#34;ElectricVehicle Class data and methods&#34;&#34;&#34;</span>
+</code></pre></div><h3 id="importing-individual-classes-from-a-module"><strong>Importing individual classes from a module</strong></h3>
+<p><strong><code>vehicle_objects.py</code></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> vehicle <span style="color:#f92672">import</span> Vehicle, ElectricVehicle
+a_mini <span style="color:#f92672">=</span> Vehicle(<span style="color:#e6db74">&#39;Cooper&#39;</span>, <span style="color:#e6db74">&#39;Mini&#39;</span>, <span style="color:#e6db74">&#39;Car&#39;</span>)
+a_mini<span style="color:#f92672">.</span>fuel_up()
+a_mini<span style="color:#f92672">.</span>drive()
+a_tesla <span style="color:#f92672">=</span> ElectricVehicle(<span style="color:#e6db74">&#39;Tesla&#39;</span>, <span style="color:#e6db74">&#39;Model 3&#39;</span>, <span style="color:#e6db74">&#39;Car&#39;</span>)
+a_tesla<span style="color:#f92672">.</span>charge()
+a_tesla<span style="color:#f92672">.</span>drive()
+</code></pre></div><h3 id="importing-an-entire-module"><strong>Importing an entire module</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> vehicle
+a_mini <span style="color:#f92672">=</span> Vehicle(<span style="color:#e6db74">&#39;Cooper&#39;</span>, <span style="color:#e6db74">&#39;Mini&#39;</span>, <span style="color:#e6db74">&#39;Car&#39;</span>)
+a_mini<span style="color:#f92672">.</span>fuel_up()
+a_mini<span style="color:#f92672">.</span>drive()
+a_tesla <span style="color:#f92672">=</span> ElectricVehicle(<span style="color:#e6db74">&#39;Tesla&#39;</span>, <span style="color:#e6db74">&#39;Model 3&#39;</span>, <span style="color:#e6db74">&#39;Car&#39;</span>)
+a_tesla<span style="color:#f92672">.</span>charge()
+a_tesla<span style="color:#f92672">.</span>drive()
+</code></pre></div><hr>
+<h2 id="understandingselfin-python"><strong>Understanding self in Python</strong></h2>
+<p>You can see that the first parameter of a method is always <strong><code>self</code></strong>. Self is not a keyword, you can actually name that first parameter whatever you like. It does make great sense to use <strong><code>self</code></strong> however, as it is a convention that is recommended you use self so that as people who read your code will know what you’re talking about. So the first argument is self, which is a reference to the object, not the class, to the object. When an object is created from the class, <strong><code>self</code></strong> will reference that object. It provides a way to make other variables and objects available everywhere in a class. The <strong><code>self</code></strong> variable is automatically passed to each method that’s called through an object, which is why it’s listed first in every method definition. Variables attached to <strong><code>self</code></strong> are available everywhere in the class.</p>
+<h3 id="understanding__init__"><strong>Understanding <strong>init</strong>()</strong></h3>
+<p>The <strong><strong>init</strong>()</strong> method is a function that belongs to a class, just like other methods. What is important regarding <strong><code>__init__()</code></strong> is that it’s called automatically every time you instantiate a new object from a class. In other words, it is a <em>constructor</em> function.</p>
+<hr>
+<h2 id="storing-objects-in-a-list"><strong>Storing objects in a list</strong></h2>
+<p><strong><a href="https://vegibit.com/how-to-use-python-lists/">Lists</a></strong> can hold as few or as many things as you want them to. In addition to all the other types you can store in a list, objects can be stored in lists as well. Let’s see a few examples of how this works. Here’s an example showing how to instantiate a group of rental vehicles, and ensure all the vehicles are ready to drive.</p>
+<h3 id="a-collection-of-rental-vehicles"><strong>A collection of rental vehicles</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> vehicle <span style="color:#f92672">import</span> Vehicle, ElectricVehicle
+gas_fleet <span style="color:#f92672">=</span> []
+electric_fleet <span style="color:#f92672">=</span> []
+ 
+<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>):
+    vehicle <span style="color:#f92672">=</span> Vehicle(<span style="color:#e6db74">&#39;Honda&#39;</span>, <span style="color:#e6db74">&#39;Civic&#39;</span>, <span style="color:#e6db74">&#39;Car&#39;</span>)
+    gas_fleet<span style="color:#f92672">.</span>append(vehicle)
+<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">50</span>):
+    evehicle <span style="color:#f92672">=</span> ElectricVehicle(<span style="color:#e6db74">&#39;Nissan&#39;</span>, <span style="color:#e6db74">&#39;Leaf&#39;</span>, <span style="color:#e6db74">&#39;Car&#39;</span>)
+    electric_fleet<span style="color:#f92672">.</span>append(evehicle)
+<span style="color:#66d9ef">for</span> vehicle <span style="color:#f92672">in</span> gas_fleet:
+    vehicle<span style="color:#f92672">.</span>fuel_up()
+<span style="color:#66d9ef">for</span> evehicle <span style="color:#f92672">in</span> electric_fleet:
+    evehicle<span style="color:#f92672">.</span>charge()
+<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Gas vehicles: {len(gas_fleet)}&#39;</span>)
+<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Electric vehicles: {len(electric_fleet)}&#39;</span>)
+</code></pre></div><h3 id="learn-more-about-python-classes"><strong>Learn More About Python Classes</strong></h3>
+<ul>
+<li><a href="https://www.bitdegree.org/learn/python-class">Understanding How Python Class Works</a> (Bit Degree)</li>
+<li><a href="https://dev.to/codemouse92/dead-simple-python-classes-42f7">Dead Simple Python: Classes</a> (Dev.to)</li>
+<li><a href="https://techsparx.com/software-development/python/classes.html">Understanding how Python classes work</a> (Tech Sparx)</li>
+<li><a href="https://opensource.com/article/19/7/get-modular-python-classes">Make your code more modular with Python classes</a> (Open Source)</li>
+<li><a href="https://medium.com/better-programming/python-how-object-and-class-attributes-work-8edf4ed9caa4">How Instance and Class Attributes Work</a> (Medium)</li>
+<li><a href="https://dzone.com/articles/python-class-attributes-vs-instance-attributes">Class Attribute vs. Instance Attribute In Python</a> (Dzone)</li>
+<li><a href="https://docs.python.org/3/tutorial/classes.html">Python Classes</a> (Python Docs)</li>
+<li><a href="https://www.hackerearth.com/practice/python/object-oriented-programming/classes-and-objects-i/tutorial/">Python Classes and Methods</a> (Hacker Earth)</li>
+<li><a href="https://www.quora.com/How-do-Python-Classes-work">How do Python Classes work?</a> (Quora)</li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-construct-classes-and-define-objects-in-python-3">How To Construct Classes and Define Objects in Python 3</a> (Digital Ocean)</li>
+<li><a href="https://vegibit.com/python-abstract-base-classes/">Python Abstract Base Classes</a> (Vebibit)</li>
+<li><a href="https://www.educba.com/abstract-class-in-python/">Abstract Class in Python</a> (Educba)</li>
+<li><a href="https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Python Classes and Object Oriented Programming</a> (Jeff Knupp)</li>
+<li><a href="https://stackoverflow.com/questions/552329/how-do-python-classes-work">How do python classes work?</a> (Stack Overflow)</li>
+<li><a href="http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/">Introduction to Classes and Inheritance in Python</a> (Jess Hamrick)</li>
+</ul>
+<h3 id="python-class-examples-summary"><strong>Python Class Examples Summary</strong></h3>
+<p>If you want to do object-oriented programming in Python, then you need a good understanding of how Classes work. In this collection of python class examples, we had a look at what classes are, how to create and use a class, what instance attributes are, how to modify attributes, how to use inheritance, and how to follow proper naming conventions.</p>
+<p>Reference : <a href="https://vegibit.com/python-class-examples/">https://vegibit.com/python-class-examples/</a></p>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/class/">Class</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://example.com/">Michael Vahn</a></h5>
+      <h6 class="card-subtitle">Professor of Artificial Intelligence</h6>
+      <p class="card-text" itemprop="description">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/gcushen" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+    <div class="article-widget">
+      
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/post/book-review-principles/" rel="next">Book Review - Principles</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/post/jupyter/" rel="prev">Display Jupyter Notebooks with academia</a>
+  </div>
+  
+</div>
+
+    </div>
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academia.min.e4fc229c2f28284fc2dfa5b66a52b765.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p>
+          Copyright © 2021 &middot; 
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/Twitter" target="_blank" rel="noopener" title="DM Me"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="skype:echo123?call"  title="Skype Me"><i class="fab fa-skype" aria-hidden="true"></i></a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://keybase.io/" target="_blank" rel="noopener" title="Chat on Keybase"><i class="fab fa-keybase" aria-hidden="true"></i></a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://discourse.gohugo.io" target="_blank" rel="noopener" title="Discuss on Forum"><i class="fas fa-comments" aria-hidden="true"></i></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
